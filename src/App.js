@@ -14,6 +14,7 @@ import Header from "./components/Header/Header";
 import LandingPages from "./pages/LandinPages/LandingPages";
 import Footer from "./components/Footer/Footer";
 import CatalogService from "./pages/CatalogService/CatalogService";
+import DetailOffer from "./pages/DetailOffer/DetailOffer";
 
 function App() {
     return (
@@ -21,7 +22,8 @@ function App() {
             {/* <Footer /> */}
             {/* <Header /> */}
             {/* <LandingPages /> */}
-            <CatalogService />
+            {/* <CatalogService /> */}
+            <DetailOffer />
         </div>
         // <Provider store={createStore(reducers, applyMiddleware(thunk))}>
         //     {/* <Router>
