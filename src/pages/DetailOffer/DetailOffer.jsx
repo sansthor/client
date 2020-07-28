@@ -1,18 +1,39 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import Styled from "styled-components";
-import { Form, CustomInput } from "reactstrap";
+import { Form, CustomInput, ButtonToggle } from "reactstrap";
 // --- Styled Components ---
-
+const Container = Styled.div`
+padding: 100px;
+`;
 const Wraps = Styled.div`
 display: flex;
 flex-direction: row;
 justify-content: space-around;
+@media (max-width: 940px) {
+    flex-direction: column;
+    justify-content: center;
+    }
 `;
-const ContentWrap = Styled.div`
+const ContentWrapLeft = Styled.div`
 display: flex;
 flex-direction: column;
-width: 45%;
+width: 60%;
+
+@media (max-width: 940px) {
+    width: 100%;
+    margin-top: 30px;
+    }
+`;
+const ContentWrapRight = Styled.div`
+display: flex;
+flex-direction: column;
+width: 25%;
+
+@media (max-width: 940px) {
+    width: 100%;
+    margin-top: 30px;
+    }
 `;
 const ContentWrapDetail = Styled.div`
 display: flex;
@@ -23,15 +44,20 @@ display: flex;
 flex-direction: column;
 border: 1px solid gray;
 `;
+const Tittle = Styled.h1`
+margin-left: 2rem;
+@media (max-width: 960px) {
+    text-align: center;
+    }
+`;
 // --- Styled Components ---
 
 function DetailOffer() {
     return (
-        <div>
-            <h1>Tittle Detail Product</h1>
+        <Container>
+            <Tittle>Tittle Product</Tittle>
             <Wraps>
-                <ContentWrap>
-                    <ContentWrapDetail></ContentWrapDetail>
+                <ContentWrapLeft>
                     <ContentWrapDetail>
                         <p>@username</p>
                         <span style={{ margin: "0 5px" }}>||</span>
@@ -58,14 +84,21 @@ function DetailOffer() {
                             </p>
                         </div>
                     </ImageWrap>
-                </ContentWrap>
-                <ContentWrap>
+                </ContentWrapLeft>
+                <ContentWrapRight>
                     <ContentWrapDetail>
                         <p>Offer Feature</p>
                     </ContentWrapDetail>
 
                     <ContentWrapDetail>
-                        <Form>
+                        <Form
+                            style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                border: "1px solid gray",
+                                padding: "25px",
+                            }}
+                        >
                             <CustomInput
                                 id="exampleCustomCheckbox"
                                 type="checkbox"
@@ -81,12 +114,17 @@ function DetailOffer() {
                                 type="checkbox"
                                 label="Commercial use"
                             />
-                            <ButtonToggle color="primary">primary</ButtonToggle>
+                            <ButtonToggle
+                                color="primary"
+                                style={{ marginTop: "30px" }}
+                            >
+                                primary
+                            </ButtonToggle>
                         </Form>
                     </ContentWrapDetail>
-                </ContentWrap>
+                </ContentWrapRight>
             </Wraps>
-        </div>
+        </Container>
     );
 }
 
