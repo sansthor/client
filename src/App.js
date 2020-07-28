@@ -12,10 +12,12 @@ import PrivateRoute from "./helpers/PrivateRoute";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header/Header";
 import LandingPages from "./pages/LandinPages/LandingPages";
+import Footer from "./components/Footer/Footer";
 
 function App() {
     return (
         <div>
+            {/* <Footer /> */}
             {/* <Header /> */}
             <LandingPages />
         </div>

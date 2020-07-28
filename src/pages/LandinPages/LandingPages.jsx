@@ -10,6 +10,7 @@ import {
     Input,
 } from "reactstrap";
 import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 // --Styledcomponent--
 const SearchWrappers = Styled.div`
@@ -113,6 +114,7 @@ function LandingPages() {
                     </Cards>
                 </CardsWrap>
             </div>
+            <Footer />
         </div>
     );
 }
