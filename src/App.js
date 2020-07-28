@@ -11,11 +11,13 @@ import reducers from "./redux/reducers";
 import PrivateRoute from "./helpers/PrivateRoute";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header/Header";
+import LandingPages from "./pages/LandinPages/LandingPages";
 
 function App() {
     return (
         <div>
-            <Header />
+            {/* <Header /> */}
+            <LandingPages />
         </div>
         // <Provider store={createStore(reducers, applyMiddleware(thunk))}>
         //     {/* <Router>

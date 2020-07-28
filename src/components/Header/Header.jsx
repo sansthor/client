@@ -7,8 +7,6 @@ import {
     Nav,
     NavItem,
     NavLink,
-    ButtonToggle,
-    NavbarText,
     Button,
 } from "reactstrap";
 
