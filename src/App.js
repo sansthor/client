@@ -15,15 +15,17 @@ import LandingPages from "./pages/LandinPages/LandingPages";
 import Footer from "./components/Footer/Footer";
 import CatalogService from "./pages/CatalogService/CatalogService";
 import DetailOffer from "./pages/DetailOffer/DetailOffer";
+import PaymentMethod from "./pages/PaymentMethod/PaymentMethod";
 
 function App() {
     return (
         <div>
             {/* <Footer /> */}
-            <Header />
+            {/* <Header /> */}
             {/* <LandingPages /> */}
             {/* <CatalogService /> */}
             {/* <DetailOffer /> */}
+            <PaymentMethod />
         </div>
         // <Provider store={createStore(reducers, applyMiddleware(thunk))}>
         //     {/* <Router>

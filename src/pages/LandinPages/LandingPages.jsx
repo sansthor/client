@@ -1,14 +1,6 @@
 import React from "react";
-import Styled from "styled-components";
-import {
-    Jumbotron,
-    Container,
-    Button,
-    InputGroup,
-    InputGroupAddon,
-    InputGroupText,
-    Input,
-} from "reactstrap";
+
+import { Jumbotron, Container, Button } from "reactstrap";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import FindDigitalService from "../../components/FindDigitalService/FindDigitalService";
