@@ -9,6 +9,7 @@ import {
     InputGroupText,
     Input,
 } from "reactstrap";
+import Header from "../../components/Header/Header";
 
 // --Styledcomponent--
 const SearchWrappers = Styled.div`
@@ -52,6 +53,7 @@ width: 100%;
 function LandingPages() {
     return (
         <div>
+            <Header />
             <Jumbotron fluid>
                 <Container fluid>
                     <h1 style={{ width: "50%" }} className="display-3">
