@@ -20,10 +20,10 @@ function App() {
     return (
         <div>
             {/* <Footer /> */}
-            {/* <Header /> */}
+            <Header />
             {/* <LandingPages /> */}
             {/* <CatalogService /> */}
-            <DetailOffer />
+            {/* <DetailOffer /> */}
         </div>
         // <Provider store={createStore(reducers, applyMiddleware(thunk))}>
         //     {/* <Router>

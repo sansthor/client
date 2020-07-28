@@ -28,9 +28,11 @@ const Header = (props) => {
                             </NavLink>
                         </NavItem>
                     </Nav>
-                    <NavLink style={{ marginRight: "2 rem" }} href="/">
+
+                    <p style={{ margin: "5px 10px 5px 0", cursor: "pointer" }}>
                         Login
-                    </NavLink>
+                    </p>
+
                     <Button color="danger">Become Talent</Button>
                 </Collapse>
             </Navbar>
