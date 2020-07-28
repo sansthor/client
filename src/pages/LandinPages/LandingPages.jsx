@@ -1,4 +1,5 @@
 import React from "react";
+import Styled from "styled-components";
 import {
     Jumbotron,
     Container,
@@ -16,6 +17,22 @@ import {
     CardTitle,
     CardSubtitle,
 } from "reactstrap";
+
+// --Styledcomponent--
+const SearchWrappers = Styled.div`
+display: flex;
+flex direction: row;
+justify-content: space-between;
+margin: 10px 200px;
+`;
+
+const Wrap = Styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+`;
+// --Styledcomponent--
+
 function LandingPages() {
     return (
         <div>
@@ -33,25 +50,33 @@ function LandingPages() {
                 </Container>
             </Jumbotron>
             <div>
-                <h2>Find Digital Services...</h2>
-                <div>
-                    <InputGroup>
-                        <InputGroupAddon addonType="prepend">
-                            <InputGroupText>@</InputGroupText>
-                        </InputGroupAddon>
-                        <Input placeholder="username" />
-                    </InputGroup>
-                    <FormGroup>
-                        <Label for="exampleSelect">Select</Label>
-                        <Input type="select" name="select" id="exampleSelect">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </Input>
-                    </FormGroup>
-                </div>
+                <Wrap>
+                    <h2 style={{ alignSelf: "center" }}>
+                        Find Digital Services...
+                    </h2>
+                    <div>
+                        <SearchWrappers>
+                            <Input
+                                style={{ marginRight: "1rem" }}
+                                placeholder="Search..."
+                            />
+
+                            <Input
+                                style={{ width: "40%", marginRight: "1rem" }}
+                                type="select"
+                                name="select"
+                                id="exampleSelect"
+                            >
+                                <option>Data scientist</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </Input>
+                            <Button color="danger">Find</Button>
+                        </SearchWrappers>
+                    </div>
+                </Wrap>
                 <div>
                     <Card>
                         <CardImg
