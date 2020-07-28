@@ -83,13 +83,12 @@ function LandingPages() {
                                 style={{ width: "40%", marginRight: "1rem" }}
                                 type="select"
                                 name="select"
-                                id="exampleSelect"
                             >
-                                <option>Data scientist</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
+                                <option>Data Scientist</option>
+                                <option>Web Developer</option>
+                                <option>Designer</option>
+                                <option>Web Design</option>
+                                <option>DevOps</option>
                             </Input>
                             <Button color="danger">Find</Button>
                         </SearchWrappers>
