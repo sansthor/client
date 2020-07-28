@@ -13,13 +13,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header/Header";
 import LandingPages from "./pages/LandinPages/LandingPages";
 import Footer from "./components/Footer/Footer";
+import CatalogService from "./pages/CatalogService/CatalogService";
 
 function App() {
     return (
         <div>
             {/* <Footer /> */}
             {/* <Header /> */}
-            <LandingPages />
+            {/* <LandingPages /> */}
+            <CatalogService />
         </div>
         // <Provider store={createStore(reducers, applyMiddleware(thunk))}>
         //     {/* <Router>
