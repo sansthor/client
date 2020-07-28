@@ -3,7 +3,7 @@ import Styled from "styled-components";
 
 // --- Styled components ---
 const FooterWraps = Styled.footer`
-padding: 20px;
+padding: 20px 0 5px 0;
 background-color: #292c2f;
 color: white;
 `;
