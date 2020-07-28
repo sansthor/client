@@ -9,10 +9,14 @@ import React from "react";
 
 import reducers from "./redux/reducers";
 import PrivateRoute from "./helpers/PrivateRoute";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/Header/Header";
 
 function App() {
     return (
-        <div></div>
+        <div>
+            <Header />
+        </div>
         // <Provider store={createStore(reducers, applyMiddleware(thunk))}>
         //     {/* <Router>
         // <Switch>
