@@ -55,7 +55,7 @@ function Footer() {
             >
                 <p>
                     <span>&#169; </span>
-                    <strong>All Right Reserved Talent with Findthes</strong>
+                    All Right Reserved Talent with Findthes
                 </p>
             </div>
         </FooterWraps>
