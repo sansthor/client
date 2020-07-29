@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { ButtonToggle, Jumbotron, Container } from "reactstrap";
 import Styled from "styled-components";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 // --- Styled Components ---
 const FlexColumn = Styled.div`
@@ -21,6 +23,7 @@ const Wraps = Styled.div`
 display: flex;
 flex-direction: row;
 justify-content: space-around;
+padding: 50px;
 `;
 // --- Styled Components ---
 
@@ -129,6 +132,7 @@ function PaymentMethod() {
     };
     return (
         <div>
+            <Header />
             <Jumbotron fluid>
                 <Container fluid>
                     <h1 className="display-3">Select Payment Method</h1>
@@ -246,6 +250,7 @@ function PaymentMethod() {
                     </ButtonToggle>
                 </WrapRight>
             </Wraps>
+            <Footer />
         </div>
     );
 }
