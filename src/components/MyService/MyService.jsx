@@ -34,7 +34,7 @@ width: 100%;
 `;
 // --- Styled components ---
 
-function PurchaseHistory() {
+function MyService() {
     return (
         <div>
             <Wraps>
@@ -61,4 +61,4 @@ function PurchaseHistory() {
     );
 }
 
-export default PurchaseHistory;
+export default MyService;
