@@ -19,6 +19,11 @@ function PaymentMethod() {
         bgcolor1: "none",
         bgcolor2: "none",
         bgcolor3: "none",
+        bgcolor4: "none",
+        bgcolor5: "none",
+        bgcolor6: "none",
+        bgcolor7: "none",
+        bgcolor8: "none",
     });
 
     const handleChange = (event) => {
@@ -27,12 +32,22 @@ function PaymentMethod() {
                 bgcolor1: "primary",
                 bgcolor2: "none",
                 bgcolor3: "none",
+                bgcolor4: "none",
+                bgcolor5: "none",
+                bgcolor6: "none",
+                bgcolor7: "none",
+                bgcolor8: "none",
             });
         } else if (event.target.name === "bgColor2") {
             setBgColor({
                 bgcolor1: "none",
                 bgcolor2: "primary",
                 bgcolor3: "none",
+                bgcolor4: "none",
+                bgcolor5: "none",
+                bgcolor6: "none",
+                bgcolor7: "none",
+                bgcolor8: "none",
             });
         } else if (event.target.name === "bgColor3") {
             setBgColor({
@@ -89,7 +104,44 @@ function PaymentMethod() {
                     </div>
                 </FlexColumn>
             </WrapLeft>
-            <div></div>
+            <div>
+                {" "}
+                <ButtonToggle
+                    name="bgColor4"
+                    color={bgColor.bgcolor4}
+                    onClick={handleChange}
+                >
+                    CreditCard
+                </ButtonToggle>
+                <ButtonToggle
+                    name="bgColor5"
+                    color={bgColor.bgcolor5}
+                    onClick={handleChange}
+                >
+                    Paypal
+                </ButtonToggle>
+                <ButtonToggle
+                    name="bgColor6"
+                    color={bgColor.bgcolor6}
+                    onClick={handleChange}
+                >
+                    Amazon Web Service
+                </ButtonToggle>
+                <ButtonToggle
+                    name="bgColor7"
+                    color={bgColor.bgcolor7}
+                    onClick={handleChange}
+                >
+                    Amazon Web Service
+                </ButtonToggle>
+                <ButtonToggle
+                    name="bgColor8"
+                    color={bgColor.bgcolor8}
+                    onClick={handleChange}
+                >
+                    Amazon Web Service
+                </ButtonToggle>
+            </div>
         </div>
     );
 }
