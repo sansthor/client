@@ -10,12 +10,12 @@ flex-direction: column;
 const WrapLeft = Styled.div`
 display: flex;
 flex-direction: column;
-width: 60%;
+width: 65%;
 `;
 const WrapRight = Styled.div`
 display: flex;
 flex-direction: column;
-width: 20%;
+width: 10%;
 `;
 const Wraps = Styled.div`
 display: flex;
@@ -136,8 +136,19 @@ function PaymentMethod() {
             </Jumbotron>
             <Wraps>
                 <WrapLeft>
-                    <div>
+                    <div
+                        style={{
+                            margin: "0 0 40px 0",
+                            display: "flex",
+                            justifyContent: "space-between",
+                        }}
+                    >
                         <ButtonToggle
+                            style={{
+                                border: "1px solid black",
+                                padding: "10px",
+                                width: "13rem",
+                            }}
                             name="bgColor1"
                             color={bgColor.bgcolor1}
                             onClick={handleChange}
@@ -145,6 +156,11 @@ function PaymentMethod() {
                             CreditCard
                         </ButtonToggle>
                         <ButtonToggle
+                            style={{
+                                border: "1px solid black",
+                                padding: "10px",
+                                width: "13rem",
+                            }}
                             name="bgColor2"
                             color={bgColor.bgcolor2}
                             onClick={handleChange}
@@ -152,33 +168,44 @@ function PaymentMethod() {
                             Paypal
                         </ButtonToggle>
                         <ButtonToggle
+                            style={{
+                                border: "1px solid black",
+                                padding: "10px",
+                                width: "13rem",
+                            }}
                             name="bgColor3"
                             color={bgColor.bgcolor3}
                             onClick={handleChange}
                         >
-                            Amazon Web Service
+                            Amazon Payment
                         </ButtonToggle>
                     </div>
                     {/*  */}
                     <FlexColumn>
-                        <input type="text" />
-                        <input type="number" />
+                        <input
+                            type="text"
+                            style={{ marginBottom: "40px", padding: "10px" }}
+                        />
+                        <input
+                            type="number"
+                            style={{ marginBottom: "40px", padding: "10px" }}
+                        />
                         <div
                             style={{
                                 display: "flex",
                                 justifyContent: "space-between",
                             }}
                         >
-                            <input />
-                            <input />
-                            <input />
+                            <input style={{ padding: "5px", width: "15rem" }} />
+                            <input style={{ padding: "5px", width: "15rem" }} />
+                            <input style={{ padding: "5px", width: "15rem" }} />
                         </div>
                     </FlexColumn>
                 </WrapLeft>
                 <WrapRight>
                     {" "}
                     <ButtonToggle
-                        style={{ border: "1px solid black" }}
+                        style={{ border: "1px solid black", padding: "17px" }}
                         name="bgColor4"
                         color={bgColor.bgcolor4}
                         onClick={handleChange}
@@ -186,7 +213,7 @@ function PaymentMethod() {
                         ATM
                     </ButtonToggle>
                     <ButtonToggle
-                        style={{ border: "1px solid black" }}
+                        style={{ border: "1px solid black", padding: "17px" }}
                         name="bgColor5"
                         color={bgColor.bgcolor5}
                         onClick={handleChange}
@@ -194,7 +221,7 @@ function PaymentMethod() {
                         OVO
                     </ButtonToggle>
                     <ButtonToggle
-                        style={{ border: "1px solid black" }}
+                        style={{ border: "1px solid black", padding: "17px" }}
                         name="bgColor6"
                         color={bgColor.bgcolor6}
                         onClick={handleChange}
@@ -202,7 +229,7 @@ function PaymentMethod() {
                         Go-Pay
                     </ButtonToggle>
                     <ButtonToggle
-                        style={{ border: "1px solid black" }}
+                        style={{ border: "1px solid black", padding: "17px" }}
                         name="bgColor7"
                         color={bgColor.bgcolor7}
                         onClick={handleChange}
@@ -210,7 +237,7 @@ function PaymentMethod() {
                         LinkAja
                     </ButtonToggle>
                     <ButtonToggle
-                        style={{ border: "1px solid black" }}
+                        style={{ border: "1px solid black", padding: "17px" }}
                         name="bgColor8"
                         color={bgColor.bgcolor8}
                         onClick={handleChange}
