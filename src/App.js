@@ -1,14 +1,21 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Provider } from "react-redux";
-import { createStore, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
-import styled from "styled-components";
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import { Provider } from "react-redux";
+// import { createStore, applyMiddleware } from "redux";
+// import thunk from "redux-thunk";
+// import styled from "styled-components";
 // import logo from './logo.svg';
 // import './App.css';
 
 import reducers from "./redux/reducers";
 import PrivateRoute from "./helpers/PrivateRoute";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/Header/Header";
+import LandingPages from "./pages/LandinPages/LandingPages";
+import Footer from "./components/Footer/Footer";
+import CatalogService from "./pages/CatalogService/CatalogService";
+import DetailOffer from "./pages/DetailOffer/DetailOffer";
+import PaymentMethod from "./pages/PaymentMethod/PaymentMethod";
 
 function App() {
     return (
