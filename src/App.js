@@ -25,7 +25,7 @@ function App() {
             {/* <LandingPages /> */}
             {/* <CatalogService /> */}
             {/* <DetailOffer /> */}
-            <PaymentMethod />
+            {/* <PaymentMethod /> */}
         </div>
         // <Provider store={createStore(reducers, applyMiddleware(thunk))}>
         //     {/* <Router>
