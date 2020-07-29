@@ -16,6 +16,7 @@ import Footer from "./components/Footer/Footer";
 import CatalogService from "./pages/CatalogService/CatalogService";
 import DetailOffer from "./pages/DetailOffer/DetailOffer";
 import PaymentMethod from "./pages/PaymentMethod/PaymentMethod";
+import PurchaseHistory from "./components/PurchaseHistory/PurchaseHistory";
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
             {/* <CatalogService /> */}
             {/* <DetailOffer /> */}
             {/* <PaymentMethod /> */}
+            <PurchaseHistory />
         </div>
         // <Provider store={createStore(reducers, applyMiddleware(thunk))}>
         //     {/* <Router>
