@@ -19,35 +19,30 @@ import PaymentMethod from "./pages/PaymentMethod/PaymentMethod";
 
 function App() {
     return (
-        <div>
-            {/* <Footer /> */}
-            {/* <Header /> */}
-            {/* <LandingPages /> */}
-            {/* <CatalogService /> */}
-            {/* <DetailOffer /> */}
-            <PaymentMethod />
-        </div>
-        // <Provider store={createStore(reducers, applyMiddleware(thunk))}>
-        //     {/* <Router>
-        // <Switch>
-        //   {/* <Route exact path="/">
-        //                 <Home />
-        //             </Route>
-        //             <Route exact path="/register">
-        //                 <Register />
-        //             </Route>
-        //             <Route exact path="/login">
-        //                 <Login />
-        //             </Route>
-        //             <PrivateRoute exact path="/userPage">
-        //                 <ListRestaurant />
-        //             </PrivateRoute>
-        //             <PrivateRoute exact path="/restaurants/:id">
-        //                 <DescriptionRestaurants />
-        //             </PrivateRoute> */}
-        //     {/* </Switch> */}
-        //     {/* </Router>  */}
-        // </Provider>
+        <Provider store={createStore(reducers, applyMiddleware(thunk))}>
+            <div>
+                <h1>test staging</h1>
+            </div>
+            <Router>
+                <Switch>
+                    {/* <Route exact path="/">
+                        <Home />
+                    </Route>
+                    <Route exact path="/register">
+                        <Register />
+                    </Route>
+                    <Route exact path="/login">
+                        <Login />
+                    </Route>
+                    <PrivateRoute exact path="/userPage">
+                        <ListRestaurant />
+                    </PrivateRoute>
+                    <PrivateRoute exact path="/restaurants/:id">
+                        <DescriptionRestaurants />
+                    </PrivateRoute> */}
+                </Switch>
+            </Router>
+        </Provider>
     );
 }
 
