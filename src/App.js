@@ -11,11 +11,14 @@ import reducers from "./redux/reducers";
 import PrivateRoute from "./helpers/PrivateRoute";
 
 function App() {
-  return (
-    <Provider store={createStore(reducers, applyMiddleware(thunk))}>
-      <Router>
-        <Switch>
-          {/* <Route exact path="/">
+    return (
+        <Provider store={createStore(reducers, applyMiddleware(thunk))}>
+            <div>
+                <h1>test staging</h1>
+            </div>
+            <Router>
+                <Switch>
+                    {/* <Route exact path="/">
                         <Home />
                     </Route>
                     <Route exact path="/register">
@@ -30,10 +33,10 @@ function App() {
                     <PrivateRoute exact path="/restaurants/:id">
                         <DescriptionRestaurants />
                     </PrivateRoute> */}
-        </Switch>
-      </Router>
-    </Provider>
-  );
+                </Switch>
+            </Router>
+        </Provider>
+    );
 }
 
 export default App;
