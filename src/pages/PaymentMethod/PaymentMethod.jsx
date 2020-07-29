@@ -1,5 +1,18 @@
 import React, { useState } from "react";
 import { ButtonToggle, Jumbotron, Container } from "reactstrap";
+import Styled from "styled-components";
+
+// --- Styled Components ---
+const FlexColumn = Styled.div`
+display: flex;
+flex-direction: column;
+`;
+const WrapLeft = Styled.div`
+display: flex;
+flex-direction: column;
+width: 60%;
+`;
+// --- Styled Components ---
 
 function PaymentMethod() {
     const [bgColor, setBgColor] = useState({
@@ -36,7 +49,7 @@ function PaymentMethod() {
                     <h1 className="display-3">Select Payment Method</h1>
                 </Container>
             </Jumbotron>
-            <div>
+            <WrapLeft>
                 <div>
                     <ButtonToggle
                         name="bgColor1"
@@ -61,8 +74,22 @@ function PaymentMethod() {
                     </ButtonToggle>
                 </div>
                 {/*  */}
-                <div></div>
-            </div>
+                <FlexColumn>
+                    <input type="text" />
+                    <input type="number" />
+                    <div
+                        style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                        }}
+                    >
+                        <input />
+                        <input />
+                        <input />
+                    </div>
+                </FlexColumn>
+            </WrapLeft>
+            <div></div>
         </div>
     );
 }
