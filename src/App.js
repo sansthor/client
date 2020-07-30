@@ -1,20 +1,24 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router,  Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
-import styled from "styled-components";
+// import styled from "styled-components";
 // import logo from './logo.svg';
 // import './App.css';
+// import Login from './pages/Login/Login'
+import RegisUser from './pages/RegisUser/RegisUser'
 
-import reducers from "./redux/reducers";
-import PrivateRoute from "./helpers/PrivateRoute";
+import reducers from "./redux/reducers/Registration";
+// import PrivateRoute from "./helpers/PrivateRoute";
 
 function App() {
   return (
     <Provider store={createStore(reducers, applyMiddleware(thunk))}>
       <Router>
         <Switch>
+          {/* <Login/> */}
+          <RegisUser/>
           {/* <Route exact path="/">
                         <Home />
                     </Route>
@@ -32,7 +36,7 @@ function App() {
                     </PrivateRoute> */}
         </Switch>
       </Router>
-    </Provider>
+      </Provider>
   );
 }
 
