@@ -1,5 +1,6 @@
 import React from "react";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import EditProfileTalent from "./components/EditProfileTalent/EditProfileTalent";
+// import { BrowserRouter as Router, Switch } from "react-router-dom";
 // import { Provider } from "react-redux";
 // import { createStore, applyMiddleware } from "redux";
 // import thunk from "redux-thunk";
@@ -7,43 +8,46 @@ import React from "react";
 // import logo from './logo.svg';
 // import './App.css';
 
-import reducers from "./redux/reducers";
-import PrivateRoute from "./helpers/PrivateRoute";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "./components/Header/Header";
-import LandingPages from "./pages/LandinPages/LandingPages";
-import Footer from "./components/Footer/Footer";
-import CatalogService from "./pages/CatalogService/CatalogService";
-import DetailOffer from "./pages/DetailOffer/DetailOffer";
-import PaymentMethod from "./pages/PaymentMethod/PaymentMethod";
+// import reducers from "./redux/reducers";
+// import PrivateRoute from "./helpers/PrivateRoute";
+// import Header from "./components/Header/Header";
+// import LandingPages from "./pages/LandinPages/LandingPages";
+// import Footer from "./components/Footer/Footer";
+// import EditProfileMember from "./components/EditProfileMember/EditProfileMember";
+// import CatalogService from "./pages/CatalogService/CatalogService";
+// import DetailOffer from "./pages/DetailOffer/DetailOffer";
+// import PaymentMethod from "./pages/PaymentMethod/PaymentMethod";
 
 function App() {
-    return (
-        <Provider store={createStore(reducers, applyMiddleware(thunk))}>
-            <div>
-                <h1>test staging</h1>
-            </div>
-            <Router>
-                <Switch>
-                    {/* <Route exact path="/">
-                        <Home />
-                    </Route>
-                    <Route exact path="/register">
-                        <Register />
-                    </Route>
-                    <Route exact path="/login">
-                        <Login />
-                    </Route>
-                    <PrivateRoute exact path="/userPage">
-                        <ListRestaurant />
-                    </PrivateRoute>
-                    <PrivateRoute exact path="/restaurants/:id">
-                        <DescriptionRestaurants />
-                    </PrivateRoute> */}
-                </Switch>
-            </Router>
-        </Provider>
-    );
+  return (
+    <div>
+      {/* <Header /> */}
+      {/* <EditProfileMember /> */}
+      <EditProfileTalent />
+      {/* <Footer /> */}
+      {/* <Provider>
+          <Router> */}
+      {/* <Switch> */}
+      {/* <Route exact path="/">
+                            <Home />
+                        </Route>
+                        <Route exact path="/register">
+                            <Register />
+                        </Route>
+                        <Route exact path="/login">
+                            <Login />
+                        </Route>
+                        <PrivateRoute exact path="/userPage">
+                            <ListRestaurant />
+                        </PrivateRoute>
+                        <PrivateRoute exact path="/restaurants/:id">
+                            <DescriptionRestaurants />
+                        </PrivateRoute> */}
+      {/* //     </Switch>
+        //   </Router>
+        // </Provider> */}
+    </div>
+  );
 }
 
 export default App;
