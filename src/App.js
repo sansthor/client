@@ -19,6 +19,7 @@ import PaymentMethod from "./pages/PaymentMethod/PaymentMethod";
 import PurchaseHistory from "./components/PurchaseHistory/PurchaseHistory";
 import Order from "./components/Order/Order";
 import MemberFeed from "./pages/MemberFeed/MemberFeed";
+import TalentFeed from "./pages/TalentFeed/TalentFeed";
 
 function App() {
     return (
@@ -32,6 +33,7 @@ function App() {
             {/* <PurchaseHistory /> */}
             {/* <Order /> */}
             <MemberFeed />
+            {/* <TalentFeed /> */}
         </div>
         // <Provider store={createStore(reducers, applyMiddleware(thunk))}>
         //     {/* <Router>

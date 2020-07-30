@@ -10,7 +10,6 @@ import TabPanel from "@material-ui/lab/TabPanel";
 import PurchaseHistory from "../../components/PurchaseHistory/PurchaseHistory";
 import MyService from "../../components/MyService/MyService";
 import Order from "../../components/Order/Order";
-import { Button } from "reactstrap";
 // ---Styled components---
 const Jumbotron = Styled.div`
 width: 100vw;
@@ -19,7 +18,7 @@ height: 35vh;
 `;
 const Profile = Styled.div`
 position: relative;
-top: -100px;
+top: -180px;
 margin: auto 5em;
 `;
 const Image = Styled.img`
@@ -39,7 +38,7 @@ margin-bottom: 50px;
 const Wrap = Styled.div`
 margin: 20px 100px;
 padding: 20px 50px 0 10px;
-
+border: 1px solid black;
 `;
 // ---Styled components---
 const useStyles = makeStyles((theme) => ({
@@ -48,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.background.paper,
     },
 }));
-function MemberFeed() {
+function TalentFeed() {
     const classes = useStyles();
     const [value, setValue] = React.useState("1");
 
@@ -64,7 +63,20 @@ function MemberFeed() {
                     <Image src="https://www.w3schools.com/w3images/avatar2.png" />
                 </Profile>
                 <Wrap>
-                    <Button color="danger">danger</Button>{" "}
+                    <h4>Skill</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                    </ul>
+                    <h4>Portofolio</h4>
+                    <ul>
+                        <li>Link</li>
+                    </ul>
+                    <h4>Phone Number</h4>
+                    <ul>
+                        <li>087888119345</li>
+                    </ul>
                 </Wrap>
             </About>
             <div>
@@ -75,10 +87,18 @@ function MemberFeed() {
                             aria-label="simple tabs example"
                         >
                             <Tab label="Purchase History" value="1" />
+                            <Tab label="MyService" value="2" />
+                            <Tab label="Order" value="3" />
                         </TabList>
                     </AppBar>
                     <TabPanel value="1">
                         <PurchaseHistory />
+                    </TabPanel>
+                    <TabPanel value="2">
+                        <MyService />
+                    </TabPanel>
+                    <TabPanel value="3">
+                        <Order />
                     </TabPanel>
                 </TabContext>
             </div>
@@ -86,4 +106,4 @@ function MemberFeed() {
     );
 }
 
-export default MemberFeed;
+export default TalentFeed;
