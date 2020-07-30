@@ -1,5 +1,4 @@
 import React from "react";
-import EditProfileTalent from "./components/EditProfileTalent/EditProfileTalent";
 // import { BrowserRouter as Router, Switch } from "react-router-dom";
 // import { Provider } from "react-redux";
 // import { createStore, applyMiddleware } from "redux";
@@ -13,7 +12,8 @@ import EditProfileTalent from "./components/EditProfileTalent/EditProfileTalent"
 // import Header from "./components/Header/Header";
 // import LandingPages from "./pages/LandinPages/LandingPages";
 // import Footer from "./components/Footer/Footer";
-// import EditProfileMember from "./components/EditProfileMember/EditProfileMember";
+// import AddOffer from "./components/AddOffer/AddOffer";
+import HalamanTalent from "./pages/HalamanTalent/HalamanTalent";
 // import CatalogService from "./pages/CatalogService/CatalogService";
 // import DetailOffer from "./pages/DetailOffer/DetailOffer";
 // import PaymentMethod from "./pages/PaymentMethod/PaymentMethod";
@@ -22,8 +22,9 @@ function App() {
   return (
     <div>
       {/* <Header /> */}
-      {/* <EditProfileMember /> */}
-      <EditProfileTalent />
+      {/* <Work /> */}
+      <HalamanTalent />
+      {/* <AddOffer /> */}
       {/* <Footer /> */}
       {/* <Provider>
           <Router> */}
