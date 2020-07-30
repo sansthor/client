@@ -18,6 +18,7 @@ import DetailOffer from "./pages/DetailOffer/DetailOffer";
 import PaymentMethod from "./pages/PaymentMethod/PaymentMethod";
 import PurchaseHistory from "./components/PurchaseHistory/PurchaseHistory";
 import Order from "./components/Order/Order";
+import MemberFeed from "./pages/MemberFeed/MemberFeed";
 
 function App() {
     return (
@@ -29,7 +30,8 @@ function App() {
             {/* <DetailOffer /> */}
             {/* <PaymentMethod /> */}
             {/* <PurchaseHistory /> */}
-            <Order />
+            {/* <Order /> */}
+            <MemberFeed />
         </div>
         // <Provider store={createStore(reducers, applyMiddleware(thunk))}>
         //     {/* <Router>
