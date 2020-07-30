@@ -26,13 +26,13 @@ function App() {
         <div>
             {/* <Footer /> */}
             {/* <Header /> */}
-            {/* <LandingPages /> */}
+            <LandingPages />
             {/* <CatalogService /> */}
             {/* <DetailOffer /> */}
             {/* <PaymentMethod /> */}
             {/* <PurchaseHistory /> */}
             {/* <Order /> */}
-            <MemberFeed />
+            {/* <MemberFeed /> */}
             {/* <TalentFeed /> */}
         </div>
         // <Provider store={createStore(reducers, applyMiddleware(thunk))}>

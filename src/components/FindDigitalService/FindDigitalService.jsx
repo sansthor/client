@@ -2,12 +2,6 @@ import React from "react";
 import Styled from "styled-components";
 import { Button, Input } from "reactstrap";
 // --Styledcomponent--
-const SearchWrappers = Styled.div`
-display: flex;
-flex direction: row;
-justify-content: space-between;
-margin: 10px 200px;
-`;
 
 const Wrap = Styled.div`
 display: flex;
@@ -43,32 +37,6 @@ width: 100%;
 function FindDigitalService() {
     return (
         <div>
-            <Wrap>
-                <h2 style={{ alignSelf: "center" }}>
-                    Find Digital Services...
-                </h2>
-                <div>
-                    <SearchWrappers>
-                        <Input
-                            style={{ marginRight: "1rem" }}
-                            placeholder="Search..."
-                        />
-
-                        <Input
-                            style={{ width: "40%", marginRight: "1rem" }}
-                            type="select"
-                            name="select"
-                        >
-                            <option>Data Scientist</option>
-                            <option>Web Developer</option>
-                            <option>Designer</option>
-                            <option>Web Design</option>
-                            <option>DevOps</option>
-                        </Input>
-                        <Button color="danger">Find</Button>
-                    </SearchWrappers>
-                </div>
-            </Wrap>
             <CardsWrap>
                 <Cards>
                     <Images
@@ -83,6 +51,7 @@ function FindDigitalService() {
                             Some quick example text to build on the card title
                             and make up the bulk of the card's content.
                         </p>
+                        <p>Price: 2000</p>
                     </div>
                 </Cards>
             </CardsWrap>

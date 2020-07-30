@@ -19,7 +19,6 @@ function LandingPages() {
                         Temukan talent terbaik untuk membantu memecahkan
                         masalahmu
                     </p>
-                    <Button color="danger">Find Here</Button>
                 </Container>
             </Jumbotron>
             <FindDigitalService />

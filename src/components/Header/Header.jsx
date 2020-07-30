@@ -8,8 +8,16 @@ import {
     NavItem,
     NavLink,
     Button,
+    Input,
 } from "reactstrap";
+import Styled from "styled-components";
 
+const SearchWrappers = Styled.div`
+display: flex;
+flex direction: row;
+justify-content: space-between;
+
+`;
 const Header = (props) => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -26,6 +34,16 @@ const Header = (props) => {
                             <NavLink style={{ color: "black" }} href="/">
                                 Help
                             </NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <SearchWrappers>
+                                <Input
+                                    style={{ marginRight: "1rem" }}
+                                    placeholder="Search..."
+                                />
+
+                                <Button color="danger">Search</Button>
+                            </SearchWrappers>
                         </NavItem>
                     </Nav>
 
