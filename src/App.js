@@ -26,8 +26,8 @@ function App() {
         <div>
             {/* <Footer /> */}
             {/* <Header /> */}
-            <LandingPages />
-            {/* <CatalogService /> */}
+            {/* <LandingPages /> */}
+            <CatalogService />
             {/* <DetailOffer /> */}
             {/* <PaymentMethod /> */}
             {/* <PurchaseHistory /> */}
