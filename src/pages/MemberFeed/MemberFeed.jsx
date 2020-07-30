@@ -64,7 +64,7 @@ function MemberFeed() {
                     <Image src="https://www.w3schools.com/w3images/avatar2.png" />
                 </Profile>
                 <Wrap>
-                    <Button color="danger">danger</Button>{" "}
+                    <Button color="danger">Become Talent</Button>{" "}
                 </Wrap>
             </About>
             <div>
