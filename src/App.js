@@ -20,6 +20,7 @@ import PurchaseHistory from "./components/PurchaseHistory/PurchaseHistory";
 import Order from "./components/Order/Order";
 import MemberFeed from "./pages/MemberFeed/MemberFeed";
 import TalentFeed from "./pages/TalentFeed/TalentFeed";
+import PaymentModal from "./pages/PaymentModal/PaymentModal";
 
 function App() {
     return (
@@ -27,13 +28,14 @@ function App() {
             {/* <Footer /> */}
             {/* <Header /> */}
             {/* <LandingPages /> */}
-            <CatalogService />
+            {/* <CatalogService /> */}
             {/* <DetailOffer /> */}
             {/* <PaymentMethod /> */}
             {/* <PurchaseHistory /> */}
             {/* <Order /> */}
             {/* <MemberFeed /> */}
             {/* <TalentFeed /> */}
+            <PaymentModal />
         </div>
         // <Provider store={createStore(reducers, applyMiddleware(thunk))}>
         //     {/* <Router>
