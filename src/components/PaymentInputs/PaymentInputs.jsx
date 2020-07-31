@@ -20,6 +20,12 @@ export default function PaymentInputs() {
             }}
         >
             <PaymentInputsWrapper {...wrapperProps}>
+                <input placeholder="Name on Card" />
+            </PaymentInputsWrapper>
+            <PaymentInputsWrapper
+                {...wrapperProps}
+                style={{ marginTop: "10px" }}
+            >
                 <svg {...getCardImageProps({ images })} />
 
                 <input {...getCardNumberProps()} />
