@@ -21,6 +21,7 @@ import Order from "./components/Order/Order";
 import MemberFeed from "./pages/MemberFeed/MemberFeed";
 import TalentFeed from "./pages/TalentFeed/TalentFeed";
 import PaymentModal from "./pages/PaymentModal/PaymentModal";
+import Jumbotron from "./components/Jumbortron/Jumbortron";
 
 function App() {
     return (
@@ -30,12 +31,13 @@ function App() {
             {/* <LandingPages /> */}
             {/* <CatalogService /> */}
             {/* <DetailOffer /> */}
-            {/* <PaymentMethod /> */}
+            <PaymentMethod />
+
             {/* <PurchaseHistory /> */}
             {/* <Order /> */}
             {/* <MemberFeed /> */}
             {/* <TalentFeed /> */}
-            <PaymentModal />
+            {/* <PaymentModal /> */}
         </div>
         // <Provider store={createStore(reducers, applyMiddleware(thunk))}>
         //     {/* <Router>
