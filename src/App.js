@@ -1,11 +1,11 @@
 import React from "react";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import { Provider } from "react-redux";
-// import { createStore, applyMiddleware } from "redux";
-// import thunk from "redux-thunk";
-// import styled from "styled-components";
-// import logo from './logo.svg';
-// import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import styled from "styled-components";
+import logo from "./logo.svg";
+import "./App.css";
 
 import reducers from "./redux/reducers";
 import PrivateRoute from "./helpers/PrivateRoute";
@@ -22,23 +22,23 @@ import MemberFeed from "./pages/MemberFeed/MemberFeed";
 import TalentFeed from "./pages/TalentFeed/TalentFeed";
 import PaymentModal from "./pages/PaymentModal/PaymentModal";
 import Jumbotron from "./components/Jumbortron/Jumbortron";
-
+import FindDigitalService from "./components/FindDigitalService/FindDigitalService";
 function App() {
     return (
-        <div>
+        <Provider store={createStore(reducers, applyMiddleware(thunk))}>
             {/* <Footer /> */}
             {/* <Header /> */}
             {/* <LandingPages /> */}
             {/* <CatalogService /> */}
             {/* <DetailOffer /> */}
-            <PaymentMethod />
-
+            {/* <PaymentMethod /> */}
+            <FindDigitalService />
             {/* <PurchaseHistory /> */}
             {/* <Order /> */}
             {/* <MemberFeed /> */}
             {/* <TalentFeed /> */}
             {/* <PaymentModal /> */}
-        </div>
+        </Provider>
         // <Provider store={createStore(reducers, applyMiddleware(thunk))}>
         //     {/* <Router>
         // <Switch>

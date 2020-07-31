@@ -8,7 +8,7 @@ const getAllServices = (data) => {
 };
 
 const fetchGetAllServices = () => async (dispatch) => {
-    const url = ``;
+    const url = `https://5f1b22af610bde0016fd35ad.mockapi.io/product`;
     const options = {
         method: "GET",
         headers: {
