@@ -125,7 +125,7 @@ function DetailOffer() {
                                     color="primary"
                                     style={{ marginTop: "30px" }}
                                 >
-                                    primary
+                                    Buy
                                 </ButtonToggle>
                             </Form>
                         </ContentWrapDetail>
