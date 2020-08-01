@@ -1,13 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Styled from "styled-components";
-import { Button, Input } from "reactstrap";
+import { fetchGetAllServices } from "../../redux/actions";
+import { connect } from "react-redux";
 // --Styledcomponent--
-const SearchWrappers = Styled.div`
-display: flex;
-flex direction: row;
-justify-content: space-between;
-margin: 10px 200px;
-`;
 
 const Wrap = Styled.div`
 display: flex;
@@ -40,54 +35,44 @@ width: 100%;
 `;
 // --Styledcomponent--
 
-function FindDigitalService() {
+function FindDigitalService(props) {
+    // useEffect for fetching
+    useEffect(() => {
+        props.dispatch(fetchGetAllServices());
+
+        // eslint-disable-next-line
+    }, []);
     return (
         <div>
-            <Wrap>
-                <h2 style={{ alignSelf: "center" }}>
-                    Find Digital Services...
-                </h2>
-                <div>
-                    <SearchWrappers>
-                        <Input
-                            style={{ marginRight: "1rem" }}
-                            placeholder="Search..."
-                        />
-
-                        <Input
-                            style={{ width: "40%", marginRight: "1rem" }}
-                            type="select"
-                            name="select"
-                        >
-                            <option>Data Scientist</option>
-                            <option>Web Developer</option>
-                            <option>Designer</option>
-                            <option>Web Design</option>
-                            <option>DevOps</option>
-                        </Input>
-                        <Button color="danger">Find</Button>
-                    </SearchWrappers>
-                </div>
-            </Wrap>
             <CardsWrap>
-                <Cards>
-                    <Images
-                        top
-                        src="https://images.unsplash.com/photo-1595877244575-941ed61fb8f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
-                        alt="Card image cap"
-                    />
-                    <div style={{ padding: "2px 16px" }}>
-                        <h4>Rumah Pohon</h4>
+                {props.services !== undefined &&
+                    props.services.map((item) => {
+                        return (
+                            <Cards key={item.id}>
+                                <Images
+                                    top
+                                    src={item.image}
+                                    alt="Card image cap"
+                                />
+                                <div style={{ padding: "2px 16px" }}>
+                                    <h4>{item.title}</h4>
 
-                        <p>
-                            Some quick example text to build on the card title
-                            and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </Cards>
+                                    <p>{item.description}</p>
+                                    <p>Price: {item.price}</p>
+                                </div>
+                            </Cards>
+                        );
+                    })}
             </CardsWrap>
         </div>
     );
 }
 
-export default FindDigitalService;
+const mapStateToProps = (state) => {
+    console.log(state);
+    return {
+        services: state.getallservices,
+    };
+};
+
+export default connect(mapStateToProps)(FindDigitalService);
