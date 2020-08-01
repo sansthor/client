@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
@@ -7,13 +7,11 @@ import thunk from "redux-thunk";
 // import logo from './logo.svg';
 // import './App.css';
 // import Login from './pages/Login/Login'
-import RegisUser from "./pages/RegisUser/RegisUser";
-
-import reducers from "./redux/reducers/Registration";
-// import PrivateRoute from "./helpers/PrivateRoute";
 
 import reducers from "./redux/reducers";
 import PrivateRoute from "./helpers/PrivateRoute";
+
+import RegisUser from "./pages/RegisUser/RegisUser";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header/Header";
 import LandingPages from "./pages/LandinPages/LandingPages";
@@ -31,40 +29,14 @@ import FindDigitalService from "./components/FindDigitalService/FindDigitalServi
 function App() {
   return (
     <Provider store={createStore(reducers, applyMiddleware(thunk))}>
-      {/* <Footer /> */}
-      {/* <Header /> */}
-      {/* <LandingPages /> */}
-      {/* <CatalogService /> */}
-      {/* <DetailOffer /> */}
-      {/* <PaymentMethod /> */}
-      <FindDigitalService />
-      {/* <PurchaseHistory /> */}
-      {/* <Order /> */}
-      {/* <MemberFeed /> */}
-      {/* <TalentFeed /> */}
-      {/* <PaymentModal /> */}
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <LandingPages />
+          </Route>
+        </Switch>
+      </Router>
     </Provider>
-    // <Provider store={createStore(reducers, applyMiddleware(thunk))}>
-    //     {/* <Router>
-    // <Switch>
-    //   {/* <Route exact path="/">
-    //                 <Home />
-    //             </Route>
-    //             <Route exact path="/register">
-    //                 <Register />
-    //             </Route>
-    //             <Route exact path="/login">
-    //                 <Login />
-    //             </Route>
-    //             <PrivateRoute exact path="/userPage">
-    //                 <ListRestaurant />
-    //             </PrivateRoute>
-    //             <PrivateRoute exact path="/restaurants/:id">
-    //                 <DescriptionRestaurants />
-    //             </PrivateRoute> */}
-    //     {/* </Switch> */}
-    //     {/* </Router>  */}
-    // </Provider>
   );
 }
 
