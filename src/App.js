@@ -11,10 +11,11 @@ import thunk from "redux-thunk";
 import reducers from "./redux/reducers";
 import PrivateRoute from "./helpers/PrivateRoute";
 
-import RegisUser from "./pages/RegisUser/RegisUser";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header/Header";
 import LandingPages from "./pages/LandinPages/LandingPages";
+import Login from "./pages/Login/Login";
+import RegisUser from "./pages/RegisUser/RegisUser";
 import Footer from "./components/Footer/Footer";
 import CatalogService from "./pages/CatalogService/CatalogService";
 import DetailOffer from "./pages/DetailOffer/DetailOffer";
@@ -33,6 +34,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <LandingPages />
+          </Route>
+          <Route exact path="/login">
+            <Login />
           </Route>
         </Switch>
       </Router>
