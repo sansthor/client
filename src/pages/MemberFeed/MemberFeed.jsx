@@ -12,6 +12,7 @@ import MyService from '../../components/MyService/MyService';
 import Order from '../../components/Order/Order';
 import Header from '../../components/Header/Header';
 import { Button } from 'reactstrap';
+import MemberComponent from '../../components/MemberComponents/MemberComponents';
 // ---Styled components---
 const Jumbotron = Styled.div`
 width: 100vw;
@@ -87,19 +88,7 @@ function MemberFeed() {
                 </Wrap>
             </About>
             <div>
-                <TabContext value={value}>
-                    <AppBar position="static">
-                        <TabList
-                            onChange={handleChange}
-                            aria-label="simple tabs example"
-                        >
-                            <Tab label="Purchase History" value="1" />
-                        </TabList>
-                    </AppBar>
-                    <TabPanel value="1">
-                        <PurchaseHistory />
-                    </TabPanel>
-                </TabContext>
+                <MemberComponent />
             </div>
         </div>
     );
