@@ -27,13 +27,17 @@ import TalentFeed from './pages/TalentFeed/TalentFeed';
 import PaymentModal from './pages/PaymentModal/PaymentModal';
 import Jumbotron from './components/Jumbortron/Jumbortron';
 import FindDigitalService from './components/FindDigitalService/FindDigitalService';
+import EditProfile from './pages/EditProfile/EditProfile';
+import AddlOffer from './pages/AddOffer/AddOffer';
+import TalentComponent from './components/TalentComponent/TalentComponent';
+
 function App() {
     return (
         <Provider store={createStore(reducers, applyMiddleware(thunk))}>
             <Router>
                 <Switch>
                     <Route exact path="/">
-                        <PaymentMethod />
+                        <TalentFeed />
                     </Route>
                     <Route exact path="/login">
                         <Login />

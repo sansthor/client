@@ -26,31 +26,38 @@ flex-wrap: wrap;
 `;
 const Images = Styled.img`
 width: 100%;
-
 }
+`;
+const Wrap = Styled.div`
+border: 1px solid black;
+margin: 10px;
+padding: 10px;
 `;
 // --- Styled components ---
 
 function MyService() {
     return (
         <div>
-            <CardsWrap>
-                <Cards>
-                    <Images
-                        top
-                        src="https://images.unsplash.com/photo-1595877244575-941ed61fb8f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
-                        alt="Card image cap"
-                    />
-                    <div style={{ padding: '2px 16px' }}>
-                        <h4>Rumah Pohon</h4>
+            <Wrap>
+                <CardsWrap>
+                    <Cards>
+                        <Images
+                            top
+                            src="https://images.unsplash.com/photo-1595877244575-941ed61fb8f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                            alt="Card image cap"
+                        />
+                        <div style={{ padding: '2px 16px' }}>
+                            <h4>Rumah Pohon</h4>
 
-                        <p>
-                            Some quick example text to build on the card title
-                            and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </Cards>
-            </CardsWrap>
+                            <p>
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                        </div>
+                    </Cards>
+                </CardsWrap>
+            </Wrap>
         </div>
     );
 }

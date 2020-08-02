@@ -10,6 +10,7 @@ import TabPanel from '@material-ui/lab/TabPanel';
 import PurchaseHistory from '../../components/PurchaseHistory/PurchaseHistory';
 import MyService from '../../components/MyService/MyService';
 import Order from '../../components/Order/Order';
+import TalentComponent from '../../components/TalentComponent/TalentComponent';
 // ---Styled components---
 const Jumbotron = Styled.div`
 width: 100vw;
@@ -97,27 +98,7 @@ function TalentFeed() {
                 </Wrap>
             </About>
             <div>
-                <TabContext value={value}>
-                    <AppBar position="static">
-                        <TabList
-                            onChange={handleChange}
-                            aria-label="simple tabs example"
-                        >
-                            <Tab label="Purchase History" value="1" />
-                            <Tab label="MyService" value="2" />
-                            <Tab label="Order" value="3" />
-                        </TabList>
-                    </AppBar>
-                    <TabPanel value="1">
-                        <PurchaseHistory />
-                    </TabPanel>
-                    <TabPanel value="2">
-                        <MyService />
-                    </TabPanel>
-                    <TabPanel value="3">
-                        <Order />
-                    </TabPanel>
-                </TabContext>
+                <TalentComponent />
             </div>
         </div>
     );
