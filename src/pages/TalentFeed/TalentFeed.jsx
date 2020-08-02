@@ -18,11 +18,11 @@ height: 35vh;
 `;
 const Profile = Styled.div`
 position: relative;
-top: -100px;
+top: -180px;
 margin: auto 5em;
 display: flex;
 flex-direction: row;
-@media (max-width: 600px) {
+@media (max-width: 1250px) {
    top: -80px;
    margin-left: 30px;
   }
