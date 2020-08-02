@@ -33,7 +33,7 @@ function App() {
             <Router>
                 <Switch>
                     <Route exact path="/">
-                        <TalentFeed />
+                        <PaymentMethod />
                     </Route>
                     <Route exact path="/login">
                         <Login />
