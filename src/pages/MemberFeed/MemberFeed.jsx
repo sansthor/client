@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Styled from 'styled-components';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -13,6 +13,8 @@ import Order from '../../components/Order/Order';
 import Header from '../../components/Header/Header';
 import { Button } from 'reactstrap';
 import MemberComponent from '../../components/MemberComponents/MemberComponents';
+import { fetchGetMember } from '../../redux/actions';
+import { useDispatch, useSelector } from 'react-redux';
 // ---Styled components---
 const Jumbotron = Styled.div`
 width: 100vw;
@@ -60,6 +62,9 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 function MemberFeed() {
+    const dispatch = useDispatch();
+    const member = useSelector((state) => state.getmember);
+    console.log(member, 'member');
     const classes = useStyles();
     const [value, setValue] = React.useState('1');
 
@@ -67,6 +72,9 @@ function MemberFeed() {
         setValue(newValue);
     };
 
+    useEffect(() => {
+        dispatch(fetchGetMember());
+    }, []);
     return (
         <div>
             <Header />
@@ -76,10 +84,10 @@ function MemberFeed() {
                     <Image src="https://www.w3schools.com/w3images/avatar2.png" />
                     <div style={{ margin: '40px 0 0 10px' }}>
                         <p style={{ lineHeight: '1px' }}>
-                            <strong>Agus trihanton</strong>
+                            <strong>{member.fullname}</strong>
                         </p>
                         <p>
-                            <strong>Member</strong>
+                            <strong>{member.role}</strong>
                         </p>
                     </div>
                 </Profile>
