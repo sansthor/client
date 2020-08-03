@@ -3,6 +3,7 @@ import './RegisUser.css'
 import { useDispatch } from 'react-redux'
 import {register} from '../../redux/actions/Registration'
 import { useHistory } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 const RegisUser = () => {
 
@@ -17,9 +18,21 @@ const RegisUser = () => {
         address:''
     })
 
-    const handleSubmit = (event) =>{
+    const handleSubmit = async (event) =>{
         event.preventDefault()
-        dispatch(register(form, history))
+        if(form.password.length < 6){
+            Swal.fire({
+                title: 'Password must longer than six characters',
+                text: '',
+                icon: 'error',
+                confirmButtonText: 'Cool'
+              })
+        }
+        else{
+            await dispatch(register(form, history))
+            history.push('/user/login')
+        }
+       
     }
 
     const handleChange = (event) =>{
@@ -101,7 +114,7 @@ const RegisUser = () => {
                         />
                         <label className="label" htmlFor="address">Address</label>
                     </div>
-                    <button type="submit">Register</button>
+                    <button className='new-button' type="submit">Register</button>
                 </form>
             </div>
         </section>

@@ -46,7 +46,7 @@ const Login = () => {
                             onChange={handleChange}
                             value={form.email}
                         />
-                        <label className="label" for="email">Email</label>
+                        <label className="label" htmlFor="email">Email</label>
                     </div>
                     <div className="form-group">
                         <input
@@ -59,9 +59,9 @@ const Login = () => {
                             onChange={handleChange}
                             value={form.password}
                         />
-                        <label className="label" for="password">Password</label>
+                        <label className="label" htmlFor="password">Password</label>
                     </div>
-                    <button type='submit'>Sign In</button> 
+                    <button className='new-button' type='submit'>Log In</button> 
                 </form>
                 <div className="button-box">
                  
