@@ -1,7 +1,17 @@
-import React from "react";
-import { PaymentInputsWrapper, usePaymentInputs } from "react-payment-inputs";
-import images from "react-payment-inputs/images";
+import React from 'react';
+import { PaymentInputsWrapper, usePaymentInputs } from 'react-payment-inputs';
+import images from 'react-payment-inputs/images';
+import { ButtonToggle } from 'reactstrap';
+import Styled from 'styled-components';
 
+const Wraps = Styled.div`
+display: flex;
+flex-direction: column;
+padding: 20px 300PX;
+@media (max-width: 1000px) {
+    padding: 50px 50px;
+}
+`;
 export default function PaymentInputs() {
     const {
         wrapperProps,
@@ -12,19 +22,13 @@ export default function PaymentInputs() {
     } = usePaymentInputs();
 
     return (
-        <div
-            style={{
-                display: "flex",
-                flexDirection: "column",
-                padding: "400PX",
-            }}
-        >
+        <Wraps>
             <PaymentInputsWrapper {...wrapperProps}>
                 <input placeholder="Name on Card" />
             </PaymentInputsWrapper>
             <PaymentInputsWrapper
                 {...wrapperProps}
-                style={{ marginTop: "10px" }}
+                style={{ marginTop: '10px' }}
             >
                 <svg {...getCardImageProps({ images })} />
 
@@ -33,7 +37,7 @@ export default function PaymentInputs() {
 
             <PaymentInputsWrapper
                 {...wrapperProps}
-                style={{ margin: "10px 0" }}
+                style={{ margin: '10px 0' }}
             >
                 <input {...getExpiryDateProps()} />
             </PaymentInputsWrapper>
@@ -41,6 +45,6 @@ export default function PaymentInputs() {
             <PaymentInputsWrapper {...wrapperProps}>
                 <input {...getCVCProps()} />
             </PaymentInputsWrapper>
-        </div>
+        </Wraps>
     );
 }

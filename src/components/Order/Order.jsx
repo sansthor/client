@@ -1,23 +1,28 @@
-import React from "react";
-import { Table, FormGroup, Label, Input, Button } from "reactstrap";
-import Styled from "styled-components";
+import React from 'react';
+import { Table, FormGroup, Label, Input, Button } from 'reactstrap';
+import Styled from 'styled-components';
 
 // --- Styled components ---
-
-const Wraps = Styled.div`
-padding: 50px 50px;
+const TableHeading = Styled.th`
+width: "60%";
+@media (max-width: 700px) {
+    width: 50%;
+   }
+`;
+const Wrap = Styled.div`
 border: 1px solid black;
-margin: 100px;
+margin: 10px;
+padding: 0 0 100px 0;
 `;
 // --- Styled components ---
 function Order() {
     return (
         <div>
-            <Wraps>
+            <Wrap>
                 <Table bordered>
                     <thead>
                         <tr>
-                            <th style={{ width: "60%" }}>PESANAN</th>
+                            <TableHeading>PESANAN</TableHeading>
                             <th>STATUS</th>
                         </tr>
                     </thead>
@@ -25,16 +30,16 @@ function Order() {
                         <tr>
                             <td>Design web buat company animekit</td>
                             <td>
-                                {" "}
+                                {' '}
                                 <FormGroup
                                     style={{
-                                        display: "flex",
-                                        flexDirection: "row",
-                                        justifyContent: "space-between",
+                                        display: 'flex',
+                                        flexDirection: 'row',
+                                        justifyContent: 'space-between',
                                     }}
                                 >
                                     <Input
-                                        style={{ width: "70%" }}
+                                        style={{ width: '70%' }}
                                         type="select"
                                         name="select"
                                         id="exampleSelect"
@@ -48,7 +53,7 @@ function Order() {
                         </tr>
                     </tbody>
                 </Table>
-            </Wraps>
+            </Wrap>
         </div>
     );
 }

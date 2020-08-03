@@ -1,13 +1,7 @@
-import React from "react";
-import Styled from "styled-components";
+import React from 'react';
+import Styled from 'styled-components';
 
 // --- Styled components ---
-
-const Wraps = Styled.div`
-padding: 50px 50px;
-border: 1px solid black;
-margin: 100px;
-`;
 
 const Cards = Styled.div`
 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -19,25 +13,32 @@ cursor: pointer;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     opacity: 0.9;
 }
+@media (max-width: 700px) {
+    width: 100%;
+   }
 `;
 
 const CardsWrap = Styled.div`
 margin: 50px 0;
 display: flex;
 flex-wrap: wrap;
-justify-content: center;
+
 `;
 const Images = Styled.img`
 width: 100%;
-
 }
+`;
+const Wrap = Styled.div`
+border: 1px solid black;
+margin: 10px;
+padding: 10px;
 `;
 // --- Styled components ---
 
 function PurchaseHistory() {
     return (
         <div>
-            <Wraps>
+            <Wrap>
                 <CardsWrap>
                     <Cards>
                         <Images
@@ -45,7 +46,7 @@ function PurchaseHistory() {
                             src="https://images.unsplash.com/photo-1595877244575-941ed61fb8f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
                             alt="Card image cap"
                         />
-                        <div style={{ padding: "2px 16px" }}>
+                        <div style={{ padding: '2px 16px' }}>
                             <h4>Rumah Pohon</h4>
 
                             <p>
@@ -56,7 +57,7 @@ function PurchaseHistory() {
                         </div>
                     </Cards>
                 </CardsWrap>
-            </Wraps>
+            </Wrap>
         </div>
     );
 }
