@@ -1,68 +1,13 @@
-import React, { useState } from 'react';
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    Button,
-    Input,
-} from 'reactstrap';
-import { Link } from 'react-router-dom';
-import Styled from 'styled-components';
+import React from 'react';
+import HeaderGuest from './HeaderGuest';
+import HeaderMember from './HeaderMember';
 
-const SearchWrappers = Styled.div`
-display: flex;
-flex direction: row;
-justify-content: space-between;
-
-`;
-const Header = (props) => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggle = () => setIsOpen(!isOpen);
-
+const Header = () => {
+    const token = localStorage.getItem('token');
     return (
-        <div>
-            <Navbar color="faded" light expand="md">
-                <NavbarBrand href="/">FindThes</NavbarBrand>
-                <NavbarToggler onClick={toggle} />
-                <Collapse isOpen={isOpen} navbar>
-                    <Nav className="mr-auto" navbar>
-                        <NavItem>
-                            <NavLink style={{ color: 'black' }} href="/">
-                                Help
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <SearchWrappers>
-                                <Input
-                                    style={{ marginRight: '1rem' }}
-                                    placeholder="Search..."
-                                />
-
-                                <Button color="danger">Search</Button>
-                            </SearchWrappers>
-                        </NavItem>
-                    </Nav>
-
-                    <Link to="/user/login">
-                        <p
-                            style={{
-                                margin: '5px 10px 5px 0',
-                                cursor: 'pointer',
-                            }}
-                        >
-                            Login
-                        </p>
-                    </Link>
-
-                    <Button color="danger">Become Talent</Button>
-                </Collapse>
-            </Navbar>
-        </div>
+        <React.Fragment>
+            {token ? <HeaderMember /> : <HeaderGuest />}
+        </React.Fragment>
     );
 };
 
