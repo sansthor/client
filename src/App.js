@@ -62,6 +62,12 @@ function App() {
                     <Route exact path="/user/addoffer">
                         <AddOffer />
                     </Route>
+                    <Route exact path="/user/detailoffer">
+                        <DetailOffer />
+                    </Route>
+                    <Route exact path="/user/editprofile">
+                        <EditProfile />
+                    </Route>
                 </Switch>
                 <Footer />
             </Router>

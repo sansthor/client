@@ -1,7 +1,12 @@
-import React from "react";
+import React from 'react';
+import EditProfileComponents from '../../components/EditProfileComponent/EditProfileComponent';
 
 function EditProfile() {
-  return <div></div>;
+    return (
+        <div>
+            <EditProfileComponents />
+        </div>
+    );
 }
 
 export default EditProfile;

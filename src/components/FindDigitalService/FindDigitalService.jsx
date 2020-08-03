@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Styled from 'styled-components';
 import { fetchGetAllServices } from '../../redux/actions';
-
+import { Link, NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 // --Styledcomponent--
 
@@ -59,8 +59,9 @@ function FindDigitalService() {
                                     alt="Card image cap"
                                 /> */}
                                 <div style={{ padding: '2px 16px' }}>
-                                    <h4>{item.title}</h4>
-
+                                    <NavLink to="/user/detailoffer">
+                                        <h4>{item.title}</h4>
+                                    </NavLink>
                                     <p>{item.description}</p>
                                     <p>Price: {item.price}</p>
                                 </div>

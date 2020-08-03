@@ -1,8 +1,8 @@
-import React from "react";
-import Header from "../../components/Header/Header";
-import Styled from "styled-components";
-import { Form, CustomInput, ButtonToggle } from "reactstrap";
-import Footer from "../../components/Footer/Footer";
+import React from 'react';
+import Header from '../../components/Header/Header';
+import Styled from 'styled-components';
+import { Form, CustomInput, ButtonToggle } from 'reactstrap';
+import Footer from '../../components/Footer/Footer';
 // --- Styled Components ---
 const Container = Styled.div`
 padding: 100px;
@@ -60,26 +60,25 @@ margin-left: 2rem;
 function DetailOffer() {
     return (
         <div>
-            <Header />
             <Container>
                 <Tittle>Tittle Product</Tittle>
                 <Wraps>
                     <ContentWrapLeft>
                         <ContentWrapDetail>
-                            <p>@username</p>
-                            <span style={{ margin: "0 5px" }}>||</span>
-                            <span>Icon Star</span>
+                            <p>Pembuat</p>
+                            <span style={{ margin: '0 5px' }}>||</span>
+                            <span>Price</span>
                         </ContentWrapDetail>
 
                         <ImageWrap>
-                            <div style={{ width: "50%" }}>
+                            <div style={{ width: '50%' }}>
                                 <img
                                     src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80"
                                     alt="images-product"
-                                    style={{ width: "100%" }}
+                                    style={{ width: '100%' }}
                                 />
                             </div>
-                            <div style={{ padding: "1rem" }}>
+                            <div style={{ padding: '1rem' }}>
                                 <h2>Description</h2>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur,
@@ -100,10 +99,10 @@ function DetailOffer() {
                         <ContentWrapDetail>
                             <Form
                                 style={{
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    border: "1px solid gray",
-                                    padding: "25px",
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    border: '1px solid gray',
+                                    padding: '25px',
                                 }}
                             >
                                 <CustomInput
@@ -123,7 +122,7 @@ function DetailOffer() {
                                 />
                                 <ButtonToggle
                                     color="primary"
-                                    style={{ marginTop: "30px" }}
+                                    style={{ marginTop: '30px' }}
                                 >
                                     Buy
                                 </ButtonToggle>
