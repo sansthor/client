@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
 function MemberFeed() {
     const dispatch = useDispatch();
     const member = useSelector((state) => state.getmember);
-    console.log(member, 'member');
+    console.log(member, 'membercomponent');
     const classes = useStyles();
     const [value, setValue] = React.useState('1');
 

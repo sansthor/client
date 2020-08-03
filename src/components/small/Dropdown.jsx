@@ -13,7 +13,13 @@ export default function DropdownMember(props) {
 
     return (
         <Dropdown isOpen={dropdownOpen} toggle={toggleDropdown}>
-            <DropdownToggle caret>Dropdown</DropdownToggle>
+            <DropdownToggle
+                color="link"
+                style={{ color: 'black', textDecoration: 'none' }}
+                caret
+            >
+                @{props.username}
+            </DropdownToggle>
             <DropdownMenu>
                 <DropdownItem header>Header</DropdownItem>
                 <DropdownItem>Some Action</DropdownItem>

@@ -54,9 +54,8 @@ const HeaderMember = (props) => {
                                 <Button color="danger">Search</Button>
                             </SearchWrappers>
                         </NavItem>
-                        <p>{member.fullname}</p>
-                        <Dropdown role={member.role} />
                     </Nav>
+                    <Dropdown role={member.role} username={member.username} />
                 </Collapse>
             </Navbar>
         </div>
