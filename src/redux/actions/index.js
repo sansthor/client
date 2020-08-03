@@ -1,2 +1,3 @@
-export * from "./registration";
-export * from "./getallservices";
+export * from './registration';
+export * from './getallservices';
+export * from './getmember';
