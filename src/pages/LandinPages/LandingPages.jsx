@@ -5,6 +5,7 @@ import { Jumbotron, Container, Button } from 'reactstrap';
 import CardPopular from '../../components/CardComponent/CardPopular';
 import Coding from '../../assets/coding_.svg';
 import WebDevelopment from '../../assets/web_developer.svg';
+import CardCategories from '../../components/CardComponent/CardCategories';
 // --- styledComponents --- //
 const Tittle = Styled.h1`
 font-size: 46px;
@@ -46,6 +47,7 @@ function LandingPages() {
                 </Container>
             </Jumbotron>
             <CardPopular />
+            <CardCategories />
         </div>
     );
 }

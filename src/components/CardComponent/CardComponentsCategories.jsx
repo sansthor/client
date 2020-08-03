@@ -1,30 +1,83 @@
 import React from 'react';
-import {
-    Card,
-    CardImg,
-    CardText,
-    CardBody,
-    CardTitle,
-    CardSubtitle,
-    Button,
-} from 'reactstrap';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
+import Avatar from '@material-ui/core/Avatar';
 
-const CardComponentsCategories = (props) => {
+import Styled from 'styled-components';
+
+const Img = Styled.div`
+width:100%;
+height: 200px;
+`;
+const useStyles = makeStyles({
+    root: {
+        maxWidth: 270,
+    },
+});
+
+export default function CardComponent(props) {
+    const classes = useStyles();
+
     return (
-        <div>
-            <Card>
-                <CardImg
-                    top
-                    width="100%"
-                    src={props.image}
-                    alt="Card image cap"
-                />
-                <CardBody>
-                    <CardTitle>{props.title}</CardTitle>
-                </CardBody>
-            </Card>
-        </div>
+        <Card style={{ marginTop: '40px' }} className={classes.root}>
+            <CardActionArea>
+                <Img>
+                    <CardMedia
+                        style={{ height: '100%', width: '100%' }}
+                        component="img"
+                        alt="Contemplative Reptile"
+                        image={props.image}
+                        title="Contemplative Reptile"
+                    />
+                </Img>
+                <Divider />
+                <CardContent>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                        }}
+                    >
+                        <Avatar
+                            style={{ top: '-5px', marginRight: '5px' }}
+                            alt="Remy Sharp"
+                            src={props.avatar}
+                        />
+                        <div
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                lineHeight: '0.4',
+                            }}
+                        >
+                            <p style={{ fontSize: '14px' }}>
+                                <strong>{props.title}</strong>
+                            </p>
+                            <p
+                                style={{
+                                    fontSize: '12px',
+                                }}
+                            >
+                                by{' '}
+                                <span
+                                    style={{
+                                        fontStyle: 'italic',
+                                    }}
+                                >
+                                    {props.name}
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </CardContent>
+            </CardActionArea>
+        </Card>
     );
-};
-
-export default CardComponentsCategories;
+}

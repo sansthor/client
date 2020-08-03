@@ -20,12 +20,12 @@ function CardPopular() {
     return (
         <div>
             <Typography gutterBottom variant="h5" component="h2" align="center">
-                <strong>Popular Professional Service</strong>
+                <strong>Best Categories Service</strong>
             </Typography>
             <Wrap>
                 <Image>
                     <CardComponent
-                        title="Bootstrap 5"
+                        title="Wordpress"
                         image="https://bestpartnereducation.com/public/news/2019/12/tertarik-menjadi-web-developer-ikuti-langkah-ini/web%20developer.jpg"
                     />
                 </Image>
