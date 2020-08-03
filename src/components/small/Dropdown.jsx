@@ -33,7 +33,9 @@ export default function DropdownMember(props) {
                 <DropdownItem divider />
                 {props.role === 'TALENT' && (
                     <React.Fragment>
-                        <DropdownItem>Dashboard</DropdownItem>
+                        <NavLink to="/user/halamantalent">
+                            <DropdownItem>Dashboard</DropdownItem>
+                        </NavLink>
                     </React.Fragment>
                 )}
             </DropdownMenu>
