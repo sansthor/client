@@ -15,6 +15,7 @@ import { Button } from 'reactstrap';
 import MemberComponent from '../../components/MemberComponents/MemberComponents';
 import { fetchGetMember } from '../../redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 // ---Styled components---
 const Jumbotron = Styled.div`
 width: 100vw;
@@ -63,6 +64,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 function MemberFeed() {
     const dispatch = useDispatch();
+    const history = useHistory();
     const member = useSelector((state) => state.getmember);
     console.log(member, 'member');
     const classes = useStyles();
@@ -70,6 +72,10 @@ function MemberFeed() {
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
+    };
+
+    const handleTalent = () => {
+        history.push('/user/register/talent');
     };
 
     useEffect(() => {
@@ -91,7 +97,9 @@ function MemberFeed() {
                     </div>
                 </Profile>
                 <Wrap>
-                    <Button color="danger">Become Talent</Button>{' '}
+                    <Button color="danger" onClick={handleTalent}>
+                        Become Talent
+                    </Button>{' '}
                 </Wrap>
             </About>
             <div>

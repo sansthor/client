@@ -15,6 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
 import LandingPages from './pages/LandinPages/LandingPages';
 import RegisUser from './pages/RegisUser/RegisUser';
+import RegisSeller from './pages/RegisSeller/RegisSeller';
 import Footer from './components/Footer/Footer';
 import CatalogService from './pages/CatalogService/CatalogService';
 import DetailOffer from './pages/DetailOffer/DetailOffer';
@@ -41,6 +42,9 @@ function App() {
                     </Route>
                     <Route exact path="/user/register">
                         <RegisUser />
+                    </Route>
+                    <Route exact path="/user/register/talent">
+                        <RegisSeller />
                     </Route>
                     <Route exact path="/user/login">
                         <Login />

@@ -10,7 +10,7 @@ import {
     Button,
     Input,
 } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Styled from 'styled-components';
 
 const SearchWrappers = Styled.div`
@@ -21,9 +21,12 @@ justify-content: space-between;
 `;
 const HeaderGuest = (props) => {
     const [isOpen, setIsOpen] = useState(false);
-
+    const history = useHistory();
     const toggle = () => setIsOpen(!isOpen);
 
+    const handleSignUp = () => {
+        history.push('/user/register');
+    };
     return (
         <div>
             <Navbar color="faded" light expand="md">
@@ -59,7 +62,9 @@ const HeaderGuest = (props) => {
                         </p>
                     </Link>
 
-                    <Button color="danger">Become Talent</Button>
+                    <Button color="danger" onClick={handleSignUp}>
+                        Sign Up
+                    </Button>
                 </Collapse>
             </Navbar>
         </div>
