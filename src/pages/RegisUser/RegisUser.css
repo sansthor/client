@@ -29,6 +29,19 @@ body{
     border-radius: 5px;
     margin-bottom: 3rem;
 }
+.new-button{
+    padding: .8rem 3rem;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+    background-color: rgb(241, 66, 12);
+    border: 1px solid rgb(152, 245, 152);
+    color: rgb(219, 241, 241);
+}
+.new-button:hover{
+    background-color: rgb(218, 58, 10);
+    color: rgb(231, 247, 247);;
+}
 .form-group:not(:last-child) {
     margin-bottom: 2rem;
 }

@@ -1,12 +1,12 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import React from "react";
+import { BrowserRouter as Router,  Switch, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 // import styled from "styled-components";
 // import logo from './logo.svg';
 // import './App.css';
-// import Login from './pages/Login/Login'
+import Login from './pages/Login/Login'
 
 import reducers from './redux/reducers';
 import PrivateRoute from './helpers/PrivateRoute';
@@ -14,7 +14,6 @@ import PrivateRoute from './helpers/PrivateRoute';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
 import LandingPages from './pages/LandinPages/LandingPages';
-import Login from './pages/Login/Login';
 import RegisUser from './pages/RegisUser/RegisUser';
 import Footer from './components/Footer/Footer';
 import CatalogService from './pages/CatalogService/CatalogService';
@@ -32,16 +31,17 @@ import AddlOffer from './pages/AddOffer/AddOffer';
 import TalentComponent from './components/TalentComponent/TalentComponent';
 
 function App() {
-    return (
-        <Provider store={createStore(reducers, applyMiddleware(thunk))}>
-            <Router>
-                <Switch>
-                    <Route exact path="/">
-                        <MemberFeed />
-                    </Route>
-                    <Route exact path="/login">
-                        <Login />
-                    </Route>
+  return (
+    <Provider store={createStore(reducers, applyMiddleware(thunk))}>
+      <Router>
+        <Switch>
+
+          <Route exact path='/user/register'>
+        <RegisUser/>
+        </Route>
+        <Route exact path='/user/login'>
+          <Login/>
+          </Route>
                 </Switch>
             </Router>
         </Provider>
