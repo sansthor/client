@@ -15,6 +15,7 @@ import { Button } from 'reactstrap';
 import MemberComponent from '../../components/MemberComponents/MemberComponents';
 import { fetchGetMember } from '../../redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
+import TalentSkill from './TalentSkill';
 // ---Styled components---
 const Jumbotron = Styled.div`
 width: 100vw;
@@ -54,6 +55,14 @@ padding: 20px 50px 0 10px;
     margin-top: -90px;
    }
 `;
+const WrapTalent = Styled.div`
+margin: 20px 100px;
+padding: 20px 50px 0 10px;
+@media (max-width: 600px) {
+    margin-left: 20px;
+    margin-top: -90px;
+   }
+`;
 // ---Styled components---
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -64,6 +73,7 @@ const useStyles = makeStyles((theme) => ({
 function MemberFeed() {
     const dispatch = useDispatch();
     const member = useSelector((state) => state.getmember);
+    const memberTalent = useSelector((state) => state.getmember.role);
     console.log(member, 'membercomponent');
     const classes = useStyles();
     const [value, setValue] = React.useState('1');
@@ -91,9 +101,18 @@ function MemberFeed() {
                         </p>
                     </div>
                 </Profile>
-                <Wrap>
-                    <Button color="danger">Become Talent</Button>{' '}
-                </Wrap>
+                <React.Fragment>
+                    {memberTalent === 'TALENT' ? (
+                        <WrapTalent>
+                            <TalentSkill />
+                        </WrapTalent>
+                    ) : (
+                        <Wrap>
+                            {' '}
+                            <Button color="danger">Become Talent</Button>{' '}
+                        </Wrap>
+                    )}
+                </React.Fragment>
             </About>
             <div>
                 <MemberComponent />

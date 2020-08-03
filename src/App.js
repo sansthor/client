@@ -22,7 +22,7 @@ import PaymentMethod from './pages/PaymentMethod/PaymentMethod';
 import PurchaseHistory from './components/PurchaseHistory/PurchaseHistory';
 import Order from './components/Order/Order';
 import MemberFeed from './pages/MemberFeed/MemberFeed';
-import TalentFeed from './pages/TalentFeed/TalentFeed';
+
 import PaymentModal from './pages/PaymentModal/PaymentModal';
 import Jumbotron from './components/Jumbortron/Jumbortron';
 import FindDigitalService from './components/FindDigitalService/FindDigitalService';
