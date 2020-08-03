@@ -18,6 +18,8 @@ import RegisUser from './pages/RegisUser/RegisUser';
 import RegisSeller from './pages/RegisSeller/RegisSeller';
 import Footer from './components/Footer/Footer';
 import CatalogService from './pages/CatalogService/CatalogService';
+import HalamanTalent from './pages/HalamanTalent/HalamanTalent';
+import AddOffer from './pages/AddOffer/AddOffer';
 import DetailOffer from './pages/DetailOffer/DetailOffer';
 import PaymentMethod from './pages/PaymentMethod/PaymentMethod';
 import PurchaseHistory from './components/PurchaseHistory/PurchaseHistory';
@@ -28,7 +30,6 @@ import PaymentModal from './pages/PaymentModal/PaymentModal';
 import Jumbotron from './components/Jumbortron/Jumbortron';
 import FindDigitalService from './components/FindDigitalService/FindDigitalService';
 import EditProfile from './pages/EditProfile/EditProfile';
-import AddlOffer from './pages/AddOffer/AddOffer';
 import TalentComponent from './components/TalentComponent/TalentComponent';
 
 function App() {
@@ -57,6 +58,12 @@ function App() {
                     </Route>
                     <Route exact path="/service/catalog">
                         <CatalogService />
+                    </Route>
+                    <Route exact path="/user/halamanTalent">
+                        <HalamanTalent />
+                    </Route>
+                    <Route exact path="/user/addoffer">
+                        <AddOffer />
                     </Route>
                 </Switch>
                 <Footer />
