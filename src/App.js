@@ -53,9 +53,6 @@ function App() {
                     <Route exact path="/user/member">
                         <MemberFeed />
                     </Route>
-                    <Route exact path="/user/talent">
-                        <TalentFeed />
-                    </Route>
                     <Route exact path="/service/catalog">
                         <CatalogService />
                     </Route>
@@ -64,6 +61,12 @@ function App() {
                     </Route>
                     <Route exact path="/user/addoffer">
                         <AddOffer />
+                    </Route>
+                    <Route exact path="/user/detailoffer">
+                        <DetailOffer />
+                    </Route>
+                    <Route exact path="/user/editprofile">
+                        <EditProfile />
                     </Route>
                 </Switch>
                 <Footer />

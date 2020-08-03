@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
-import Styled from "styled-components";
-import { fetchGetAllServices } from "../../redux/actions";
-import { connect } from "react-redux";
+import React, { useEffect } from 'react';
+import Styled from 'styled-components';
+import { fetchGetAllServices } from '../../redux/actions';
+import { Link, NavLink } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 // --Styledcomponent--
 
 const Wrap = Styled.div`
@@ -35,28 +36,32 @@ width: 100%;
 `;
 // --Styledcomponent--
 
-function FindDigitalService(props) {
+function FindDigitalService() {
+    const dispatch = useDispatch();
+    const service = useSelector((state) => state.getallservices);
+    console.log(service, 'service isinya apa');
     // useEffect for fetching
     useEffect(() => {
-        props.dispatch(fetchGetAllServices());
+        dispatch(fetchGetAllServices());
 
         // eslint-disable-next-line
     }, []);
     return (
         <div>
             <CardsWrap>
-                {props.services !== undefined &&
-                    props.services.map((item) => {
+                {service.data !== undefined &&
+                    service.data.map((item) => {
                         return (
                             <Cards key={item.id}>
-                                <Images
+                                {/* <Images
                                     top
                                     src={item.image}
                                     alt="Card image cap"
-                                />
-                                <div style={{ padding: "2px 16px" }}>
-                                    <h4>{item.title}</h4>
-
+                                /> */}
+                                <div style={{ padding: '2px 16px' }}>
+                                    <NavLink to="/user/detailoffer">
+                                        <h4>{item.title}</h4>
+                                    </NavLink>
                                     <p>{item.description}</p>
                                     <p>Price: {item.price}</p>
                                 </div>
@@ -68,11 +73,4 @@ function FindDigitalService(props) {
     );
 }
 
-const mapStateToProps = (state) => {
-    console.log(state);
-    return {
-        services: state.getallservices,
-    };
-};
-
-export default connect(mapStateToProps)(FindDigitalService);
+export default FindDigitalService;

@@ -5,7 +5,8 @@ import {
     DropdownMenu,
     DropdownItem,
 } from 'reactstrap';
-
+import { NavLink } from 'react-router-dom';
+import PersonIcon from '@material-ui/icons/Person';
 export default function DropdownMember(props) {
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -18,21 +19,25 @@ export default function DropdownMember(props) {
                 style={{ color: 'black', textDecoration: 'none' }}
                 caret
             >
-                @{props.username}
+                <PersonIcon />
+                {props.username}
             </DropdownToggle>
             <DropdownMenu>
-                <DropdownItem header>Header</DropdownItem>
-                <DropdownItem>Some Action</DropdownItem>
-                <DropdownItem disabled>Action (disabled)</DropdownItem>
+                <DropdownItem header>General</DropdownItem>
+                <NavLink to="/user/member">
+                    <DropdownItem>Profile</DropdownItem>
+                </NavLink>
+                <NavLink to="/user/editprofile">
+                    <DropdownItem>Edit Profile</DropdownItem>
+                </NavLink>
                 <DropdownItem divider />
                 {props.role === 'TALENT' && (
                     <React.Fragment>
-                        <DropdownItem>Add Talent</DropdownItem>
-                        <DropdownItem>Talent</DropdownItem>
+                        <NavLink to="/user/halamantalent">
+                            <DropdownItem>Dashboard</DropdownItem>
+                        </NavLink>
                     </React.Fragment>
                 )}
-                <DropdownItem>Bar Action</DropdownItem>
-                <DropdownItem>Quo Action</DropdownItem>
             </DropdownMenu>
         </Dropdown>
     );
