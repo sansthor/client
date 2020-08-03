@@ -53,9 +53,6 @@ function App() {
                     <Route exact path="/user/member">
                         <MemberFeed />
                     </Route>
-                    <Route exact path="/user/talent">
-                        <TalentFeed />
-                    </Route>
                     <Route exact path="/service/catalog">
                         <CatalogService />
                     </Route>
