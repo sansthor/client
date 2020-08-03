@@ -41,15 +41,11 @@ function App() {
                     <Route exact path="/">
                         <LandingPages />
                     </Route>
-                    <Route exact path="/user/register">
-                        <RegisUser />
-                    </Route>
+
                     <Route exact path="/user/register/talent">
                         <RegisSeller />
                     </Route>
-                    <Route exact path="/user/login">
-                        <Login />
-                    </Route>
+
                     <Route exact path="/user/member">
                         <MemberFeed />
                     </Route>
@@ -70,6 +66,12 @@ function App() {
                     </Route>
                 </Switch>
                 <Footer />
+                <Route exact path="/user/register">
+                    <RegisUser />
+                </Route>
+                <Route exact path="/user/login">
+                    <Login />
+                </Route>
             </Router>
         </Provider>
     );
