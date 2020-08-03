@@ -7,6 +7,7 @@ import Coding from '../../assets/coding_.svg';
 import WebDevelopment from '../../assets/web_developer.svg';
 import CardCategories from '../../components/CardComponent/CardCategories';
 import CardCompany from '../../components/CardComponent/CardCompany';
+import CardHire from '../../components/CardComponent/CardHire';
 // --- styledComponents --- //
 const Tittle = Styled.h1`
 font-size: 46px;
@@ -50,6 +51,7 @@ function LandingPages() {
             <CardPopular />
             <CardCategories />
             <CardCompany />
+            <CardHire />
         </div>
     );
 }
