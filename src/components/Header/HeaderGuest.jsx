@@ -29,7 +29,17 @@ const HeaderGuest = (props) => {
     };
     return (
         <div>
-            <Navbar color="faded" light expand="md">
+            <Navbar
+                color="faded"
+                light
+                expand="md"
+                style={{
+                    backgroundColor: '#6f4a8e',
+                    position: 'fixed',
+                    zIndex: '99',
+                    width: '100%',
+                }}
+            >
                 <NavbarBrand href="/">FindThes</NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
