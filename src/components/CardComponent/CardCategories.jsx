@@ -5,7 +5,7 @@ function CardCategories() {
     return (
         <div style={{ padding: '50px 0 100px 0', backgroundColor: '#ebebeb' }}>
             <Typography gutterBottom variant="h5" component="h2" align="center">
-                <strong>The most popular service 2020</strong>
+                <strong>The Most Popular Service 2020</strong>
             </Typography>
             <div
                 style={{
