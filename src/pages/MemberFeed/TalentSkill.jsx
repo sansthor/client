@@ -6,7 +6,7 @@ function TalentSkill() {
         <div>
             <h4>Skill</h4>
             <ul>
-                <li>HTML</li>
+                <li>CSS</li>
             </ul>
             <h4>Portofolio</h4>
             <ul>
