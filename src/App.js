@@ -34,6 +34,7 @@ function App() {
     return (
         <Provider store={createStore(reducers, applyMiddleware(thunk))}>
             <Router>
+                <Header />
                 <Switch>
                     <Route exact path="/">
                         <LandingPages />
@@ -47,7 +48,14 @@ function App() {
                     <Route exact path="/user/member">
                         <MemberFeed />
                     </Route>
+                    <Route exact path="/user/talent">
+                        <TalentFeed />
+                    </Route>
+                    <Route exact path="/service/catalog">
+                        <CatalogService />
+                    </Route>
                 </Switch>
+                <Footer />
             </Router>
         </Provider>
     );

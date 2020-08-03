@@ -77,7 +77,6 @@ function MemberFeed() {
     }, []);
     return (
         <div>
-            <Header />
             <Jumbotron></Jumbotron>
             <About>
                 <Profile>

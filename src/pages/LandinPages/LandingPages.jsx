@@ -27,7 +27,6 @@ font-size: 24px;
 function LandingPages() {
     return (
         <div>
-            <Header />
             <Jumbotron fluid style={{ padding: '100px 50px' }}>
                 <Container fluid>
                     <Tittle className="display-3">
@@ -44,7 +43,6 @@ function LandingPages() {
                 </Container>
             </Jumbotron>
             <FindDigitalService />
-            <Footer />
         </div>
     );
 }
