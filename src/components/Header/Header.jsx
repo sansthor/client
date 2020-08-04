@@ -12,8 +12,6 @@ const Header = () => {
         dispatch(fetchGetMember());
     }, [dispatch]);
 
-    console.log(member);
-
     return (
         <React.Fragment>
             {member.role !== undefined ? <HeaderMember /> : <HeaderGuest />}
