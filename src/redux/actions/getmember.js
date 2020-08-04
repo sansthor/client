@@ -1,5 +1,7 @@
+import Swal from 'sweetalert2';
 import jwt_decode from 'jwt-decode';
 const GET_MEMBER = 'GET_MEMBER';
+const LOGOUT = 'LOGOUT';
 
 const getMember = (data) => {
     return {
@@ -28,4 +30,17 @@ const fetchGetMember = () => async (dispatch) => {
         console.log(error);
     }
 };
-export { fetchGetMember, getMember, GET_MEMBER };
+
+const logout = (history) => (dispatch, getState) => {
+    Swal.fire({
+        icon: 'success',
+        title: 'Terimakasih',
+    });
+    setInterval(() => {
+        localStorage.clear();
+        history.push('/');
+    }, 3000);
+    dispatch({ type: LOGOUT });
+};
+
+export { fetchGetMember, getMember, GET_MEMBER, logout, LOGOUT };

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
+import logger from 'redux-logger';
 import Login from './pages/Login/Login';
 
 import reducers from './redux/reducers';
@@ -22,7 +23,7 @@ import EditProfile from './pages/EditProfile/EditProfile';
 
 function App() {
     return (
-        <Provider store={createStore(reducers, applyMiddleware(thunk))}>
+        <Provider store={createStore(reducers, applyMiddleware(thunk, logger))}>
             <Router>
                 <Header />
                 <Switch>
