@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Table, FormGroup, Input, Button } from 'reactstrap';
 import Styled from 'styled-components';
 
 // --- Styled components ---

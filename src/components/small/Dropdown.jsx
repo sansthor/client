@@ -5,12 +5,17 @@ import {
     DropdownMenu,
     DropdownItem,
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import PersonIcon from '@material-ui/icons/Person';
+import { useDispatch } from 'react-redux';
+import { logout } from '../../redux/actions';
+
 export default function DropdownMember(props) {
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const history = useHistory();
 
     const toggleDropdown = () => setDropdownOpen((prevState) => !prevState);
+    const dispatch = useDispatch();
 
     return (
         <Dropdown isOpen={dropdownOpen} toggle={toggleDropdown}>
@@ -38,6 +43,9 @@ export default function DropdownMember(props) {
                         </NavLink>
                     </React.Fragment>
                 )}
+                <DropdownItem onClick={() => dispatch(logout(history))}>
+                    Log Out
+                </DropdownItem>
             </DropdownMenu>
         </Dropdown>
     );
