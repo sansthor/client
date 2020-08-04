@@ -6,6 +6,8 @@ import { fetchGetMember } from '../../redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import TalentSkill from './TalentSkill';
+import Member from './Member';
+import MemberTalent from './MemberTalent';
 // ---Styled components---
 const Jumbotron = Styled.div`
 width: 100vw;
@@ -70,9 +72,9 @@ function MemberFeed() {
     }, [dispatch]);
     return (
         <div>
-            <Jumbotron></Jumbotron>
+            <MemberTalent />
             <About>
-                <Profile>
+                {/* <Profile>
                     <Image src="https://www.w3schools.com/w3images/avatar2.png" />
                     <div style={{ margin: '40px 0 0 10px' }}>
                         <p style={{ lineHeight: '1px' }}>
@@ -82,8 +84,8 @@ function MemberFeed() {
                             <strong>{member.role}</strong>
                         </p>
                     </div>
-                </Profile>
-                <React.Fragment>
+                </Profile> */}
+                {/* <React.Fragment>
                     {memberTalent === 'TALENT' ? (
                         <WrapTalent>
                             <TalentSkill />
@@ -96,7 +98,7 @@ function MemberFeed() {
                             </Button>{' '}
                         </Wrap>
                     )}
-                </React.Fragment>
+                </React.Fragment> */}
             </About>
             <div>
                 <MemberComponent />

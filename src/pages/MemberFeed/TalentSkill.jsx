@@ -4,13 +4,9 @@ function TalentSkill() {
     return (
         <div>
             <h4>Skill</h4>
-            <ul>
-                <li>CSS</li>
-            </ul>
+            <p>Programmer</p>
             <h4>Portofolio</h4>
-            <ul>
-                <li>Link</li>
-            </ul>
+            <p>https://portofolio.com</p>
         </div>
     );
 }
