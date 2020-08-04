@@ -21,6 +21,7 @@ function App() {
             <Router>
                 <Switch>
                     <Route exact path="/">
+                        <Navbar />
                         <CardDetailOffer />
                     </Route>
                     <Route exact path="/login">
