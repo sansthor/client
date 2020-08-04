@@ -41,4 +41,35 @@ const logout = (history) => (dispatch, getState) => {
     dispatch({ type: LOGOUT });
 };
 
-export { fetchGetMember, getMember, GET_MEMBER, logout, LOGOUT };
+const updateProfile = (data, history) => async (dispatch) => {
+    try {
+        const decoded = jwt_decode(localStorage.getItem('token'));
+        const id = decoded.id;
+        const url = `${process.env.REACT_APP_API_URL}/user/${id}`;
+
+        for (let key in data) {
+            if (data[key] === '') {
+                delete data[key];
+            }
+        }
+
+        const options = {
+            method: 'PUT',
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        };
+
+        console.log(data);
+
+        // const response = await fetch(url, options);
+        // const result = await response.json();
+
+        // dispatch(getMember(result.data));
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+export { fetchGetMember, getMember, GET_MEMBER, logout, LOGOUT, updateProfile };

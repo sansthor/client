@@ -17,7 +17,7 @@ const Title = styled.h1`
 
 const MyInput = (props) => {
     return (
-        <FormGroup className="form-label-group">
+        <FormGroup>
             <Label for={props.name}>{props.label}</Label>
             <Input
                 name={props.name}
