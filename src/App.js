@@ -13,16 +13,15 @@ import NavbarUser from './components/NavbarUser/NavbarUser';
 import Dashboard from './pages/Dashboard/Dashboard';
 import MyServices from './pages/MyServices/MyServices';
 import Order from './pages/Order/Order';
-import CardDetailOffer from './components/CardDetailOffer/CardDetailOffer';
-
+import DetailOffer from './pages/DetailOffer/DetailOffer';
 function App() {
     return (
         <div className="App">
             <Router>
                 <Switch>
                     <Route exact path="/">
-                        <Navbar />
-                        <CardDetailOffer />
+                        <Header />
+                        <Home />
                     </Route>
                     <Route exact path="/login">
                         <Navbar />
@@ -51,6 +50,10 @@ function App() {
                     <Route exact path="/order">
                         <NavbarUser />
                         <Order />
+                    </Route>
+                    <Route exact path="/detailoffer">
+                        <NavbarUser />
+                        <DetailOffer />
                     </Route>
                 </Switch>
             </Router>
