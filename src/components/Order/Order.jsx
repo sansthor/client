@@ -10,9 +10,11 @@ width: "60%";
    }
 `;
 const Wrap = Styled.div`
-border: 1px solid black;
-margin: 10px;
-padding: 0 0 100px 0;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+padding: 50px;
 `;
 // --- Styled components ---
 function Order() {

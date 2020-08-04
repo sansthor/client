@@ -73,33 +73,7 @@ function MemberFeed() {
     return (
         <div>
             <MemberTalent />
-            <About>
-                {/* <Profile>
-                    <Image src="https://www.w3schools.com/w3images/avatar2.png" />
-                    <div style={{ margin: '40px 0 0 10px' }}>
-                        <p style={{ lineHeight: '1px' }}>
-                            <strong>{member.fullname}</strong>
-                        </p>
-                        <p>
-                            <strong>{member.role}</strong>
-                        </p>
-                    </div>
-                </Profile> */}
-                {/* <React.Fragment>
-                    {memberTalent === 'TALENT' ? (
-                        <WrapTalent>
-                            <TalentSkill />
-                        </WrapTalent>
-                    ) : (
-                        <Wrap>
-                            {' '}
-                            <Button color="danger" onClick={handleTalent}>
-                                Become Talent
-                            </Button>{' '}
-                        </Wrap>
-                    )}
-                </React.Fragment> */}
-            </About>
+            <About></About>
             <div>
                 <MemberComponent />
             </div>
