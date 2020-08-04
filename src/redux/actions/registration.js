@@ -87,7 +87,7 @@ const registerTalent = (formData, history) => async (dispatch) => {
     const url = `${process.env.REACT_APP_API_URL}/user/register/service/${id}`;
     const options = {
         method: 'PUT',
-        body: JSON.stringify({ ...formData, status: 'TALENT' }),
+        body: JSON.stringify({ ...formData, role: 'TALENT' }),
         headers: {
             'Content-type': 'application/json',
         },
