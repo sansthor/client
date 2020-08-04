@@ -46,6 +46,16 @@ function MyService() {
                     title="Fix Locat Storage"
                     name="Doflamingo"
                 />
+                <CardComponentsCategories
+                    image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSc2h1nFzPu3w-Yc4JukGS4pwDViRD9Rt1Ojg&usqp=CAU"
+                    title="Fix Locat Storage"
+                    name="Doflamingo"
+                />
+                <CardComponentsCategories
+                    image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSc2h1nFzPu3w-Yc4JukGS4pwDViRD9Rt1Ojg&usqp=CAU"
+                    title="Fix Locat Storage"
+                    name="Doflamingo"
+                />
             </Wrap>
         </div>
     );
