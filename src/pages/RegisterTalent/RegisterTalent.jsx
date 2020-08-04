@@ -32,11 +32,17 @@ const Error = styled.div`
     font-size: 12px;
 `;
 
+const ButtonSubmit = styled.div`
+    & button {
+        width: 100%;
+    }
+`;
+
 function RegisSeller() {
     return (
         <Container className="themed-container" fluid="sm">
             <Row>
-                <Col sm="12" md={{ size: 6, offset: 3 }}>
+                <Col xs="12" sm="12" md={{ size: 6, offset: 3 }}>
                     <Div>
                         <Title>Talent Registration</Title>
                         <Formik
@@ -100,22 +106,17 @@ function RegisSeller() {
                                         name="phone"
                                         render={(msg) => <Error>{msg}</Error>}
                                     />
-                                    <div
-                                        style={{
-                                            textAlign: 'center',
-                                        }}
-                                    >
+                                    <ButtonSubmit>
                                         <Button
                                             color="primary"
                                             type="submit"
                                             style={{
                                                 margin: '10px 0',
-                                                width: '100%',
                                             }}
                                         >
                                             Submit
                                         </Button>
-                                    </div>
+                                    </ButtonSubmit>
                                 </Form>
                             )}
                         </Formik>
