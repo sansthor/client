@@ -81,6 +81,31 @@ const register = (formData, history) => async (dispatch) => {
     dispatch(registerUser(result));
 };
 
+const registerTalent = (formData, history) => async (dispatch) => {
+    const decoded = jwt_decode(localStorage.getItem('token'));
+    const id = decoded.id;
+    const url = `${process.env.REACT_APP_API_URL}/user/register/service/${id}`;
+    const options = {
+        method: 'PUT',
+        body: JSON.stringify({ ...formData, status: 'TALENT' }),
+        headers: {
+            'Content-type': 'application/json',
+        },
+    };
+
+    const response = await fetch(url, options);
+    await response.json();
+
+    if (response.status === 200) {
+        Swal.fire({
+            title: 'Your Account Successfully be Talent',
+            text: '',
+            icon: 'success',
+        });
+        history.push('/user/member');
+    }
+};
+
 export {
     getUserLogin,
     GET_USER_LOGIN,
@@ -88,4 +113,5 @@ export {
     REGISTER_USER,
     register,
     registerUser,
+    registerTalent,
 };

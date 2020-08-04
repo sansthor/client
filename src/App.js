@@ -12,7 +12,7 @@ import reducers from './redux/reducers';
 import Header from './components/Header/Header';
 import LandingPages from './pages/LandinPages/LandingPages';
 import RegisUser from './pages/RegisUser/RegisUser';
-import RegisSeller from './pages/RegisSeller/RegisSeller';
+import RegisterTalent from './pages/RegisterTalent/RegisterTalent';
 import Footer from './components/Footer/Footer';
 import CatalogService from './pages/CatalogService/CatalogService';
 import HalamanTalent from './pages/HalamanTalent/HalamanTalent';
@@ -30,11 +30,9 @@ function App() {
                     <Route exact path="/">
                         <LandingPages />
                     </Route>
-
                     <Route exact path="/user/register/talent">
-                        <RegisSeller />
+                        <RegisterTalent />
                     </Route>
-
                     <Route exact path="/user/member">
                         <MemberFeed />
                     </Route>
@@ -53,14 +51,14 @@ function App() {
                     <Route exact path="/user/editprofile">
                         <EditProfile />
                     </Route>
+                    <Route exact path="/user/register">
+                        <RegisUser />
+                    </Route>
+                    <Route exact path="/user/login">
+                        <Login />
+                    </Route>
                 </Switch>
                 <Footer />
-                <Route exact path="/user/register">
-                    <RegisUser />
-                </Route>
-                <Route exact path="/user/login">
-                    <Login />
-                </Route>
             </Router>
         </Provider>
     );
