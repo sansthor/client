@@ -73,10 +73,10 @@ export default function MemberTalent() {
                     </div>
                     <Div>
                         <p>
-                            <strong>Agus Trihanton</strong>
+                            <strong>{member.fullname}</strong>
                         </p>
-                        <p>Agustrihanton99@gmail.com</p>
-                        <p>Member</p>
+                        <p>{member.email}</p>
+                        <p>{member.role}</p>
                         <div
                             style={{
                                 display: 'flex',
