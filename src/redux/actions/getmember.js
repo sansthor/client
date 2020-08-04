@@ -36,10 +36,8 @@ const logout = (history) => (dispatch, getState) => {
         icon: 'success',
         title: 'Terimakasih',
     });
-    setInterval(() => {
-        localStorage.clear();
-        history.push('/');
-    }, 3000);
+    localStorage.clear();
+    history.push('/');
     dispatch({ type: LOGOUT });
 };
 
