@@ -1,15 +1,9 @@
 import React, { useEffect } from 'react';
 import Styled from 'styled-components';
 import { fetchGetAllServices } from '../../redux/actions';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 // --Styledcomponent--
-
-const Wrap = Styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-`;
 
 const Cards = Styled.div`
 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -29,17 +23,11 @@ display: flex;
 flex-wrap: wrap;
 justify-content: center;
 `;
-const Images = Styled.img`
-width: 100%;
-
-}
-`;
 // --Styledcomponent--
 
 function FindDigitalService() {
     const dispatch = useDispatch();
     const service = useSelector((state) => state.getallservices);
-    console.log(service, 'service isinya apa');
     // useEffect for fetching
     useEffect(() => {
         dispatch(fetchGetAllServices());
@@ -59,9 +47,9 @@ function FindDigitalService() {
                                     alt="Card image cap"
                                 /> */}
                                 <div style={{ padding: '2px 16px' }}>
-                                    <NavLink to="/user/detailoffer">
+                                    <Link to="/user/detailoffer">
                                         <h4>{item.title}</h4>
-                                    </NavLink>
+                                    </Link>
                                     <p>{item.description}</p>
                                     <p>Price: {item.price}</p>
                                 </div>

@@ -11,7 +11,6 @@ const getMember = (data) => {
 const fetchGetMember = () => async (dispatch) => {
     try {
         const decoded = jwt_decode(localStorage.getItem('token'));
-        console.log(decoded);
         const id = decoded.id;
         const url = `${process.env.REACT_APP_API_URL}/user/${id}`;
         const options = {

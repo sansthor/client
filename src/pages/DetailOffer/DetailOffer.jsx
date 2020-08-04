@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../../components/Header/Header';
 import Styled from 'styled-components';
 import { Form, CustomInput, ButtonToggle } from 'reactstrap';
 import Footer from '../../components/Footer/Footer';

@@ -21,7 +21,7 @@ display: flex;
 flex direction: row;
 justify-content: space-between;
 `;
-const HeaderMember = (props) => {
+const HeaderMember = () => {
     const dispatch = useDispatch();
     const member = useSelector((state) => state.getmember);
     const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +30,7 @@ const HeaderMember = (props) => {
 
     useEffect(() => {
         dispatch(fetchGetMember());
-    }, []);
+    }, [dispatch]);
 
     return (
         <div>
@@ -45,12 +45,18 @@ const HeaderMember = (props) => {
                     width: '100%',
                 }}
             >
-                <NavbarBrand href="/">FindThes</NavbarBrand>
+                <NavbarBrand tag={Link} to="/">
+                    FindThes
+                </NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
                         <NavItem>
-                            <NavLink style={{ color: 'black' }} href="/">
+                            <NavLink
+                                tag={Link}
+                                style={{ color: 'black' }}
+                                to="/"
+                            >
                                 Help
                             </NavLink>
                         </NavItem>

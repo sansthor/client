@@ -24,7 +24,8 @@ const userLogin = (formData, history) => async (dispatch) => {
 
         const response = await fetch(url, options);
         const result = await response.json();
-        const token = await jwt_decode(result.result);
+        await jwt_decode(result.result);
+
         if (response.status === 200) {
             Swal.fire({
                 title: 'Login Success!',
@@ -60,7 +61,7 @@ const register = (formData, history) => async (dispatch) => {
 
     const response = await fetch(url, options);
     const result = await response.json();
-    console.log(response.status);
+
     if (response.status === 200) {
         Swal.fire({
             title: 'Your Email Successfuly Register!',

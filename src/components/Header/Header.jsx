@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import HeaderGuest from './HeaderGuest';
 import HeaderMember from './HeaderMember';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchGetMember } from '../../redux/actions';
 
 const Header = () => {
-    const token = localStorage.getItem('token');
+    const dispatch = useDispatch();
+    const member = useSelector((state) => state.getmember);
+
+    useEffect(() => {
+        dispatch(fetchGetMember());
+    }, [dispatch]);
+
     return (
         <React.Fragment>
-            {token ? <HeaderMember /> : <HeaderGuest />}
+            {member.role !== undefined ? <HeaderMember /> : <HeaderGuest />}
         </React.Fragment>
     );
 };

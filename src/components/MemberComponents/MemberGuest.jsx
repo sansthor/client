@@ -6,18 +6,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import {
-    Button,
-    Form,
-    FormGroup,
-    Label,
-    Input,
-    Container,
-    Row,
-    Col,
-} from 'reactstrap';
-import Order from '../Order/Order';
-import MyService from '../MyService/MyService';
 import PurchaseHistory from '../PurchaseHistory/PurchaseHistory';
 
 function TabPanel(props) {

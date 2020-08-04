@@ -1,16 +1,5 @@
 import React, { useEffect } from 'react';
 import Styled from 'styled-components';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Tab from '@material-ui/core/Tab';
-import TabContext from '@material-ui/lab/TabContext';
-import TabList from '@material-ui/lab/TabList';
-import TabPanel from '@material-ui/lab/TabPanel';
-
-import PurchaseHistory from '../../components/PurchaseHistory/PurchaseHistory';
-import MyService from '../../components/MyService/MyService';
-import Order from '../../components/Order/Order';
-import Header from '../../components/Header/Header';
 import { Button } from 'reactstrap';
 import MemberComponent from '../../components/MemberComponents/MemberComponents';
 import { fetchGetMember } from '../../redux/actions';
@@ -65,24 +54,12 @@ padding: 20px 50px 0 10px;
    }
 `;
 // ---Styled components---
-const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-        backgroundColor: theme.palette.background.paper,
-    },
-}));
+
 function MemberFeed() {
     const dispatch = useDispatch();
     const history = useHistory();
     const member = useSelector((state) => state.getmember);
     const memberTalent = useSelector((state) => state.getmember.role);
-    console.log(member, 'membercomponent');
-    const classes = useStyles();
-    const [value, setValue] = React.useState('1');
-
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
 
     const handleTalent = () => {
         history.push('/user/register/talent');
@@ -90,7 +67,7 @@ function MemberFeed() {
 
     useEffect(() => {
         dispatch(fetchGetMember());
-    }, []);
+    }, [dispatch]);
     return (
         <div>
             <Jumbotron></Jumbotron>

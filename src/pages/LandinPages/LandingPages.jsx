@@ -1,10 +1,8 @@
 import React from 'react';
 import Styled from 'styled-components';
 
-import { Jumbotron, Container, Button } from 'reactstrap';
+import { Jumbotron, Container } from 'reactstrap';
 import CardPopular from '../../components/CardComponent/CardPopular';
-import Coding from '../../assets/coding_.svg';
-import WebDevelopment from '../../assets/web_developer.svg';
 import CardCategories from '../../components/CardComponent/CardCategories';
 import CardCompany from '../../components/CardComponent/CardCompany';
 import CardHire from '../../components/CardComponent/CardHire';
