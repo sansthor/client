@@ -3,6 +3,9 @@ import { FormGroup } from '@material-ui/core';
 import { Button, Label, Input, Container, Col, Row } from 'reactstrap';
 import styled from 'styled-components';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { useDispatch } from 'react-redux';
+import { registerTalent } from '../../redux/actions';
+import { useHistory } from 'react-router-dom';
 
 const Div = styled.div`
     margin: 100px 0;
@@ -39,6 +42,8 @@ const ButtonSubmit = styled.div`
 `;
 
 function RegisSeller() {
+    const dispatch = useDispatch();
+    const history = useHistory();
     return (
         <Container className="themed-container" fluid="sm">
             <Row>
@@ -67,20 +72,17 @@ function RegisSeller() {
                                 }
                                 return errors;
                             }}
-                            onSubmit={(values, { setSubmitting }) => {
-                                setTimeout(() => {
-                                    alert(JSON.stringify(values, null, 2));
-                                    setSubmitting(false);
-                                }, 400);
+                            onSubmit={(values) => {
+                                dispatch(registerTalent(values, history));
                             }}
                         >
-                            {({ isSubmitting }) => (
+                            {() => (
                                 <Form>
                                     <Field
                                         as={MyInput}
                                         type="text"
                                         name="skills"
-                                        label="Phone Number"
+                                        label="Skills"
                                     />
                                     <ErrorMessage
                                         name="skills"
