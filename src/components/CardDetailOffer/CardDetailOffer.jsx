@@ -93,7 +93,7 @@ function CardDetailOffer() {
                 <Wraps>
                     <SectionOne>
                         <WrapImage>
-                            <img src="https://bestpartnereducation.com/public/news/2019/12/tertarik-menjadi-web-developer-ikuti-langkah-ini/web%20developer.jpg" />
+                            <img src="https://bestpartnereducation.com/public/news/2019/12/tertarik-menjadi-web-developer-ikuti-langkah-ini/web%20developer.jpg" alt="description" />
                         </WrapImage>
                         <Description>
                             <p>
@@ -106,18 +106,18 @@ function CardDetailOffer() {
                         </Description>
                     </SectionOne>
                     <SectionTwo>
-                        <Label class="checkbox">
+                        <Label className="checkbox">
                             <Input type="checkbox" checked />
                             Revision 12 Times
                         </Label>
-                        <Label class="checkbox">
+                        <Label className="checkbox">
                             <Input type="checkbox" checked />
                             Commercial Use
                         </Label>
-                        <Label class="checkbox">
+                        <Label className="checkbox">
                             <Input type="checkbox" checked />5 Hours Of Works
                         </Label>
-                        <button class="button is-link ">Buy Now</button>
+                        <button className="button is-link ">Buy Now</button>
                     </SectionTwo>
                 </Wraps>
             </Wrapping>

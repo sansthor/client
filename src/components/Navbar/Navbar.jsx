@@ -4,9 +4,9 @@ function Navbar() {
     let url = '';
     return (
         <div>
-            <nav class="navbar" role="navigation" aria-label="main navigation">
-                <div class="navbar-brand">
-                    <a class="navbar-item" href="/">
+            <nav className="navbar" role="navigation" aria-label="main navigation">
+                <div className="navbar-brand">
+                    <a className="navbar-item" href="/">
                         <img
                             src="https://img.vim-cn.com/6a/ed728d1db5126a936b5e1237e9e3aa58dd3100.png"
                             width="112"
@@ -16,41 +16,41 @@ function Navbar() {
                     </a>
                 </div>
 
-                <div id="navbarBasicExample" class="navbar-menu">
-                    <div class="navbar-start">
-                        <a href={url} class="navbar-item">
+                <div id="navbarBasicExample" className="navbar-menu">
+                    <div className="navbar-start">
+                        <a href={url} className="navbar-item">
                             Bantuan
                         </a>
 
-                        {/* <div class="navbar-item has-dropdown is-hoverable">
-                    <a href={url} class="navbar-link">
+                        {/* <div className="navbar-item has-dropdown is-hoverable">
+                    <a href={url} className="navbar-link">
                       More
                     </a>
 
-                    <div class="navbar-dropdown">
-                      <a href={url} class="navbar-item">
+                    <div className="navbar-dropdown">
+                      <a href={url} className="navbar-item">
                         About
                       </a>
-                      <a href={url} class="navbar-item">
+                      <a href={url} className="navbar-item">
                         Jobs
                       </a>
-                      <a href={url} class="navbar-item">
+                      <a href={url} className="navbar-item">
                         Contact
                       </a>
-                      <hr class="navbar-divider" />
-                      <a href={url} class="navbar-item">
+                      <hr className="navbar-divider" />
+                      <a href={url} className="navbar-item">
                         Report an issue
                       </a>
                     </div>
                   </div> */}
                     </div>
 
-                    <div class="navbar-end">
-                        <div class="navbar-item">
-                            <div class="buttons">
+                    <div className="navbar-end">
+                        <div className="navbar-item">
+                            <div className="buttons">
                                 <a
                                     href="/register"
-                                    class="button is-primary is-rounded"
+                                    className="button is-primary is-rounded"
                                 >
                                     <strong>Gabung Disini!</strong>
                                 </a>

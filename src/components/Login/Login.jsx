@@ -28,8 +28,8 @@ function Login() {
                 <div className="hero-body">
                     <div className="container has-text-centered">
                         <div className="column is-4 is-offset-4">
-                            <p class="subtitle has-text-black">Sign In</p>
-                            <hr class="login-hr" />
+                            <p className="subtitle has-text-black">Sign In</p>
+                            <hr className="login-hr" />
                             <div className="box">
                                 <figure className="avatar">
                                     <img
