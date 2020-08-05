@@ -62,6 +62,18 @@ function AddOffer() {
                                                 'Masukan hanya angka';
                                         }
 
+                                        if (!values.title) {
+                                            errors.title = 'Wajib Isi';
+                                        }
+
+                                        if (!values.desc) {
+                                            errors.desc = 'Wajib Isi';
+                                        }
+
+                                        if (!values.processtime) {
+                                            errors.processtime = 'Wajib Isi';
+                                        }
+
                                         return errors;
                                     }}
                                     onSubmit={(values, { setSubmitting }) => {
