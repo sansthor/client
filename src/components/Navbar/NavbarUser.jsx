@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function NavbarUser() {
+function NavbarUser(props) {
     let url = '';
     return (
         <div>
@@ -42,7 +42,7 @@ function NavbarUser() {
                             style={{ marginRight: '5em' }}
                         >
                             <Link to={url} className="navbar-link">
-                                @username
+                                @{props.username}
                             </Link>
 
                             <div className="navbar-dropdown">
