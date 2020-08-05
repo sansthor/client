@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
 function Navbar() {
     let url = '';
     return (
@@ -21,39 +22,23 @@ function Navbar() {
                         <a href={url} class="navbar-item">
                             Bantuan
                         </a>
-
-                        {/* <div class="navbar-item has-dropdown is-hoverable">
-                    <a href={url} class="navbar-link">
-                      More
-                    </a>
-
-                    <div class="navbar-dropdown">
-                      <a href={url} class="navbar-item">
-                        About
-                      </a>
-                      <a href={url} class="navbar-item">
-                        Jobs
-                      </a>
-                      <a href={url} class="navbar-item">
-                        Contact
-                      </a>
-                      <hr class="navbar-divider" />
-                      <a href={url} class="navbar-item">
-                        Report an issue
-                      </a>
-                    </div>
-                  </div> */}
                     </div>
 
                     <div class="navbar-end">
                         <div class="navbar-item">
                             <div class="buttons">
-                                <a
+                                <Link
+                                    to="/login"
+                                    class="button is-light is-rounded"
+                                >
+                                    Log in
+                                </Link>
+                                <Link
                                     href="/register"
                                     class="button is-primary is-rounded"
                                 >
                                     <strong>Gabung Disini!</strong>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

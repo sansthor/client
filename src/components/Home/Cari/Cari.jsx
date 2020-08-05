@@ -21,7 +21,11 @@ function Cari() {
                             data-aos="fade-left"
                         >
                             <h1 class="title is-2">
-                                Temukan Penawaran dari Talenta Digital Kami!
+                                Help you find the best digital talent that match
+                                your needs!
+                            </h1>
+                            <h1 class="subtitle">
+                                Temukan Penawaran dari Talenta Digital Kami
                             </h1>
                             <br />
                             <p>
