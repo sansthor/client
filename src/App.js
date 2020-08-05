@@ -65,8 +65,8 @@ function App() {
                         <DetailOffer />
                     </Route>
                 </Switch>
+                <Footer />
             </Router>
-            <Footer />
         </Provider>
     );
 }

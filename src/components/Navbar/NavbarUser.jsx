@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Dropdown from '../Dropdown/Dropdown';
 
 function NavbarUser(props) {
     let url = '';
@@ -44,8 +45,8 @@ function NavbarUser(props) {
                             <Link to={url} className="navbar-link">
                                 @{props.username}
                             </Link>
-
-                            <div className="navbar-dropdown">
+                            <Dropdown />
+                            {/* <div className="navbar-dropdown">
                                 <Link to="/profile" className="navbar-item">
                                     Feed
                                 </Link>
@@ -77,7 +78,7 @@ function NavbarUser(props) {
                                     ></i>
                                     &nbsp;&nbsp;Keluar
                                 </Link>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

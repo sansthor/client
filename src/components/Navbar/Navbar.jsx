@@ -12,7 +12,6 @@ function Navbar() {
     }, [dispatch]);
     return (
         <div>
-            {' '}
             <React.Fragment>
                 {member.role !== undefined ? (
                     <NavbarUser username={member.username} />
