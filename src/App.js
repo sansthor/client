@@ -24,22 +24,19 @@ function App() {
     return (
         <Provider store={createStore(reducers, applyMiddleware(thunk))}>
             <Router>
-                <Navbar />
                 <Switch>
                     <Route exact path="/">
                         <Header />
                         <Home />
                     </Route>
+                    <Navbar />
                     <Route exact path="/login">
-                        <Navbar />
                         <Login />
                     </Route>
                     <Route exact path="/register">
-                        <Navbar />
                         <Register />
                     </Route>
                     <Route exact path="/register/talent">
-                        <NavbarUser />
                         <RegisTalent />
                     </Route>
                     <Route exact path="/profile">
