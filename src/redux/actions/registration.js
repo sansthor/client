@@ -35,7 +35,7 @@ const userLogin = (formData, history) => async (dispatch) => {
             });
             localStorage.setItem('token', result.result);
             dispatch(getUserLogin(result));
-            history.push('/user/member');
+            history.push('/profile');
         } else if (response.status === 403) {
             localStorage.clear();
         }

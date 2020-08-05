@@ -1,5 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import reducers from './redux/reducers';
 
 import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
@@ -16,7 +20,7 @@ import Order from './pages/Order/Order';
 import DetailOffer from './pages/DetailOffer/DetailOffer';
 function App() {
     return (
-        <div className="App">
+        <Provider store={createStore(reducers, applyMiddleware(thunk))}>
             <Router>
                 <Switch>
                     <Route exact path="/">
@@ -58,7 +62,7 @@ function App() {
                 </Switch>
             </Router>
             <Footer />
-        </div>
+        </Provider>
     );
 }
 
