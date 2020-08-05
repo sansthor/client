@@ -6,7 +6,6 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import reducers from './redux/reducers';
 
-import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
 import Footer from './components/Footer/Footer';
 import Login from './components/Login/Login';
@@ -32,7 +31,7 @@ function App() {
             <Router>
                 <Switch>
                     <Route exact path="/">
-                        <Header />
+                        <Navbar />
                         <Home />
                     </Route>
                     <Route exact path="/login">
