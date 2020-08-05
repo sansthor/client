@@ -24,6 +24,7 @@ import EditProfile from './pages/Edit Profile/EditProfile';
 import EditBank from './pages/EditBank/EditBank';
 import EditProfileTalent from './pages/EditProfileTalent/EditProfileTalent';
 import DetailOffer from './pages/DetailOffer/DetailOffer';
+import Payment from './pages/Payment/Payment';
 import PaymentReport from './pages/Payment/PaymentReport';
 
 function App() {
@@ -86,6 +87,10 @@ function App() {
                     <Route exact path="/detailoffer">
                         <NavbarUser />
                         <DetailOffer />
+                    </Route>
+                    <Route exact path="/payment">
+                        <NavbarUser />
+                        <Payment />
                     </Route>
                     <Route exact path="/payment-report">
                         <NavbarUser />
