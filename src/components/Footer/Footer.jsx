@@ -4,7 +4,7 @@ import '../../assets/css/Home.css';
 
 function Footer() {
     return (
-        <footer className="footer">
+        <footer className="footer" style={{ marginTop: '5em' }}>
             <p>
                 <strong className="white">Bulma</strong> by{' '}
                 <a href="http://jgthms.com">Jeremy Thomas</a>. The source code
