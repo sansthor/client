@@ -16,9 +16,9 @@ import Profile from './pages/Profile/Profile';
 import NavbarUser from './components/Navbar/NavbarUser';
 import Dashboard from './pages/Dashboard/Dashboard';
 import MyServices from './pages/MyServices/MyServices';
-// import RiwayatPembelian from './pages/RiwayatPembelian/RiwayatPembelian';
+import RiwayatPembelian from './pages/RiwayatPembelian/RiwayatPembelian';
 import Order from './pages/Order/Order';
-// import Catalog from './pages/Catalog/Catalog';
+import Catalog from './pages/Catalog/Catalog';
 import EditProfile from './pages/Edit Profile/EditProfile';
 import EditBank from './pages/EditBank/EditBank';
 import EditProfileTalent from './pages/EditProfileTalent/EditProfileTalent';
@@ -60,6 +60,9 @@ function App() {
                     </Route>
                     <Route exact path="/profile">
                         <Profile />
+                    </Route>
+                    <Route exact path="/history">
+                        <RiwayatPembelian />
                     </Route>
                     <Route exact path="/catalog">
                         <Catalog />
