@@ -18,6 +18,8 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import MyServices from './pages/MyServices/MyServices';
 import Order from './pages/Order/Order';
 import DetailOffer from './pages/DetailOffer/DetailOffer';
+import AddOffer from './pages/AddOffer/AddOffer';
+
 function App() {
     return (
         <Provider store={createStore(reducers, applyMiddleware(thunk))}>
@@ -58,6 +60,10 @@ function App() {
                     <Route exact path="/detailoffer">
                         <NavbarUser />
                         <DetailOffer />
+                    </Route>
+                    <Route exact path="/addoffer">
+                        <NavbarUser />
+                        <AddOffer />
                     </Route>
                 </Switch>
             </Router>
