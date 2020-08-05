@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../assets/css/Login.css';
-import styled from 'styled-components';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 const MyInput = (props) => {
@@ -20,11 +19,6 @@ const MyInput = (props) => {
         </div>
     );
 };
-
-const Error = styled.div`
-    font-style: italic;
-    color: red;
-`;
 
 function AddOffer() {
     return (
@@ -95,7 +89,11 @@ function AddOffer() {
                                                 placeholder="Masukan Judul"
                                             />
                                             <ErrorMessage name="title">
-                                                {(msg) => <Error>{msg}</Error>}
+                                                {(msg) => (
+                                                    <p class="help is-danger">
+                                                        {msg}
+                                                    </p>
+                                                )}
                                             </ErrorMessage>
                                             <Field
                                                 as={MyInput}
@@ -105,7 +103,11 @@ function AddOffer() {
                                                 placeholder="Masukan Deskripsi"
                                             />
                                             <ErrorMessage name="desc">
-                                                {(msg) => <Error>{msg}</Error>}
+                                                {(msg) => (
+                                                    <p class="help is-danger">
+                                                        {msg}
+                                                    </p>
+                                                )}
                                             </ErrorMessage>
                                             <Field
                                                 as={MyInput}
@@ -115,7 +117,11 @@ function AddOffer() {
                                                 placeholder="Mulai dari"
                                             />
                                             <ErrorMessage name="price">
-                                                {(msg) => <Error>{msg}</Error>}
+                                                {(msg) => (
+                                                    <p class="help is-danger">
+                                                        {msg}
+                                                    </p>
+                                                )}
                                             </ErrorMessage>
                                             <Field
                                                 as={MyInput}
@@ -125,7 +131,11 @@ function AddOffer() {
                                                 placeholder="x Kali"
                                             />
                                             <ErrorMessage name="revision">
-                                                {(msg) => <Error>{msg}</Error>}
+                                                {(msg) => (
+                                                    <p class="help is-danger">
+                                                        {msg}
+                                                    </p>
+                                                )}
                                             </ErrorMessage>
                                             <Field
                                                 as={MyInput}
@@ -135,7 +145,11 @@ function AddOffer() {
                                                 placeholder="Beritahu kepada pelanggang kebutuhan awal"
                                             />
                                             <ErrorMessage name="requirement">
-                                                {(msg) => <Error>{msg}</Error>}
+                                                {(msg) => (
+                                                    <p class="help is-danger">
+                                                        {msg}
+                                                    </p>
+                                                )}
                                             </ErrorMessage>
                                             <Field
                                                 as={MyInput}
@@ -145,7 +159,11 @@ function AddOffer() {
                                                 placeholder="x Hari"
                                             />
                                             <ErrorMessage name="processtime">
-                                                {(msg) => <Error>{msg}</Error>}
+                                                {(msg) => (
+                                                    <p class="help is-danger">
+                                                        {msg}
+                                                    </p>
+                                                )}
                                             </ErrorMessage>
                                             <button className="button is-block is-info is-fullwidth">
                                                 Tambah
