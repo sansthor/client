@@ -1,8 +1,23 @@
-import React from 'react';
-
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { fetchGetMember } from '../../redux/actions';
 import '../../assets/css/Profile.css';
 
 function Profile() {
+    const dispatch = useDispatch();
+    const history = useHistory();
+    const member = useSelector((state) => state.getmember);
+    console.log(member);
+    // const memberTalent = useSelector((state) => state.getmember.role);
+
+    const handleTalent = () => {
+        history.push('/user/register/talent');
+    };
+
+    useEffect(() => {
+        dispatch(fetchGetMember());
+    }, [dispatch]);
     return (
         <div style={{ minHeight: '80vh' }}>
             <section className="section" id="about">
@@ -23,9 +38,11 @@ function Profile() {
                                         className="title is-4"
                                         style={{ marginTop: '2em' }}
                                     >
-                                        Nama Lengkap
+                                        {member.fullname}
                                     </h4>
-                                    <h6 className="subtitle is-6">@username</h6>
+                                    <h6 className="subtitle is-6">
+                                        @{member.username}
+                                    </h6>
                                 </article>
                             </div>
                         </div>
@@ -42,7 +59,7 @@ function Profile() {
                                     </tr>
                                     <tr>
                                         <td>Email:</td>
-                                        <td>minion@despicable.me</td>
+                                        <td>{member.email}</td>
                                     </tr>
                                 </table>
                             </div>

@@ -48,10 +48,10 @@ function App() {
                         <NavbarUser />
                         <Profile />
                     </Route>
-                    <Route exact path="/catalog">
+                    {/* <Route exact path="/catalog">
                         <NavbarUser />
                         <Catalog />
-                    </Route>
+                    </Route> */}
                     <Route exact path="/dashboard">
                         <NavbarUser />
                         <Dashboard />
