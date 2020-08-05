@@ -110,7 +110,7 @@ function CardDetailOffer(props) {
                             <Input type="checkbox" checked />5 Hours Of Works
                         </Label>
                         <button className="button is-link ">
-                            Buy Now IDR {props.price}
+                            Buy Now ${props.price}
                         </button>
                     </SectionTwo>
                 </Wraps>

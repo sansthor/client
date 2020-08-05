@@ -78,8 +78,8 @@ export default function CardComponent(props) {
                         </div>
                     </div>
                     <Divider />
-                    <div>
-                        <p> Price: {props.price}</p>
+                    <div style={{ margin: '10px 0 0 0' }}>
+                        <p> Price: ${props.price}</p>
                     </div>
                 </CardContent>
             </CardActionArea>
