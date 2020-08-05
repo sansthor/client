@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
@@ -36,12 +37,20 @@ function App() {
                         <Register />
                     </Route>
                     <Route exact path="/register/talent">
-                        <Navbar />
+                        <NavbarUser />
                         <RegisTalent />
                     </Route>
                     <Route exact path="/profile">
                         <NavbarUser />
                         <Profile />
+                    </Route>
+                    <Route exact path="/history">
+                        <NavbarUser />
+                        <Profile />
+                    </Route>
+                    <Route exact path="/catalog">
+                        <NavbarUser />
+                        <Catalog />
                     </Route>
                     <Route exact path="/dashboard">
                         <NavbarUser />
