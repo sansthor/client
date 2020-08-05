@@ -37,8 +37,8 @@ function Profile() {
                                 {/* Content */}
                                 <table className="table-profile">
                                     <tr>
-                                        <th colspan="1"></th>
-                                        <th colspan="2"></th>
+                                        <th colSpan="1"></th>
+                                        <th colSpan="2"></th>
                                     </tr>
                                     <tr>
                                         <td>Email:</td>

@@ -16,13 +16,15 @@ import Profile from './pages/Profile/Profile';
 import NavbarUser from './components/NavbarUser/NavbarUser';
 import Dashboard from './pages/Dashboard/Dashboard';
 import MyServices from './pages/MyServices/MyServices';
-import RiwayatPembelian from './pages/RiwayatPembelian/RiwayatPembelian';
+// import RiwayatPembelian from './pages/RiwayatPembelian/RiwayatPembelian';
 import Order from './pages/Order/Order';
-import Catalog from './pages/Catalog/Catalog';
+// import Catalog from './pages/Catalog/Catalog';
 import EditProfile from './pages/Edit Profile/EditProfile';
 import EditBank from './pages/EditBank/EditBank';
 import EditProfileTalent from './pages/EditProfileTalent/EditProfileTalent';
 import DetailOffer from './pages/DetailOffer/DetailOffer';
+import Payment from './pages/Payment/Payment';
+import PaymentReport from './pages/Payment/PaymentReport';
 import AddOffer from './pages/AddOffer/AddOffer';
 
 function App() {
@@ -64,11 +66,11 @@ function App() {
                     </Route>
                     <Route exact path="/history">
                         <NavbarUser />
-                        <RiwayatPembelian />
+                        {/* <RiwayatPembelian /> */}
                     </Route>
                     <Route exact path="/catalog">
                         <NavbarUser />
-                        <Catalog />
+                        {/* <Catalog /> */}
                     </Route>
                     <Route exact path="/dashboard">
                         <NavbarUser />
@@ -86,6 +88,13 @@ function App() {
                         <NavbarUser />
                         <DetailOffer />
                     </Route>
+                    <Route exact path="/payment">
+                        <NavbarUser />
+                        <Payment />
+                    </Route>
+                    <Route exact path="/payment-report">
+                        <NavbarUser />
+                        <PaymentReport />
                     <Route exact path="/addoffer">
                         <NavbarUser />
                         <AddOffer />

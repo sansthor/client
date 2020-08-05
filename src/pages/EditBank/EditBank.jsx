@@ -15,9 +15,9 @@ function EditBank() {
                     </li>
                 </ul>
             </div>
-            <div class="columns" style={{ minHeight: '80vh' }}>
-                <div class="column"></div>
-                <div class="column is-half">
+            <div className="columns" style={{ minHeight: '80vh' }}>
+                <div className="column"></div>
+                <div className="column is-half">
                     <div className="field">
                         <label className="label">Bank Name</label>
                         <div className="control">
@@ -62,7 +62,7 @@ function EditBank() {
                         </div>
                     </div>
                 </div>
-                <div class="column"></div>
+                <div className="column"></div>
             </div>
         </div>
     );

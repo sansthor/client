@@ -109,18 +109,18 @@ function CardDetailOffer() {
                         </Description>
                     </SectionOne>
                     <SectionTwo>
-                        <Label class="checkbox">
+                        <Label className="checkbox">
                             <Input type="checkbox" checked />
                             Revision 12 Times
                         </Label>
-                        <Label class="checkbox">
+                        <Label className="checkbox">
                             <Input type="checkbox" checked />
                             Commercial Use
                         </Label>
-                        <Label class="checkbox">
+                        <Label className="checkbox">
                             <Input type="checkbox" checked />5 Hours Of Works
                         </Label>
-                        <button class="button is-link ">Buy Now</button>
+                        <button className="button is-link ">Buy Now</button>
                     </SectionTwo>
                 </Wraps>
             </Wrapping>

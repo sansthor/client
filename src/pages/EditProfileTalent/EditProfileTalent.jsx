@@ -15,9 +15,9 @@ function EditProfileTalent() {
                     </li>
                 </ul>
             </div>
-            <div class="columns" style={{ minHeight: '120vh' }}>
-                <div class="column"></div>
-                <div class="column is-half">
+            <div className="columns" style={{ minHeight: '120vh' }}>
+                <div className="column"></div>
+                <div className="column is-half">
                     <div className="field">
                         <label className="label">Username</label>
                         <div className="control has-icons-left">
@@ -88,7 +88,7 @@ function EditProfileTalent() {
                                 value=""
                             />
                             <span className="icon is-small is-left">
-                                <i class="fas fa-tools"></i>
+                                <i className="fas fa-tools"></i>
                             </span>
                         </div>
                     </div>
@@ -103,7 +103,7 @@ function EditProfileTalent() {
                                 value=""
                             />
                             <span className="icon is-small is-left">
-                                <i class="fas fa-scroll"></i>
+                                <i className="fas fa-scroll"></i>
                             </span>
                         </div>
                     </div>
@@ -116,7 +116,7 @@ function EditProfileTalent() {
                         </div>
                     </div>
                 </div>
-                <div class="column"></div>
+                <div className="column"></div>
             </div>
         </div>
     );

@@ -27,10 +27,10 @@ function AddOffer() {
                 <div className="hero-body">
                     <div className="container has-text-centered">
                         <div className="column is-4 is-offset-4">
-                            <p class="subtitle has-text-black">
+                            <p className="subtitle has-text-black">
                                 Tambah Layanan
                             </p>
-                            <hr class="login-hr" />
+                            <hr className="login-hr" />
                             <div className="box">
                                 <Formik
                                     initialValues={{
