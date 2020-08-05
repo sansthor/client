@@ -12,8 +12,12 @@ import Profile from './pages/Profile/Profile';
 import NavbarUser from './components/NavbarUser/NavbarUser';
 import Dashboard from './pages/Dashboard/Dashboard';
 import MyServices from './pages/MyServices/MyServices';
+import RiwayatPembelian from './pages/RiwayatPembelian/RiwayatPembelian';
 import Order from './pages/Order/Order';
 import Catalog from './pages/Catalog/Catalog';
+import EditProfile from './pages/Edit Profile/EditProfile';
+import EditBank from './pages/EditBank/EditBank';
+import EditProfileTalent from './pages/EditProfileTalent/EditProfileTalent';
 
 function App() {
     return (
@@ -40,9 +44,21 @@ function App() {
                         <NavbarUser />
                         <Profile />
                     </Route>
+                    <Route exact path="/profile/edit">
+                        <NavbarUser />
+                        <EditProfile />
+                    </Route>
+                    <Route exact path="/profile/edit/talent">
+                        <NavbarUser />
+                        <EditProfileTalent />
+                    </Route>
+                    <Route exact path="/profile/bank">
+                        <NavbarUser />
+                        <EditBank />
+                    </Route>
                     <Route exact path="/history">
                         <NavbarUser />
-                        <Profile />
+                        <RiwayatPembelian />
                     </Route>
                     <Route exact path="/catalog">
                         <NavbarUser />
