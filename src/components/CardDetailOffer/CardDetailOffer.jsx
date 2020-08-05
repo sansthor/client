@@ -1,5 +1,6 @@
 import React from 'react';
 import Styled from 'styled-components';
+import CollapseComponents from '../CollapseComponents/CollapseComponents';
 
 const Wraps = Styled.div`
 display: flex;
@@ -53,7 +54,8 @@ const Description = Styled.div`
 padding: 10px;
 `;
 const Title = Styled.h1`
-text-align: center;
+padding: 5px;
+
 
 `;
 const Avatar = Styled.img`
@@ -63,6 +65,9 @@ width: 30px;
 `;
 const WrapTittle = Styled.div`
 margin: 10px 0;
+@media (max-width: 1000px){
+    padding-left: 10px;
+}
 `;
 function CardDetailOffer(props) {
     return (
@@ -75,7 +80,7 @@ function CardDetailOffer(props) {
                     <div
                         style={{
                             display: 'flex',
-                            justifyContent: 'center',
+
                             paddingBottom: '10px',
                         }}
                     >
@@ -114,6 +119,7 @@ function CardDetailOffer(props) {
                         </button>
                     </SectionTwo>
                 </Wraps>
+                <CollapseComponents />
             </Wrapping>
         </div>
     );
