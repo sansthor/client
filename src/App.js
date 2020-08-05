@@ -95,6 +95,7 @@ function App() {
                     <Route exact path="/payment-report">
                         <NavbarUser />
                         <PaymentReport />
+                    </Route>
                     <Route exact path="/addoffer">
                         <NavbarUser />
                         <AddOffer />
