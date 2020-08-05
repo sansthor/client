@@ -5,7 +5,7 @@ import CardCategories from '../../components/CardComponent/CardCategories';
 import TentangKami from '../../components/Home/TentangKami/TentangKami';
 import MottoKami from '../../components/Home/MottoKami/MottoKami';
 import LayananKami from '../../components/Home/LayananKami/LayananKami';
-import PenawaranTalent from '../../components/Home/PenawaranTalent/PenawaranTalent';
+import CardPopular from '../../components/CardComponent/CardPopular';
 import SaranMasukan from '../../components/Home/SaranMasukan/SaranMasukan';
 
 import '../../assets/css/Home.css';
@@ -17,10 +17,12 @@ function Home() {
             <div className="main-content">
                 <Cari />
                 <CardCategories />
+                <div style={{ marginTop: '5em' }}></div>
+
+                <CardPopular />
                 <TentangKami />
                 <MottoKami />
                 <LayananKami />
-                <PenawaranTalent />
                 <SaranMasukan />
             </div>
             {/* End Main Content */}
