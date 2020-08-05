@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
 function Navbar() {
     let url = '';
     return (
@@ -21,39 +22,23 @@ function Navbar() {
                         <a href={url} className="navbar-item">
                             Bantuan
                         </a>
-
-                        {/* <div className="navbar-item has-dropdown is-hoverable">
-                    <a href={url} className="navbar-link">
-                      More
-                    </a>
-
-                    <div className="navbar-dropdown">
-                      <a href={url} className="navbar-item">
-                        About
-                      </a>
-                      <a href={url} className="navbar-item">
-                        Jobs
-                      </a>
-                      <a href={url} className="navbar-item">
-                        Contact
-                      </a>
-                      <hr className="navbar-divider" />
-                      <a href={url} className="navbar-item">
-                        Report an issue
-                      </a>
-                    </div>
-                  </div> */}
                     </div>
 
-                    <div className="navbar-end">
-                        <div className="navbar-item">
-                            <div className="buttons">
-                                <a
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="buttons">
+                                <Link
+                                    to="/login"
+                                    class="button is-light is-rounded"
+                                >
+                                    Log in
+                                </Link>
+                                <Link
                                     href="/register"
                                     className="button is-primary is-rounded"
                                 >
                                     <strong>Gabung Disini!</strong>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

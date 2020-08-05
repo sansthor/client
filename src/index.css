@@ -16,4 +16,5 @@ html {
     font-family: 'Poppins', Lato, Tahoma, sans-serif;
     width: 100%;
     min-height: 100%;
+    text-decoration: none;
 }

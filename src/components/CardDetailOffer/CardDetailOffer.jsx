@@ -93,7 +93,10 @@ function CardDetailOffer() {
                 <Wraps>
                     <SectionOne>
                         <WrapImage>
-                            <img src="https://bestpartnereducation.com/public/news/2019/12/tertarik-menjadi-web-developer-ikuti-langkah-ini/web%20developer.jpg" alt="description" />
+                            <img
+                                src="https://bestpartnereducation.com/public/news/2019/12/tertarik-menjadi-web-developer-ikuti-langkah-ini/web%20developer.jpg"
+                                alt="thumbnail"
+                            />
                         </WrapImage>
                         <Description>
                             <p>
