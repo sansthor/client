@@ -69,7 +69,7 @@ const register = (formData, history) => async (dispatch) => {
             icon: 'success',
             confirmButtonText: 'Cool',
         });
-        history.push('/user/login');
+        history.push('/login');
     } else {
         Swal.fire({
             title: 'Email already registered',
