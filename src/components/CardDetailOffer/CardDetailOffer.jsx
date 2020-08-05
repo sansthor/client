@@ -64,15 +64,13 @@ width: 30px;
 const WrapTittle = Styled.div`
 margin: 10px 0;
 `;
-function CardDetailOffer() {
+function CardDetailOffer(props) {
     return (
-        <div>
+        <div key={props.key}>
             <Wrapping>
                 <WrapTittle>
                     <Title>
-                        <strong>
-                            Memperbaiki Bug dalam Pembuatan Web E-commerce
-                        </strong>
+                        <strong>{props.title}</strong>
                     </Title>
                     <div
                         style={{
@@ -86,26 +84,17 @@ function CardDetailOffer() {
                             alt="avatar"
                         />
                         <Title as="span">
-                            <em>Agus Trihanton</em>
+                            <em>{props.name}</em>
                         </Title>
                     </div>
                 </WrapTittle>
                 <Wraps>
                     <SectionOne>
                         <WrapImage>
-                            <img
-                                src="https://bestpartnereducation.com/public/news/2019/12/tertarik-menjadi-web-developer-ikuti-langkah-ini/web%20developer.jpg"
-                                alt="thumbnail"
-                            />
+                            <img src={props.image} alt="thumbnail" />
                         </WrapImage>
                         <Description>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur
-                                adipisicing elit. Quae, aliquam quas. Id quo
-                                explicabo, perferendis quasi minus consequuntur
-                                labore alias veritatis numquam aperiam officia
-                                exercitationem qui ab officiis facilis vitae.
-                            </p>
+                            <p>{props.desc}</p>
                         </Description>
                     </SectionOne>
                     <SectionTwo>
@@ -120,7 +109,9 @@ function CardDetailOffer() {
                         <Label className="checkbox">
                             <Input type="checkbox" checked />5 Hours Of Works
                         </Label>
-                        <button className="button is-link ">Buy Now</button>
+                        <button className="button is-link ">
+                            Buy Now IDR {props.price}
+                        </button>
                     </SectionTwo>
                 </Wraps>
             </Wrapping>
