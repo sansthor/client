@@ -7,7 +7,7 @@ function DropdownTalent() {
                 <Link to="/profile" className="navbar-item">
                     Feed
                 </Link>
-                <Link to="/profile/edit" className="navbar-item">
+                <Link to="/profile/edit/talent" className="navbar-item">
                     Edit Profile
                 </Link>
                 <Link to="/history" className="navbar-item">
