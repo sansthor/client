@@ -1,6 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import reducers from './redux/reducers';
+
 import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
 import Footer from './components/Footer/Footer';
@@ -18,10 +23,11 @@ import Catalog from './pages/Catalog/Catalog';
 import EditProfile from './pages/Edit Profile/EditProfile';
 import EditBank from './pages/EditBank/EditBank';
 import EditProfileTalent from './pages/EditProfileTalent/EditProfileTalent';
+import DetailOffer from './pages/DetailOffer/DetailOffer';
 
 function App() {
     return (
-        <div className="App">
+        <Provider store={createStore(reducers, applyMiddleware(thunk))}>
             <Router>
                 <Switch>
                     <Route exact path="/">
@@ -76,10 +82,14 @@ function App() {
                         <NavbarUser />
                         <Order />
                     </Route>
+                    <Route exact path="/detailoffer">
+                        <NavbarUser />
+                        <DetailOffer />
+                    </Route>
                 </Switch>
             </Router>
             <Footer />
-        </div>
+        </Provider>
     );
 }
 
