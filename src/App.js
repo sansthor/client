@@ -31,15 +31,12 @@ function App() {
                         <Home />
                     </Route>
                     <Route exact path="/login">
-                        <Navbar />
                         <Login />
                     </Route>
                     <Route exact path="/register">
-                        <Navbar />
                         <Register />
                     </Route>
                     <Route exact path="/register/talent">
-                        <NavbarUser />
                         <RegisTalent />
                     </Route>
                     <Route exact path="/profile">
