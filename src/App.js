@@ -26,6 +26,7 @@ import EditProfileTalent from './pages/EditProfileTalent/EditProfileTalent';
 import DetailOffer from './pages/DetailOffer/DetailOffer';
 import Payment from './pages/Payment/Payment';
 import PaymentReport from './pages/Payment/PaymentReport';
+import AddOffer from './pages/AddOffer/AddOffer';
 
 function App() {
     return (
@@ -95,6 +96,9 @@ function App() {
                     <Route exact path="/payment-report">
                         <NavbarUser />
                         <PaymentReport />
+                    <Route exact path="/addoffer">
+                        <NavbarUser />
+                        <AddOffer />
                     </Route>
                 </Switch>
             </Router>
