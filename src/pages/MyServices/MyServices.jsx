@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
 import '../../assets/css/Profile.css';
 
@@ -35,10 +36,6 @@ function MyServices() {
                         justifyContent: 'space-around',
                     }}
                 >
-                    <CardRiwayat />
-                    <CardRiwayat />
-                    <CardRiwayat />
-                    <CardRiwayat />
                     <CardRiwayat />
                 </div>
             </section>

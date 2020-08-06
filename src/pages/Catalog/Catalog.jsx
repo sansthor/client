@@ -53,7 +53,7 @@ function Catalog() {
                                             image={item.image}
                                             title={item.title}
                                             name={item.userID.username}
-                                            avatar="https://i.pinimg.com/originals/97/54/f6/9754f6c22aeade64c3e77cf1c9406567.jpg"
+                                            avatar={item.userID.avatar}
                                             price={item.price}
                                         />
                                     </NavLink>
