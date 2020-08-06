@@ -27,7 +27,6 @@ function Register() {
             });
         } else {
             await dispatch(register(form, history));
-            history.push('/login');
         }
     };
 
