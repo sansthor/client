@@ -13,10 +13,9 @@ function EditProfileTalent() {
     const dispatch = useDispatch();
     const member = useSelector((state) => state.getmember);
     const [updated, setupdated] = useState({
-        fullname: member.fullname,
         username: member.username,
         email: member.email,
-        password: member.password,
+        password: '',
         address: member.address,
         skills: member.skills,
         link: member.link,
@@ -58,7 +57,7 @@ function EditProfileTalent() {
                                     className="input"
                                     type="text"
                                     placeholder="New Username"
-                                    name="fullname"
+                                    name="username"
                                     value={updated.username}
                                     onChange={handleChange}
                                 />
