@@ -6,7 +6,7 @@ function TableProfileTalent(props) {
             <tr>
                 <td>Skills:</td>
                 {props.skills !== undefined ? (
-                    <td>{props.skilss}</td>
+                    <td>{props.skills}</td>
                 ) : (
                     <td>-</td>
                 )}
