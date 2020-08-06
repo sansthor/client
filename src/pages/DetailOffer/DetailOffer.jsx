@@ -10,7 +10,7 @@ function DetailOffer() {
     console.log(service);
     useEffect(() => {
         dispatch(fetchGetServiceById(id));
-    }, [dispatch]);
+    }, [dispatch, id]);
     return (
         <div>
             <CardDetailOffer
