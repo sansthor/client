@@ -1,8 +1,30 @@
-import React from 'react';
-
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { fetchPutBasicUser, fetchGetMember } from '../../redux/actions';
 import { Link } from 'react-router-dom';
 
 function EditProfile() {
+    const history = useHistory();
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(fetchGetMember());
+    }, []);
+    const member = useSelector((state) => state.getmember);
+    console.log(member, 'di edit profile member');
+    const [form, setForm] = useState({
+        username: member.username || '',
+        email: member.email || '',
+        password: member.password || '',
+    });
+
+    const handleChange = (event) => {
+        setForm({ ...form, [event.target.name]: event.target.value });
+    };
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        dispatch(fetchPutBasicUser(form, history));
+    };
     return (
         <div>
             <div className="tabs is-centered">
@@ -12,64 +34,76 @@ function EditProfile() {
                     </li>
                 </ul>
             </div>
-            <div className="columns" style={{ minHeight: '80vh' }}>
-                <div className="column"></div>
-                <div className="column is-half">
-                    <div className="field">
-                        <label className="label">Username</label>
-                        <div className="control has-icons-left">
-                            <input
-                                className="input"
-                                type="text"
-                                placeholder="New Username"
-                                value=""
-                            />
-                            <span className="icon is-small is-left">
-                                <i className="fas fa-user"></i>
-                            </span>
+            <form onSubmit={handleSubmit}>
+                <div className="columns" style={{ minHeight: '80vh' }}>
+                    <div className="column"></div>
+                    <div className="column is-half">
+                        <div className="field">
+                            <label className="label">Username</label>
+                            <div className="control has-icons-left">
+                                <input
+                                    className="input"
+                                    type="text"
+                                    placeholder="New Username"
+                                    value=""
+                                    id="username"
+                                    name="username"
+                                    value={form.username}
+                                    onChange={handleChange}
+                                />
+                                <span className="icon is-small is-left">
+                                    <i className="fas fa-user"></i>
+                                </span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="field">
-                        <label className="label">Email</label>
-                        <div className="control has-icons-left">
-                            <input
-                                className="input "
-                                type="email"
-                                placeholder="Email input"
-                                value=""
-                            />
-                            <span className="icon is-small is-left">
-                                <i className="fas fa-envelope"></i>
-                            </span>
+                        <div className="field">
+                            <label className="label">Email</label>
+                            <div className="control has-icons-left">
+                                <input
+                                    className="input "
+                                    type="email"
+                                    placeholder="Email input"
+                                    id="email"
+                                    name="email"
+                                    value={form.email}
+                                    onChange={handleChange}
+                                />
+                                <span className="icon is-small is-left">
+                                    <i className="fas fa-envelope"></i>
+                                </span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="field">
-                        <label className="label">Password</label>
-                        <div className="control has-icons-left ">
-                            <input
-                                className="input"
-                                type="password"
-                                placeholder="New Password"
-                                value=""
-                            />
-                            <span className="icon is-small is-left">
-                                <i className="fas fa-key"></i>
-                            </span>
+                        <div className="field">
+                            <label className="label">Password</label>
+                            <div className="control has-icons-left ">
+                                <input
+                                    className="input"
+                                    type="password"
+                                    placeholder="New Password"
+                                    id="password"
+                                    name="password"
+                                    value={form.password}
+                                    onChange={handleChange}
+                                />
+                                <span className="icon is-small is-left">
+                                    <i className="fas fa-key"></i>
+                                </span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="field is-grouped">
-                        <div className="control">
-                            <button className="button is-link">
-                                Simpan Perubahan
-                            </button>
+                        <div className="field is-grouped">
+                            <div className="control">
+                                <button className="button is-link">
+                                    Simpan Perubahan
+                                </button>
+                            </div>
                         </div>
                     </div>
+                    <div className="column"></div>
                 </div>
-                <div className="column"></div>
-            </div>
+            </form>
         </div>
     );
 }
