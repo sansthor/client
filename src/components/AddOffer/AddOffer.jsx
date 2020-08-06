@@ -49,7 +49,7 @@ const FileInput = (props) => {
             </label>
             <div className="control">
                 <ReactFilestack
-                    apikey="A1Wpfmx0ShhFzrxIEH4ngz"
+                    apikey={process.env.REACT_APP_FILESTACK_API}
                     customRender={({ onPick }) => (
                         <div>
                             <ButtonUpload onClick={onPick}>
