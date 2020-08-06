@@ -35,33 +35,47 @@ function Dashboard() {
                 <div className="section-heading">
                     <h3 className="title is-2">Dashboard</h3>
                 </div>
-                <div className="container">
-                    <div className="columns">
-                        <div className="column">
-                            <div className="box">
-                                <div
-                                    className="content"
-                                    style={{ textAlign: 'center' }}
-                                >
-                                    <h4 className="title is-5">
-                                        Pekerjaan In Progress
-                                    </h4>
-                                    Total: X
-                                </div>
-                            </div>
-                        </div>
-                        <div className="column">
-                            <div className="box">
-                                <div
-                                    className="content"
-                                    style={{ textAlign: 'center' }}
-                                >
-                                    <h4 className="title is-5">Pendapatan</h4>
-                                    {member.balance} <strong>IDR</strong>
-                                </div>
-                            </div>
+                <nav class="level is-mobile">
+                    <div class="level-item has-text-centered"></div>
+                    <div class="level-item has-text-centered">
+                        <div>
+                            <p class="heading">Pendapatan</p>
+                            <p class="title">IDR {member.balance}</p>
                         </div>
                     </div>
+                    <div class="level-item has-text-centered">
+                        <div>
+                            <p class="heading">In Progress</p>
+                            <p class="title">0</p>
+                        </div>
+                    </div>
+                    <div class="level-item has-text-centered"></div>
+                </nav>
+                <div className="tile is-parent" style={{ marginTop: '5em' }}>
+                    <article className="tile is-child notification ">
+                        <p className="title">Akun Bank</p>
+                        <div className="content">
+                            {/* Content */}
+                            <table className="table-profile">
+                                <tr>
+                                    <th colSpan="1"></th>
+                                    <th colSpan="2"></th>
+                                </tr>
+                                <tr>
+                                    <td>Nama Bank:</td>
+                                    <td>{member.bankname}</td>
+                                </tr>
+                                <tr>
+                                    <td>Nama di Bank:</td>
+                                    <td>{member.bankaccname}</td>
+                                </tr>
+                                <tr>
+                                    <td>Nomor Rekening:</td>
+                                    <td>{member.bankaccnumber}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </article>
                 </div>
             </section>
         </div>
