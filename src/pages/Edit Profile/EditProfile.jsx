@@ -17,7 +17,7 @@ function EditProfile() {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchGetMember());
-    }, []);
+    }, [dispatch]);
     const member = useSelector((state) => state.getmember);
     console.log(member, 'di edit profile member');
     const [form, setForm] = useState({
@@ -54,7 +54,6 @@ function EditProfile() {
                                     className="input"
                                     type="text"
                                     placeholder="New Username"
-                                    value=""
                                     id="username"
                                     name="username"
                                     value={form.username}
