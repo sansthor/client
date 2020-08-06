@@ -19,7 +19,7 @@ padding: 50px;
 margin: 100px;
 @media (max-width: 1000px) {
     padding: 0;
-    margin:30px 15px 30px 30px;
+    margin:30px;
     border-radius: 15px;
     
 }
@@ -42,7 +42,7 @@ padding: 40px;
 }
 `;
 const WrapImage = Styled.div`
-
+width: 100%;
 `;
 const Input = Styled.input`
 margin-right: 5px;
@@ -51,7 +51,7 @@ const Label = Styled.label`
 margin-bottom: 10px;
 `;
 const Description = Styled.div`
-padding: 10px;
+padding: 30px 20px 30px 20px;
 `;
 const Title = Styled.h1`
 padding: 5px;
@@ -96,7 +96,11 @@ function CardDetailOffer(props) {
                 <Wraps>
                     <SectionOne>
                         <WrapImage>
-                            <img src={props.image} alt="thumbnail" />
+                            <img
+                                style={{ width: '100%', height: '100%' }}
+                                src={props.image}
+                                alt="thumbnail"
+                            />
                         </WrapImage>
                         <Description>
                             <p>{props.desc}</p>

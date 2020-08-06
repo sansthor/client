@@ -52,7 +52,7 @@ function Catalog() {
                                             key={item._id}
                                             image={item.image}
                                             title={item.title}
-                                            name="LeviAckerman"
+                                            name={item.userID.username}
                                             avatar="https://i.pinimg.com/originals/97/54/f6/9754f6c22aeade64c3e77cf1c9406567.jpg"
                                             price={item.price}
                                         />
