@@ -2,12 +2,12 @@ import jwt_decode from 'jwt-decode';
 import Swal from 'sweetalert2';
 const PUT_BASIC_USER = 'PUT_BASIC_USER';
 
-const putBasicUser = (data) => {
-    return {
-        type: PUT_BASIC_USER,
-        data,
-    };
-};
+// const putBasicUser = (data) => {
+//     return {
+//         type: PUT_BASIC_USER,
+//         data,
+//     };
+// };
 const fetchPutBasicUser = (formData, history) => async (dispatch) => {
     const decoded = jwt_decode(localStorage.getItem('token'));
     const id = decoded.id;
@@ -27,7 +27,7 @@ const fetchPutBasicUser = (formData, history) => async (dispatch) => {
         },
     };
     const response = await fetch(url, options);
-    const result = await response.json();
+    await response.json();
     // dispatch(putBasicUser(result));
     if (response.status === 200) {
         Swal.fire({
