@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import '../../assets/css/Profile.css';
 
 import CardRiwayat from '../../components/CardRiwayat/CardRiwayat';
@@ -10,21 +10,24 @@ function MyServices() {
             <div className="tabs">
                 <ul>
                     <li>
-                        <a href="/dashboard">Dashboard</a>
+                        <Link to="/dashboard">Dashboard</Link>
                     </li>
                     <li className="is-active">
-                        <a href="/myservices">My Services</a>
+                        <Link to="/myservices">My Services</Link>
                     </li>
                     <li>
-                        <a href="/order">Order</a>
+                        <Link to="/order">Order</Link>
+                    </li>
+                    <li>
+                        <Link to="/addoffer">Add Offer</Link>
                     </li>
                 </ul>
             </div>
+
             <section className="section" id="about">
                 <div className="section-heading">
                     <h3 className="title is-2">My Services</h3>
                 </div>
-
                 <div
                     style={{
                         display: 'flex',

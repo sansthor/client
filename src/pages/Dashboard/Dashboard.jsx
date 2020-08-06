@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchGetMember } from '../../redux/actions';
+import { Link } from 'react-router-dom';
 
 import '../../assets/css/Profile.css';
 function Dashboard() {
@@ -16,13 +17,16 @@ function Dashboard() {
             <div className="tabs">
                 <ul>
                     <li className="is-active">
-                        <a href="/dashboard">Dashboard</a>
+                        <Link to="/dashboard">Dashboard</Link>
                     </li>
                     <li>
-                        <a href="/myservices">My Services</a>
+                        <Link to="/myservices">My Services</Link>
                     </li>
                     <li>
-                        <a href="/order">Order</a>
+                        <Link to="/order">Order</Link>
+                    </li>
+                    <li>
+                        <Link to="/addoffer">Add Offer</Link>
                     </li>
                 </ul>
             </div>
