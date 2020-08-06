@@ -51,7 +51,7 @@ const Label = Styled.label`
 margin-bottom: 10px;
 `;
 const Description = Styled.div`
-padding: 10px;
+padding: 30px 20px 30px 20px;
 `;
 const Title = Styled.h1`
 padding: 5px;
