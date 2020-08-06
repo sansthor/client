@@ -27,19 +27,19 @@ function CardPopular() {
                 <strong>Best Categories Service</strong>
             </Typography>
             <Wrap>
-                <Image>
+                <Image data-aos="fade-right">
                     <CardComponent
                         title="Wordpress"
                         image="https://bestpartnereducation.com/public/news/2019/12/tertarik-menjadi-web-developer-ikuti-langkah-ini/web%20developer.jpg"
                     />
                 </Image>
-                <Image>
+                <Image data-aos="fade">
                     <CardComponent
                         title="Design Thinking"
                         image="https://wisdomeweb.com/wp-content/uploads/2020/01/ReactJS.jpg"
                     />
                 </Image>
-                <Image>
+                <Image data-aos="fade-left">
                     <CardComponent
                         title="Web Development"
                         image="https://bestpartnereducation.com/public/news/2019/12/tertarik-menjadi-web-developer-ikuti-langkah-ini/web%20developer.jpg"

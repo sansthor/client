@@ -100,6 +100,23 @@ function EditProfile() {
                                 </span>
                             </div>
                         </div>
+                        <div className="field">
+                            <label className="label">Address</label>
+                            <div className="control has-icons-left ">
+                                <input
+                                    className="input"
+                                    type="text"
+                                    placeholder="New Address"
+                                    id="address"
+                                    name="address"
+                                    value={form.address}
+                                    onChange={handleChange}
+                                />
+                                <span className="icon is-small is-left">
+                                    <i className="fas fa-key"></i>
+                                </span>
+                            </div>
+                        </div>
 
                         <div className="field">
                             <label className="label">Address</label>
