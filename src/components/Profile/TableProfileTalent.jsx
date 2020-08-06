@@ -2,12 +2,7 @@ import React from 'react';
 
 function TableProfileTalent(props) {
     return (
-        <div>
-            {/* <table className="table-profile"> */}
-            {/* <tr>
-                <th colSpan="1"></th>
-                <th colSpan="2"></th>
-            </tr> */}
+        <React.Fragment>
             <tr>
                 <td>Skills:</td>
                 {props.skills !== undefined ? (
@@ -28,8 +23,7 @@ function TableProfileTalent(props) {
                     <td>-</td>
                 )}
             </tr>
-            {/* </table> */}
-        </div>
+        </React.Fragment>
     );
 }
 

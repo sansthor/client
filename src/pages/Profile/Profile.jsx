@@ -70,15 +70,14 @@ function Profile() {
                                         <td>Address:</td>
                                         <td>{member.address}</td>
                                     </tr>
-                                    <React.Fragment>
-                                        {member.role !== 'USER' && (
-                                            <TableProfileTalent
-                                                skills={member.skills}
-                                                link={member.link}
-                                                phone={member.phone}
-                                            />
-                                        )}
-                                    </React.Fragment>
+
+                                    {member.role !== 'USER' && (
+                                        <TableProfileTalent
+                                            skills={member.skills}
+                                            link={member.link}
+                                            phone={member.phone}
+                                        />
+                                    )}
                                 </table>
                             </div>
                         </article>
