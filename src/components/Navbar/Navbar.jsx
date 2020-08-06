@@ -6,7 +6,7 @@ import NavbarGuest from './NavbarGuest';
 function Navbar() {
     const dispatch = useDispatch();
     const member = useSelector((state) => state.getmember);
-    console.log(member, 'navbar');
+
     useEffect(() => {
         dispatch(fetchGetMember());
     }, [dispatch]);

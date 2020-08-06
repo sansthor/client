@@ -7,34 +7,34 @@ import CardComponentsCategories from '../../components/CardComponent/CardCompone
 function Catalog() {
     const dispatch = useDispatch();
     const services = useSelector((state) => state.getallservices);
-    console.log(services, 'all sevices');
+
     useEffect(() => {
         dispatch(fetchGetAllServices());
     }, [dispatch]);
     return (
         <div>
-            <div class="container " style={{ minHeight: '100vh' }}>
-                <h2 class="title has-text-centered">Cari Disini</h2>
-                <div class="columns">
-                    <div class="column"></div>
-                    <div class="column is-three-fifths">
-                        <div class="panel-block">
-                            <p class="control has-icons-left">
+            <div className="container " style={{ minHeight: '100vh' }}>
+                <h2 className="title has-text-centered">Cari Disini</h2>
+                <div className="columns">
+                    <div className="column"></div>
+                    <div className="column is-three-fifths">
+                        <div className="panel-block">
+                            <p className="control has-icons-left">
                                 <input
-                                    class="input is-primary"
+                                    className="input is-primary"
                                     type="text"
                                     placeholder="Search"
                                 />
-                                <span class="icon is-left">
+                                <span className="icon is-left">
                                     <i
-                                        class="fas fa-search"
+                                        className="fas fa-search"
                                         aria-hidden="true"
                                     ></i>
                                 </span>
                             </p>
                         </div>
                     </div>
-                    <div class="column"></div>
+                    <div className="column"></div>
                 </div>
                 <div
                     style={{

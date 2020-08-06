@@ -5,8 +5,8 @@ import CardRiwayat from '../../components/CardRiwayat/CardRiwayat';
 function RiwayatPembelian() {
     return (
         <div>
-            <div class="container " style={{ minHeight: '100vh' }}>
-                <h2 class="title has-text-centered">Riwayat Pembelian</h2>
+            <div className="container " style={{ minHeight: '100vh' }}>
+                <h2 className="title has-text-centered">Riwayat Pembelian</h2>
 
                 <div
                     style={{

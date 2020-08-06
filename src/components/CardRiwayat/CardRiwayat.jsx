@@ -9,9 +9,9 @@ function CardRiwayat() {
                 name="LeviAckerman"
                 avatar="https://i.pinimg.com/originals/97/54/f6/9754f6c22aeade64c3e77cf1c9406567.jpg"
             />
-            <div class="buttons is-right">
+            <div className="buttons is-right">
                 <button
-                    class="button is-link is-rounded"
+                    className="button is-link is-rounded"
                     style={{ marginTop: '1em' }}
                 >
                     Tandai Selesai

@@ -18,7 +18,7 @@ import MyServices from './pages/MyServices/MyServices';
 import RiwayatPembelian from './pages/RiwayatPembelian/RiwayatPembelian';
 import Order from './pages/Order/Order';
 import Catalog from './pages/Catalog/Catalog';
-import EditProfile from './pages/Edit Profile/EditProfile';
+import EditProfile from './pages/EditProfile/EditProfile';
 import EditBank from './pages/EditBank/EditBank';
 import EditProfileTalent from './pages/EditProfileTalent/EditProfileTalent';
 import DetailOffer from './pages/DetailOffer/DetailOffer';

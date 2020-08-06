@@ -6,7 +6,6 @@ import '../../assets/css/Profile.css';
 function Dashboard() {
     const dispatch = useDispatch();
     const member = useSelector((state) => state.getmember);
-    console.log(member, 'balance');
 
     useEffect(() => {
         dispatch(fetchGetMember());

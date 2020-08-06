@@ -90,7 +90,7 @@ function AddOffer() {
                                             />
                                             <ErrorMessage name="title">
                                                 {(msg) => (
-                                                    <p class="help is-danger">
+                                                    <p className="help is-danger">
                                                         {msg}
                                                     </p>
                                                 )}
@@ -104,7 +104,7 @@ function AddOffer() {
                                             />
                                             <ErrorMessage name="desc">
                                                 {(msg) => (
-                                                    <p class="help is-danger">
+                                                    <p className="help is-danger">
                                                         {msg}
                                                     </p>
                                                 )}
@@ -118,7 +118,7 @@ function AddOffer() {
                                             />
                                             <ErrorMessage name="price">
                                                 {(msg) => (
-                                                    <p class="help is-danger">
+                                                    <p className="help is-danger">
                                                         {msg}
                                                     </p>
                                                 )}
@@ -132,7 +132,7 @@ function AddOffer() {
                                             />
                                             <ErrorMessage name="revision">
                                                 {(msg) => (
-                                                    <p class="help is-danger">
+                                                    <p className="help is-danger">
                                                         {msg}
                                                     </p>
                                                 )}
@@ -146,7 +146,7 @@ function AddOffer() {
                                             />
                                             <ErrorMessage name="requirement">
                                                 {(msg) => (
-                                                    <p class="help is-danger">
+                                                    <p className="help is-danger">
                                                         {msg}
                                                     </p>
                                                 )}
@@ -160,7 +160,7 @@ function AddOffer() {
                                             />
                                             <ErrorMessage name="processtime">
                                                 {(msg) => (
-                                                    <p class="help is-danger">
+                                                    <p className="help is-danger">
                                                         {msg}
                                                     </p>
                                                 )}
