@@ -58,7 +58,7 @@ function EditProfileTalent() {
                                     className="input"
                                     type="text"
                                     placeholder="New Username"
-                                    name="fullname"
+                                    name="username"
                                     value={updated.username}
                                     onChange={handleChange}
                                 />
