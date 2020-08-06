@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
@@ -37,6 +38,7 @@ export default function CardComponent(props) {
                 <Divider />
                 <CardContent>
                     <div
+                        key={props.key}
                         style={{
                             display: 'flex',
                             flexDirection: 'row',
@@ -52,16 +54,16 @@ export default function CardComponent(props) {
                                 display: 'flex',
                                 flexWrap: 'wrap',
                                 flexDirection: 'column',
-                                // lineHeight: '0.4',
+                                lineHeight: '1.2',
                             }}
                         >
-                            <p style={{ fontSize: '14px', height: '8vh' }}>
+                            <p style={{ fontSize: '14px' }}>
                                 <strong>{props.title}</strong>
                             </p>
 
                             <p
                                 style={{
-                                    fontSize: '12px',
+                                    fontSize: '10px',
                                 }}
                             >
                                 by{' '}
@@ -72,9 +74,12 @@ export default function CardComponent(props) {
                                 >
                                     {props.name}
                                 </span>
-                                {props.innerComponent}
                             </p>
                         </div>
+                    </div>
+                    <Divider />
+                    <div style={{ margin: '10px 0 0 0' }}>
+                        <p> Price: ${props.price}</p>
                     </div>
                 </CardContent>
             </CardActionArea>

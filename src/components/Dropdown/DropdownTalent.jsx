@@ -1,6 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { logout } from '../../redux/actions';
 function DropdownTalent() {
+    const dispatch = useDispatch();
+    const history = useHistory();
     return (
         <React.Fragment>
             <div className="navbar-dropdown">
@@ -18,7 +22,10 @@ function DropdownTalent() {
                 </Link>
 
                 <hr className="navbar-divider" />
-                <Link to="/" className="navbar-item">
+                <Link
+                    onClick={() => dispatch(logout(history))}
+                    className="navbar-item"
+                >
                     <i className="fa fa-sign-out-alt" aria-hidden="true"></i>
                     &nbsp;&nbsp;Keluar
                 </Link>

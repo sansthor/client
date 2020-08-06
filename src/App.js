@@ -75,7 +75,7 @@ function App() {
                     <Route exact path="/order">
                         <Order />
                     </Route>
-                    <Route exact path="/detailoffer">
+                    <Route exact path="/detailoffer/:id">
                         <DetailOffer />
                     </Route>
                     <Route exact path="/payment">
