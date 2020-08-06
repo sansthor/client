@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchGetMember } from '../../redux/actions';
-import { Link } from 'react-router-dom';
 
 import '../../assets/css/Profile.css';
+import Tabs from '../../components/Tabs/TabsDashboard';
+
 function Dashboard() {
     const dispatch = useDispatch();
     const member = useSelector((state) => state.getmember);
@@ -13,42 +14,27 @@ function Dashboard() {
     }, [dispatch]);
     return (
         <div>
-            <div className="tabs">
-                <ul>
-                    <li className="is-active">
-                        <Link to="/dashboard">Dashboard</Link>
-                    </li>
-                    <li>
-                        <Link to="/myservices">My Services</Link>
-                    </li>
-                    <li>
-                        <Link to="/order">Order</Link>
-                    </li>
-                    <li>
-                        <Link to="/addoffer">Add Offer</Link>
-                    </li>
-                </ul>
-            </div>
+            <Tabs />
 
             <section className="section" id="services">
                 <div className="section-heading">
                     <h3 className="title is-2">Dashboard</h3>
                 </div>
-                <nav class="level is-mobile">
-                    <div class="level-item has-text-centered"></div>
-                    <div class="level-item has-text-centered">
+                <nav className="level is-mobile">
+                    <div className="level-item has-text-centered"></div>
+                    <div className="level-item has-text-centered">
                         <div>
-                            <p class="heading">Pendapatan</p>
-                            <p class="title">IDR {member.balance}</p>
+                            <p className="heading">Pendapatan</p>
+                            <p className="title">IDR {member.balance}</p>
                         </div>
                     </div>
-                    <div class="level-item has-text-centered">
+                    <div className="level-item has-text-centered">
                         <div>
-                            <p class="heading">In Progress</p>
-                            <p class="title">0</p>
+                            <p className="heading">In Progress</p>
+                            <p className="title">0</p>
                         </div>
                     </div>
-                    <div class="level-item has-text-centered"></div>
+                    <div className="level-item has-text-centered"></div>
                 </nav>
                 <div className="tile is-parent" style={{ marginTop: '5em' }}>
                     <article className="tile is-child notification ">

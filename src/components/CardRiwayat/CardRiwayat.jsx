@@ -23,9 +23,9 @@ function CardRiwayat() {
                                 key={item._id}
                                 price={item.price}
                             />
-                            <div class="buttons is-right">
+                            <div className="buttons is-right">
                                 <button
-                                    class="button is-link is-rounded"
+                                    className="button is-link is-rounded"
                                     style={{ marginTop: '1em' }}
                                 >
                                     Tandai Selesai

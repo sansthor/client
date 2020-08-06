@@ -47,7 +47,7 @@ function Catalog() {
                         services.data.map((item) => {
                             return (
                                 <React.Fragment>
-                                    <NavLink to={`/detailoffer/${item._id}`}>
+                                    <NavLink to={`/detail-offer/${item._id}`}>
                                         <CardComponentsCategories
                                             key={item._id}
                                             image={item.image}

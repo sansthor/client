@@ -1,6 +1,11 @@
 import React from 'react';
 import '../../assets/css/Login.css';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import ReactFilestack from 'filestack-react';
+import styled from 'styled-components';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { addService } from '../../redux/actions';
 
 const MyInput = (props) => {
     return (
@@ -12,7 +17,49 @@ const MyInput = (props) => {
                 <input
                     className="input"
                     placeholder={props.placeholder}
-                    autofocus=""
+                    autoFocus=""
+                    {...props}
+                />
+            </div>
+        </div>
+    );
+};
+
+const ButtonUpload = styled.div`
+    background: skyblue;
+    width: 100%;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+`;
+
+const Image = styled.div`
+    text-align: center;
+    & img {
+        object-fit: cover;
+        width: 100px;
+    }
+`;
+
+const FileInput = (props) => {
+    return (
+        <div className="field">
+            <label className="label" style={{ textAlign: 'start' }}>
+                {props.label}
+            </label>
+            <div className="control">
+                <ReactFilestack
+                    apikey="A1Wpfmx0ShhFzrxIEH4ngz"
+                    customRender={({ onPick }) => (
+                        <div>
+                            <ButtonUpload onClick={onPick}>
+                                Pilih Gambar
+                            </ButtonUpload>
+                        </div>
+                    )}
+                    onSuccess={(res) => {
+                        props.setFieldValue('image', res.filesUploaded[0].url);
+                    }}
                     {...props}
                 />
             </div>
@@ -21,6 +68,8 @@ const MyInput = (props) => {
 };
 
 function AddOffer() {
+    const history = useHistory();
+    const dispatch = useDispatch();
     return (
         <div className="body">
             {/* <section className="hero is-success is-fullheight">
@@ -38,6 +87,7 @@ function AddOffer() {
                             desc: '',
                             requirement: '',
                             processtime: '',
+                            image: '',
                         }}
                         validate={(values) => {
                             const errors = {};
@@ -63,16 +113,17 @@ function AddOffer() {
                                 errors.processtime = 'Wajib Isi';
                             }
 
+                            if (!values.image) {
+                                errors.image = 'Wajib Isi';
+                            }
+
                             return errors;
                         }}
-                        onSubmit={(values, { setSubmitting }) => {
-                            setTimeout(() => {
-                                alert(JSON.stringify(values, null, 2));
-                                setSubmitting(false);
-                            }, 400);
+                        onSubmit={(values) => {
+                            dispatch(addService(values, history));
                         }}
                     >
-                        {() => (
+                        {({ values, setFieldValue }) => (
                             <Form>
                                 <Field
                                     as={MyInput}
@@ -83,7 +134,23 @@ function AddOffer() {
                                 />
                                 <ErrorMessage name="title">
                                     {(msg) => (
-                                        <p class="help is-danger">{msg}</p>
+                                        <p className="help is-danger">{msg}</p>
+                                    )}
+                                </ErrorMessage>
+                                <Field
+                                    as={FileInput}
+                                    name="image"
+                                    label="Gambar"
+                                    setFieldValue={setFieldValue}
+                                />
+                                {values.image !== '' && (
+                                    <Image>
+                                        <img src={values.image} alt="preview" />
+                                    </Image>
+                                )}
+                                <ErrorMessage name="image">
+                                    {(msg) => (
+                                        <p className="help is-danger">{msg}</p>
                                     )}
                                 </ErrorMessage>
                                 <Field
@@ -95,7 +162,7 @@ function AddOffer() {
                                 />
                                 <ErrorMessage name="desc">
                                     {(msg) => (
-                                        <p class="help is-danger">{msg}</p>
+                                        <p className="help is-danger">{msg}</p>
                                     )}
                                 </ErrorMessage>
                                 <Field
@@ -105,9 +172,10 @@ function AddOffer() {
                                     label="Harga"
                                     placeholder="Mulai dari"
                                 />
+
                                 <ErrorMessage name="price">
                                     {(msg) => (
-                                        <p class="help is-danger">{msg}</p>
+                                        <p className="help is-danger">{msg}</p>
                                     )}
                                 </ErrorMessage>
                                 <Field
@@ -119,7 +187,7 @@ function AddOffer() {
                                 />
                                 <ErrorMessage name="revision">
                                     {(msg) => (
-                                        <p class="help is-danger">{msg}</p>
+                                        <p className="help is-danger">{msg}</p>
                                     )}
                                 </ErrorMessage>
                                 <Field
@@ -131,7 +199,7 @@ function AddOffer() {
                                 />
                                 <ErrorMessage name="requirement">
                                     {(msg) => (
-                                        <p class="help is-danger">{msg}</p>
+                                        <p className="help is-danger">{msg}</p>
                                     )}
                                 </ErrorMessage>
                                 <Field
@@ -143,7 +211,7 @@ function AddOffer() {
                                 />
                                 <ErrorMessage name="processtime">
                                     {(msg) => (
-                                        <p class="help is-danger">{msg}</p>
+                                        <p className="help is-danger">{msg}</p>
                                     )}
                                 </ErrorMessage>
                                 <button className="button is-block is-info is-fullwidth">

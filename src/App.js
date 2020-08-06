@@ -69,13 +69,13 @@ function App() {
                     <Route exact path="/dashboard">
                         <Dashboard />
                     </Route>
-                    <Route exact path="/myservices">
+                    <Route exact path="/my-services">
                         <MyServices />
                     </Route>
                     <Route exact path="/order">
                         <Order />
                     </Route>
-                    <Route exact path="/detailoffer/:id">
+                    <Route exact path="/detail-offer/:id">
                         <DetailOffer />
                     </Route>
                     <Route exact path="/payment">
@@ -84,7 +84,7 @@ function App() {
                     <Route exact path="/payment-report">
                         <PaymentReport />
                     </Route>
-                    <Route exact path="/addoffer">
+                    <Route exact path="/add-offer">
                         <AddOffer />
                     </Route>
                 </Switch>
