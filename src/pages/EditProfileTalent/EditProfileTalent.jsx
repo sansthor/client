@@ -2,7 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchGetMember, editprofile } from '../../redux/actions';
 import { Link } from 'react-router-dom';
+import Styled from 'styled-components';
 
+const Form = Styled.form`
+@media (max-width: 1000px) {
+padding: 30px;
+}
+`;
 function EditProfileTalent() {
     const dispatch = useDispatch();
     const member = useSelector((state) => state.getmember);
@@ -41,10 +47,10 @@ function EditProfileTalent() {
                     </li>
                 </ul>
             </div>
-            <div className="columns" style={{ minHeight: '120vh' }}>
-                <div className="column"></div>
-                <div className="column is-half">
-                    <form onSubmit={handleSubmit}>
+            <Form onSubmit={handleSubmit}>
+                <div className="columns" style={{ minHeight: '120vh' }}>
+                    <div className="column"></div>
+                    <div className="column is-half">
                         <div className="field">
                             <label className="label">Username</label>
                             <div className="control has-icons-left">
@@ -171,10 +177,10 @@ function EditProfileTalent() {
                                 </button>
                             </div>
                         </div>
-                    </form>
+                    </div>
+                    <div className="column"></div>
                 </div>
-                <div className="column"></div>
-            </div>
+            </Form>
         </div>
     );
 }

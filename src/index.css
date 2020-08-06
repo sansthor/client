@@ -1,19 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@500&family=Poppins:wght@200&display=swap');
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    font-family: 'Poppins', sans-serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
         'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-        'Helvetica Neue', sans-serif;
+        'Helvetica Neue', sans-serif; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace; */
 }
 
 html {
-    font-family: 'Poppins', Lato, Tahoma, sans-serif;
+    /* font-family: 'Lemonada', cursive; */
+    font-family: 'Poppins', sans-serif;
     width: 100%;
     min-height: 100%;
     text-decoration: none;
