@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { editbank } from '../../redux/actions';
 import { Link } from 'react-router-dom';
 import Styled from 'styled-components';
-
+import { useHistory } from 'react-router-dom';
 const Form = Styled.form`
 @media (max-width: 1000px) {
 padding: 30px;
@@ -11,6 +11,7 @@ padding: 30px;
 `;
 function EditBank() {
     const dispatch = useDispatch();
+    const history = useHistory();
     const [updated, setupdated] = useState({
         bankname: '',
         bankaccnumber: '',
@@ -23,7 +24,7 @@ function EditBank() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        await dispatch(editbank(updated));
+        await dispatch(editbank(updated, history));
     };
 
     return (

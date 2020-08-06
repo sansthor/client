@@ -5,6 +5,11 @@ const editprofile = (formData) => async (dispatch) => {
     const decoded = jwt_decode(localStorage.getItem('token'));
     const id = decoded.id;
     const url = `${process.env.REACT_APP_API_URL}/user/update/${id}`;
+    for (let key in formData) {
+        if (formData[key] === '') {
+            delete formData[key];
+        }
+    }
     const options = {
         method: 'PUT',
         body: JSON.stringify({ ...formData }),
@@ -25,10 +30,15 @@ const editprofile = (formData) => async (dispatch) => {
     }
 };
 
-const editbank = (formData) => async (dispatch) => {
+const editbank = (formData, history) => async (dispatch) => {
     const decoded = jwt_decode(localStorage.getItem('token'));
     const id = decoded.id;
     const url = `${process.env.REACT_APP_API_URL}/user/register/account/${id}`;
+    for (let key in formData) {
+        if (formData[key] === '') {
+            delete formData[key];
+        }
+    }
     const options = {
         method: 'PUT',
         body: JSON.stringify({ ...formData }),
@@ -46,6 +56,7 @@ const editbank = (formData) => async (dispatch) => {
             text: '',
             icon: 'success',
         });
+        history.push('/profile');
     }
 };
 
