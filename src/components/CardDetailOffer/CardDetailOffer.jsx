@@ -42,7 +42,7 @@ padding: 40px;
 }
 `;
 const WrapImage = Styled.div`
-
+width: 100%;
 `;
 const Input = Styled.input`
 margin-right: 5px;
@@ -96,7 +96,11 @@ function CardDetailOffer(props) {
                 <Wraps>
                     <SectionOne>
                         <WrapImage>
-                            <img src={props.image} alt="thumbnail" />
+                            <img
+                                style={{ width: '100%', height: '100%' }}
+                                src={props.image}
+                                alt="thumbnail"
+                            />
                         </WrapImage>
                         <Description>
                             <p>{props.desc}</p>
