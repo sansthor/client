@@ -1,7 +1,7 @@
 import React from 'react';
 import Styled from 'styled-components';
 import CollapseComponents from '../CollapseComponents/CollapseComponents';
-
+import { useHistory } from 'react-router-dom';
 const Wraps = Styled.div`
 display: flex;
 flex-wrap: wrap;
@@ -70,6 +70,10 @@ margin: 10px 0;
 }
 `;
 function CardDetailOffer(props) {
+    const history = useHistory();
+    const handleClick = () => {
+        history.push('/payment');
+    };
     return (
         <div key={props.key}>
             <Wrapping>
@@ -118,7 +122,10 @@ function CardDetailOffer(props) {
                         <Label className="checkbox">
                             <Input type="checkbox" checked />5 Hours Of Works
                         </Label>
-                        <button className="button is-link ">
+                        <button
+                            onClick={handleClick}
+                            className="button is-link "
+                        >
                             Buy Now ${props.price}
                         </button>
                     </SectionTwo>
