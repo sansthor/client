@@ -3,6 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { fetchPutBasicUser, fetchGetMember } from '../../redux/actions';
 import { Link } from 'react-router-dom';
+import Styled from 'styled-components';
+
+const Form = Styled.form`
+@media (max-width: 1000px) {
+padding: 30px;
+
+}
+`;
 
 function EditProfile() {
     const history = useHistory();
@@ -35,7 +43,7 @@ function EditProfile() {
                     </li>
                 </ul>
             </div>
-            <form onSubmit={handleSubmit}>
+            <Form onSubmit={handleSubmit}>
                 <div className="columns" style={{ minHeight: '80vh' }}>
                     <div className="column"></div>
                     <div className="column is-half">
@@ -122,7 +130,7 @@ function EditProfile() {
                     </div>
                     <div className="column"></div>
                 </div>
-            </form>
+            </Form>
         </div>
     );
 }

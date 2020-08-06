@@ -2,7 +2,13 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { editbank } from '../../redux/actions';
 import { Link } from 'react-router-dom';
+import Styled from 'styled-components';
 
+const Form = Styled.form`
+@media (max-width: 1000px) {
+padding: 30px;
+}
+`;
 function EditBank() {
     const dispatch = useDispatch();
     const [updated, setupdated] = useState({
@@ -32,10 +38,10 @@ function EditBank() {
                     </li>
                 </ul>
             </div>
-            <div className="columns" style={{ minHeight: '80vh' }}>
-                <div className="column"></div>
-                <div className="column is-half">
-                    <form onSubmit={handleSubmit}>
+            <Form onSubmit={handleSubmit}>
+                <div className="columns" style={{ minHeight: '80vh' }}>
+                    <div className="column"></div>
+                    <div className="column is-half">
                         <div className="field">
                             <label className="label">Bank Name</label>
                             <div className="control">
@@ -88,10 +94,10 @@ function EditBank() {
                                 </button>
                             </div>
                         </div>
-                    </form>
+                    </div>
+                    <div className="column"></div>
                 </div>
-                <div className="column"></div>
-            </div>
+            </Form>
         </div>
     );
 }
