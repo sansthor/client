@@ -111,6 +111,24 @@ function EditProfile() {
                             </div>
                         </div>
 
+                        <div className="field">
+                            <label className="label">Address</label>
+                            <div className="control has-icons-left ">
+                                <input
+                                    className="input"
+                                    type="text"
+                                    placeholder="New Address"
+                                    id="address"
+                                    name="address"
+                                    value={form.address}
+                                    onChange={handleChange}
+                                />
+                                <span className="icon is-small is-left">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </span>
+                            </div>
+                        </div>
+
                         <div className="field is-grouped">
                             <div className="control">
                                 <button className="button is-link">
