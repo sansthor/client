@@ -59,7 +59,7 @@ function EditProfileTalent() {
                                     type="text"
                                     placeholder="New Username"
                                     name="fullname"
-                                    value={updated.fullname}
+                                    value={updated.username}
                                     onChange={handleChange}
                                 />
                                 <span className="icon is-small is-left">
