@@ -13,7 +13,6 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import RegisTalent from './components/RegisTalent/RegisTalent';
 import Profile from './pages/Profile/Profile';
-import NavbarUser from './components/Navbar/NavbarUser';
 import Dashboard from './pages/Dashboard/Dashboard';
 import MyServices from './pages/MyServices/MyServices';
 import RiwayatPembelian from './pages/RiwayatPembelian/RiwayatPembelian';
@@ -76,7 +75,7 @@ function App() {
                     <Route exact path="/order">
                         <Order />
                     </Route>
-                    <Route exact path="/detailoffer">
+                    <Route exact path="/detailoffer/:id">
                         <DetailOffer />
                     </Route>
                     <Route exact path="/payment">

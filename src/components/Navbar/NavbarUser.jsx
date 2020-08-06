@@ -46,39 +46,6 @@ function NavbarUser(props) {
                                 @{props.username}
                             </Link>
                             <Dropdown />
-                            {/* <div className="navbar-dropdown">
-                                <Link to="/profile" className="navbar-item">
-                                    Feed
-                                </Link>
-                                <Link
-                                    to="/profile/edit"
-                                    className="navbar-item"
-                                >
-                                    Edit Profile
-                                </Link>
-                                <Link to="/history" className="navbar-item">
-                                    Riwayat Pembelian
-                                </Link>
-                                <Link to="/dashboard" className="navbar-item">
-                                    <strong>Halaman Talent</strong>
-                                </Link>
-                                <Link
-                                    to="/register/talent"
-                                    className="navbar-item"
-                                >
-                                    <i className="fas fa-user-plus"></i>
-                                    &nbsp;&nbsp;
-                                    <strong>Daftar jadi Talent</strong>
-                                </Link>
-                                <hr className="navbar-divider" />
-                                <Link to={url} className="navbar-item">
-                                    <i
-                                        className="fa fa-sign-out-alt"
-                                        aria-hidden="true"
-                                    ></i>
-                                    &nbsp;&nbsp;Keluar
-                                </Link>
-                            </div> */}
                         </div>
                     </div>
                 </div>

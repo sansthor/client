@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/actions/registration';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import '../../assets/css/Login.css';
 
 function Register() {
@@ -14,6 +14,7 @@ function Register() {
         username: '',
         email: '',
         password: '',
+        address: '',
     });
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -130,6 +131,25 @@ function Register() {
                                             />
                                         </div>
                                     </div>
+                                    <div className="field">
+                                        <label
+                                            className="label"
+                                            style={{ textAlign: 'start' }}
+                                        >
+                                            Address
+                                        </label>
+                                        <div className="control">
+                                            <input
+                                                className="input"
+                                                type="text"
+                                                placeholder="Address"
+                                                id="address"
+                                                name="address"
+                                                value={form.address}
+                                                onChange={handleChange}
+                                            />
+                                        </div>
+                                    </div>
                                     <button className="button is-block is-info is-fullwidth">
                                         Daftar{' '}
                                         <i
@@ -142,7 +162,7 @@ function Register() {
                                         <p className="has-text-grey">
                                             <label>
                                                 Sudah punya akun?{' '}
-                                                <a href="/login">Masuk</a>
+                                                <Link to="/login">Masuk</Link>
                                             </label>
                                         </p>
                                     </div>

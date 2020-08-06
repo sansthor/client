@@ -18,6 +18,7 @@ const fetchGetAllServices = () => async (dispatch) => {
         };
         const response = await fetch(url, options);
         const result = await response.json();
+        console.log(result);
         dispatch(getAllServices(result));
     } catch (error) {
         console.log(error);

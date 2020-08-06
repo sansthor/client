@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import '../../../assets/css/Home.css';
 
@@ -29,16 +30,16 @@ function Cari() {
                             </h1>
                             <br />
                             <p>
-                                <a
+                                <Link
                                     className="button is-medium is-info is-outlined"
-                                    href="/catalog"
+                                    to="/catalog"
                                 >
                                     <i
                                         className="fas fa-search"
                                         aria-hidden="true"
                                     ></i>
                                     Cari disini
-                                </a>
+                                </Link>
                             </p>
                         </div>
                     </div>
