@@ -1,15 +1,14 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { useHistory } from 'react-router-dom';
 import { fetchGetMember } from '../../redux/actions';
 import '../../assets/css/Profile.css';
 
+import TableProfileTalent from '../../components/Profile/TableProfileTalent';
+
 function Profile() {
     const dispatch = useDispatch();
-    // const history = useHistory();
     const member = useSelector((state) => state.getmember);
     console.log(member);
-    // const memberTalent = useSelector((state) => state.getmember.role);
 
     useEffect(() => {
         dispatch(fetchGetMember());
@@ -36,9 +35,15 @@ function Profile() {
                                     >
                                         {member.fullname}
                                     </h4>
-                                    <h6 className="subtitle is-6">
-                                        @{member.username}
-                                    </h6>
+                                    {member.role === 'USER' ? (
+                                        <h6 className="subtitle is-6">
+                                            Basic Member
+                                        </h6>
+                                    ) : (
+                                        <h6 className="subtitle is-6">
+                                            Talent
+                                        </h6>
+                                    )}
                                 </article>
                             </div>
                         </div>
@@ -54,9 +59,26 @@ function Profile() {
                                         <th colSpan="2"></th>
                                     </tr>
                                     <tr>
+                                        <td>Username:</td>
+                                        <td>{member.username}</td>
+                                    </tr>
+                                    <tr>
                                         <td>Email:</td>
                                         <td>{member.email}</td>
                                     </tr>
+                                    <tr>
+                                        <td>Address:</td>
+                                        <td>{member.address}</td>
+                                    </tr>
+                                    <React.Fragment>
+                                        {member.role !== 'USER' && (
+                                            <TableProfileTalent
+                                                skills={member.skills}
+                                                link={member.link}
+                                                phone={member.phone}
+                                            />
+                                        )}
+                                    </React.Fragment>
                                 </table>
                             </div>
                         </article>
