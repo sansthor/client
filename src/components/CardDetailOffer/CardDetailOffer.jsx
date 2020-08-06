@@ -19,7 +19,7 @@ padding: 50px;
 margin: 100px;
 @media (max-width: 1000px) {
     padding: 0;
-    margin:30px 15px 30px 30px;
+    margin:30px;
     border-radius: 15px;
     
 }
