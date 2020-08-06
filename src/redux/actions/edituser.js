@@ -28,7 +28,7 @@ const editprofile = (formData) => async (dispatch) => {
 const editbank = (formData) => async (dispatch) => {
     const decoded = jwt_decode(localStorage.getItem('token'));
     const id = decoded.id;
-    const url = `${process.env.REACT_APP_API_URL}/register/account/${id}`;
+    const url = `${process.env.REACT_APP_API_URL}/user/register/account/${id}`;
     const options = {
         method: 'PUT',
         body: JSON.stringify({ ...formData }),
@@ -42,7 +42,7 @@ const editbank = (formData) => async (dispatch) => {
 
     if (response.status === 200) {
         Swal.fire({
-            title: 'Profile Berhasil Diperbarui',
+            title: 'Akun Bank Berhasil Diperbarui',
             text: '',
             icon: 'success',
         });
