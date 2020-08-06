@@ -20,7 +20,7 @@ function NavbarGuest() {
 
                 <div id="navbarBasicExample" class="navbar-menu">
                     <div class="navbar-start">
-                        <Link to={url} class="navbar-item">
+                        <Link to="/sidebar" class="navbar-item">
                             Bantuan
                         </Link>
                     </div>
