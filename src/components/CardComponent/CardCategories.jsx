@@ -4,7 +4,10 @@ import CardComponentsCategories from './CardComponentsCategories';
 
 function CardCategories() {
     return (
-        <div style={{ padding: '50px 0 100px 0', backgroundColor: '#ebebeb' }}>
+        <div
+            style={{ padding: '50px 0 100px 0', backgroundColor: '#ebebeb' }}
+            data-aos="fade-up"
+        >
             <Typography gutterBottom variant="h5" component="h2" align="center">
                 <strong>The Most Popular Service 2020</strong>
             </Typography>
@@ -14,6 +17,7 @@ function CardCategories() {
                     flexWrap: 'wrap',
                     justifyContent: 'space-around',
                 }}
+                data-aos="fade"
             >
                 <CardComponentsCategories
                     image="https://storage.googleapis.com/pintaar-web.appspot.com/course-photo/KJMaqOmCNiMe4USlckLcUlJzPKfQhEt8Z8WqWMhv.png"

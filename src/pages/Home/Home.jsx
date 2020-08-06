@@ -18,7 +18,6 @@ function Home() {
                 <Cari />
                 <CardCategories />
                 <div style={{ marginTop: '5em' }}></div>
-
                 <CardPopular />
                 <TentangKami />
                 <MottoKami />

@@ -102,7 +102,7 @@ const registerTalent = (formData, history) => async (dispatch) => {
             text: '',
             icon: 'success',
         });
-        history.push('/user/member');
+        history.push('/profile');
     }
 };
 

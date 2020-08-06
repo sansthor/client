@@ -27,8 +27,6 @@ function RegisTalent() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         await dispatch(registerTalent(updated, history));
-
-        history.push('/profile');
     };
     useEffect(() => {
         dispatch(fetchGetMember());
