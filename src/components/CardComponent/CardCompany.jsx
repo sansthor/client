@@ -1,6 +1,9 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import CardComponentCompany from './CardComponentCompany';
+
+import './Card.css';
+
 function CardCompany() {
     return (
         <div
@@ -8,9 +11,9 @@ function CardCompany() {
                 padding: '50px',
             }}
         >
-            <Typography gutterBottom variant="h5" component="h2" align="center">
-                <strong>Collaboration With</strong>
-            </Typography>
+            <h1 className="title" align="center">
+                Collaboration With
+            </h1>
             <div
                 style={{
                     display: 'flex',

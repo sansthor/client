@@ -1,7 +1,8 @@
 import React from 'react';
 import Styled from 'styled-components';
-import Typography from '@material-ui/core/Typography';
 import CardComponent from '../CardComponent/CardComponent';
+
+import './Card.css';
 
 const Wrap = Styled.div`
 display: flex;
@@ -23,9 +24,9 @@ const Image = Styled.div`
 function CardPopular() {
     return (
         <div>
-            <Typography gutterBottom variant="h5" component="h2" align="center">
-                <strong>Best Categories Service</strong>
-            </Typography>
+            <h1 className="title" align="center">
+                Kategori Layanan Favorit
+            </h1>
             <Wrap>
                 <Image data-aos="fade-right">
                     <CardComponent

@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchGetMember, fetchTransactionCartByID } from '../../redux/actions';
+import { buyService } from '../../redux/actions/buyService';
+
 const MyInput = (props) => {
     return (
         <div className="field">
@@ -21,23 +25,40 @@ const MyInput = (props) => {
 
 export default function PaymentDetail() {
     const history = useHistory();
-    const handleClick = () => {
-        history.push('/payment-report');
-    };
+    const { id } = useParams();
+    const dispatch = useDispatch();
+
+    const member = useSelector((state) => state.getmember);
+    const transaction = useSelector(
+        (state) => state.transaction.transactionCartByID
+    );
+
+    const transactionID =
+        Array.isArray(transaction) &&
+        transaction.map((item) => {
+            return { id: item._id };
+        });
+
+    useEffect(() => {
+        dispatch(fetchGetMember());
+        dispatch(fetchTransactionCartByID(id));
+    }, [dispatch, id]);
+
     return (
         <div className="column is-6 is-offset-1">
             <div className="box">
                 <Formik
                     initialValues={{
-                        fullname: '',
-                        email: '',
-                        address: '',
+                        fullname: member.fullname || '',
+                        email: member.email || '',
+                        address: member.address || '',
                         creditName: '',
                         creditNumber: '',
                         creditExpireMonth: '',
                         creditExpireYear: '',
                         cvv: '',
                     }}
+                    enableReinitialize={true}
                     validate={(values) => {
                         const errors = {};
                         if (!values.fullname) {
@@ -58,6 +79,8 @@ export default function PaymentDetail() {
 
                         if (!values.creditNumber) {
                             errors.creditNumber = 'Wajib Isi';
+                        } else if (!values.creditNumber.match(/[0-9]/)) {
+                            errors.creditNumber = 'Format Salah';
                         }
 
                         if (!values.creditExpireMonth) {
@@ -82,11 +105,16 @@ export default function PaymentDetail() {
 
                         return errors;
                     }}
-                    onSubmit={(values, { setSubmitting }) => {
-                        setTimeout(() => {
-                            alert(JSON.stringify(values, null, 2));
-                            setSubmitting(false);
-                        }, 400);
+                    onSubmit={(values) => {
+                        dispatch(
+                            buyService(
+                                {
+                                    ...values,
+                                    transactionID,
+                                },
+                                history
+                            )
+                        );
                     }}
                 >
                     {() => (
@@ -227,9 +255,8 @@ export default function PaymentDetail() {
                                     </ErrorMessage>
                                 </div>
                             </div>
-
                             <button
-                                onClick={handleClick}
+                                type="submit"
                                 className="button is-block is-info is-fullwidth"
                             >
                                 Bayar

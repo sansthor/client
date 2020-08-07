@@ -4,8 +4,9 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
+
+import './Card.css';
 
 import Styled from 'styled-components';
 
@@ -36,21 +37,9 @@ export default function CardComponent(props) {
                 </Img>
                 <Divider />
                 <CardContent>
-                    <Typography
-                        gutterBottom
-                        variant="h5"
-                        component="h2"
-                        align="center"
-                    >
+                    <h3 className="subtitle" align="center">
                         {props.title}
-                    </Typography>
-                    <Typography
-                        variant="body2"
-                        color="textSecondary"
-                        component="p"
-                    >
-                        {props.description}
-                    </Typography>
+                    </h3>
                 </CardContent>
             </CardActionArea>
         </Card>
