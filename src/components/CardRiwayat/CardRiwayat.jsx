@@ -2,10 +2,11 @@ import React, { useEffect } from 'react';
 import CardComponentsCategories from '../CardComponent/CardComponentsCategories';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchGetServiceTalent } from '../../redux/actions';
+
 function CardRiwayat() {
     const dispatch = useDispatch();
     const service = useSelector((state) => state.getservicetalent);
-    console.log(service, 'di my service');
+
     useEffect(() => {
         dispatch(fetchGetServiceTalent());
     }, [dispatch]);
