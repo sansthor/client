@@ -1,16 +1,25 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchGetAllServices } from '../../redux/actions';
+import { fetchGetAllServices, fetchFilterCatalog } from '../../redux/actions';
 import CardComponentsCategories from '../../components/CardComponent/CardComponentsCategories';
 
 function Catalog() {
     const dispatch = useDispatch();
+    const [input, setInput] = useState('');
     const services = useSelector((state) => state.getallservices);
 
+    const handleChange = (event) => {
+        setInput(event.target.value);
+    };
+
     useEffect(() => {
-        dispatch(fetchGetAllServices());
-    }, [dispatch]);
+        if (input !== '') {
+            dispatch(fetchFilterCatalog(input));
+        } else {
+            dispatch(fetchGetAllServices());
+        }
+    }, [input, dispatch]);
     return (
         <div>
             <div className="container " style={{ minHeight: '100vh' }}>
@@ -24,6 +33,8 @@ function Catalog() {
                                     className="input is-primary"
                                     type="text"
                                     placeholder="Search"
+                                    value={input}
+                                    onChange={handleChange}
                                 />
                                 <span className="icon is-left">
                                     <i
