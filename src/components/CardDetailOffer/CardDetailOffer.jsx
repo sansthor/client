@@ -74,8 +74,9 @@ function CardDetailOffer(props) {
     const handleClick = () => {
         history.push('/payment');
     };
+
     return (
-        <div key={props.key}>
+        <div>
             <Wrapping>
                 <WrapTittle>
                     <Title>
@@ -102,7 +103,7 @@ function CardDetailOffer(props) {
                         <WrapImage>
                             <img
                                 style={{ width: '100%', height: '100%' }}
-                                src={props.image}
+                                src={props.image !== false ? props.image : ''}
                                 alt="thumbnail"
                             />
                         </WrapImage>
@@ -112,15 +113,16 @@ function CardDetailOffer(props) {
                     </SectionOne>
                     <SectionTwo>
                         <Label className="checkbox">
-                            <Input type="checkbox" checked />
+                            <Input type="checkbox" checked readOnly />
                             Revision 12 Times
                         </Label>
                         <Label className="checkbox">
-                            <Input type="checkbox" checked />
+                            <Input type="checkbox" checked readOnly />
                             Commercial Use
                         </Label>
                         <Label className="checkbox">
-                            <Input type="checkbox" checked />5 Hours Of Works
+                            <Input type="checkbox" checked readOnly />5 Hours Of
+                            Works
                         </Label>
                         <button
                             onClick={handleClick}
