@@ -12,7 +12,6 @@ function CardRiwayat() {
         dispatch(fetchGetOrder());
     }, [dispatch]);
 
-    console.log(order);
     return (
         <React.Fragment>
             {order !== undefined &&
@@ -21,16 +20,17 @@ function CardRiwayat() {
                 ) : (
                     order.length > 0 &&
                     order.map((item) => {
-                        console.log(item, 'kk');
                         return (
-                            <CardRiwayatMyServices
-                                image={item.serviceID.image}
-                                title={item.serviceID.title}
-                                name={item.talentID.username}
-                                avatar={item.userID.avatar}
-                                key={item._id}
-                                price={item.total}
-                            />
+                            <React.Fragment key={item._id}>
+                                <CardRiwayatMyServices
+                                    image={item.serviceID.image}
+                                    title={item.serviceID.title}
+                                    name={item.talentID.username}
+                                    avatar={item.userID.avatar}
+                                    id={item._id}
+                                    price={item.total}
+                                />
+                            </React.Fragment>
                         );
                     })
                 ))}

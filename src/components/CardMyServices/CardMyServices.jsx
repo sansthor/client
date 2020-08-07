@@ -6,7 +6,6 @@ import CardRiwayatMyServices from '../CardComponent/CardRiwayatMyServices';
 function CardMyServices() {
     const dispatch = useDispatch();
     const service = useSelector((state) => state.getservicetalent);
-    console.log(service);
 
     useEffect(() => {
         dispatch(fetchGetServiceTalent());
@@ -20,16 +19,17 @@ function CardMyServices() {
                 ) : (
                     service.data.length > 0 &&
                     service.data.map((item) => {
-                        console.log(item, 'kk');
                         return (
-                            <CardRiwayatMyServices
-                                image={item.image}
-                                title={item.title}
-                                name={item.userID.username}
-                                avatar={item.userID.avatar}
-                                key={item._id}
-                                price={item.price}
-                            />
+                            <React.Fragment key={item._id}>
+                                <CardRiwayatMyServices
+                                    image={item.image}
+                                    title={item.title}
+                                    name={item.userID.username}
+                                    avatar={item.userID.avatar}
+                                    id={item._id}
+                                    price={item.price}
+                                />
+                            </React.Fragment>
                         );
                     })
                 ))}

@@ -15,8 +15,9 @@ export default function Cart() {
     }, [dispatch, id]);
 
     const sum =
-        Array.isArray(transaction) &&
-        transaction.reduce((a, b) => ({ total: a.total + b.total }));
+        transaction.length > 0
+            ? transaction.reduce((a, b) => ({ total: a.total + b.total }))
+            : { total: 0 };
 
     return (
         <div className="column is-4">

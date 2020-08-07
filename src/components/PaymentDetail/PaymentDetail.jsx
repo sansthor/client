@@ -75,6 +75,8 @@ export default function PaymentDetail() {
 
                         if (!values.creditName) {
                             errors.creditName = 'Wajib Isi';
+                        } else if (values.creditName.match(/[0-9]/)) {
+                            errors.creditName = 'Format Salah';
                         }
 
                         if (!values.creditNumber) {
@@ -85,7 +87,11 @@ export default function PaymentDetail() {
 
                         if (!values.creditExpireMonth) {
                             errors.creditExpireMonth = 'Wajib Isi';
-                        } else if (values.creditExpireMonth.length !== 3) {
+                        } else if (values.creditExpireMonth.length !== 2) {
+                            errors.creditExpireMonth = 'Format Salah';
+                        } else if (!values.creditExpireMonth.match(/[0-9]/)) {
+                            errors.creditExpireMonth = 'Format Salah';
+                        } else if (values.creditExpireMonth > 12) {
                             errors.creditExpireMonth = 'Format Salah';
                         }
 
@@ -212,7 +218,7 @@ export default function PaymentDetail() {
                                         type="text"
                                         name="creditExpireMonth"
                                         label="Bulan Kadaluarsa"
-                                        placeholder="JAN"
+                                        placeholder="01"
                                     />
                                     <ErrorMessage name="creditExpireMonth">
                                         {(msg) => (
@@ -258,6 +264,7 @@ export default function PaymentDetail() {
                             <button
                                 type="submit"
                                 className="button is-block is-info is-fullwidth"
+                                disabled={transaction.length === 0 && true}
                             >
                                 Bayar
                             </button>
