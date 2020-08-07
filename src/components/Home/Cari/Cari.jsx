@@ -22,8 +22,8 @@ function Cari() {
                             data-aos="fade-left"
                         >
                             <h1 className="title is-2">
-                                Help you find the best digital talent that match
-                                your needs!
+                                Memberikan Solusi Layanan Digital yang Anda
+                                Butuhkan!
                             </h1>
                             <h1 className="subtitle">
                                 Temukan Penawaran dari Talenta Digital Kami
