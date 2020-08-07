@@ -22,7 +22,7 @@ const addCart = (values, history) => async () => {
             icon: 'success',
         });
 
-        history('/catalog');
+        history.push('/catalog');
     }
 };
 

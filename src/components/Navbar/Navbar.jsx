@@ -14,7 +14,7 @@ function Navbar() {
         <div>
             <React.Fragment>
                 {member.role !== undefined ? (
-                    <NavbarUser username={member.username} />
+                    <NavbarUser username={member.username} id={member._id} />
                 ) : (
                     <NavbarGuest />
                 )}
