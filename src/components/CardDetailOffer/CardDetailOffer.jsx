@@ -2,6 +2,9 @@ import React from 'react';
 import Styled from 'styled-components';
 import CollapseComponents from '../CollapseComponents/CollapseComponents';
 import { useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { addCart } from '../../redux/actions';
+
 const Wraps = Styled.div`
 display: flex;
 flex-wrap: wrap;
@@ -71,11 +74,32 @@ margin: 10px 0;
 `;
 function CardDetailOffer(props) {
     const history = useHistory();
-    const handleClick = () => {
-        history.push('/payment');
+    const dispatch = useDispatch();
+
+    const member = useSelector((state) => state.getmember);
+    const service = useSelector((state) => state.getservicebyid.data);
+
+    const handleClick = (id) => {
+        dispatch(
+            addCart(
+                {
+                    userID: member._id,
+                    talentID: service.userID._id,
+                    status: 'CART',
+                    quantity: 1,
+                    total: service.price,
+                    talentStatus: 'CART',
+                    userStatus: 'CART',
+                    serviceID: id,
+                },
+                history,
+                id
+            )
+        );
     };
+
     return (
-        <div key={props.key}>
+        <div>
             <Wrapping>
                 <WrapTittle>
                     <Title>
@@ -102,7 +126,7 @@ function CardDetailOffer(props) {
                         <WrapImage>
                             <img
                                 style={{ width: '100%', height: '100%' }}
-                                src={props.image}
+                                src={props.image !== false ? props.image : ''}
                                 alt="thumbnail"
                             />
                         </WrapImage>
@@ -112,18 +136,19 @@ function CardDetailOffer(props) {
                     </SectionOne>
                     <SectionTwo>
                         <Label className="checkbox">
-                            <Input type="checkbox" checked />
+                            <Input type="checkbox" checked readOnly />
                             Revision 12 Times
                         </Label>
                         <Label className="checkbox">
-                            <Input type="checkbox" checked />
+                            <Input type="checkbox" checked readOnly />
                             Commercial Use
                         </Label>
                         <Label className="checkbox">
-                            <Input type="checkbox" checked />5 Hours Of Works
+                            <Input type="checkbox" checked readOnly />5 Hours Of
+                            Works
                         </Label>
                         <button
-                            onClick={handleClick}
+                            onClick={() => handleClick(props.id)}
                             className="button is-link "
                         >
                             Buy Now ${props.price}
