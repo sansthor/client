@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import CardRiwayat from '../../components/CardRiwayat/CardRiwayat';
 
 function RiwayatPembelian() {
@@ -15,10 +15,7 @@ function RiwayatPembelian() {
                         justifyContent: 'space-around',
                     }}
                 >
-                    <CardRiwayat />
-                    <CardRiwayat />
-                    <CardRiwayat />
-                    <CardRiwayat />
+                    Kosong
                     <CardRiwayat />
                 </div>
             </div>
