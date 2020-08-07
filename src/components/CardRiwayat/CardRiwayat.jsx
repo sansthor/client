@@ -23,16 +23,14 @@ function CardRiwayat() {
                     order.map((item) => {
                         console.log(item, 'kk');
                         return (
-                            <div className="notification">
-                                <CardComponentsRiwayat
-                                    image={item.serviceID.image}
-                                    title={item.serviceID.title}
-                                    name={item.talentID.username}
-                                    avatar={item.userID.avatar}
-                                    key={item._id}
-                                    price={item.total}
-                                />
-                            </div>
+                            <CardComponentsRiwayat
+                                image={item.serviceID.image}
+                                title={item.serviceID.title}
+                                name={item.talentID.username}
+                                avatar={item.userID.avatar}
+                                key={item._id}
+                                price={item.total}
+                            />
                         );
                     })
                 ))}
