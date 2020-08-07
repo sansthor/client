@@ -21,7 +21,7 @@ const fetchGetServiceTalent = () => async (dispatch) => {
         };
         const response = await fetch(url, options);
         const result = await response.json();
-        console.log(result);
+
         dispatch(getServiceTalent(result));
     } catch (error) {
         console.log(error);

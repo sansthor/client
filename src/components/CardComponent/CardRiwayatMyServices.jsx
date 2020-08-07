@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
 import Divider from '@material-ui/core/Divider';
 import Avatar from '@material-ui/core/Avatar';
@@ -19,21 +20,28 @@ const useStyles = makeStyles({
     root: {
         maxWidth: 270,
     },
+    block: {
+        display: 'block',
+    },
 });
 
 export default function CardRiwayatMyServices(props) {
     const classes = useStyles();
 
     return (
-        <Card style={{ margin: '40px' }} className={classes.root}>
+        <Card
+            style={{ margin: '40px' }}
+            className={classes.root}
+            key={props.id}
+        >
             <CardActionArea>
                 <Img>
                     <CardMedia
                         style={{ height: '100%', width: '100%' }}
                         component="img"
-                        alt="Contemplative Reptile"
+                        alt={props.title}
                         image={props.image}
-                        title="Contemplative Reptile"
+                        title={props.title}
                     />
                 </Img>
                 <Divider />
@@ -79,23 +87,25 @@ export default function CardRiwayatMyServices(props) {
                         </div>
                     </div>
                     <Divider />
-                    <div
-                        style={{
-                            margin: '10px 0 0 0',
-                        }}
-                    >
-                        <p style={{ textAlign: 'right' }}> IDR {props.price}</p>
-                        <div className="buttons is-right">
-                            <button
-                                className="button is-link is-rounded"
-                                style={{ marginTop: '1em', width: '100%' }}
-                            >
-                                Tandai Selesai
-                            </button>
-                        </div>
-                    </div>
                 </CardContent>
             </CardActionArea>
+            <CardActions className={classes.block}>
+                <div
+                    style={{
+                        margin: '10px 0 0 0',
+                    }}
+                >
+                    <p style={{ textAlign: 'right' }}> IDR {props.price}</p>
+                    <div className="buttons is-right">
+                        <button
+                            className="button is-link is-rounded"
+                            style={{ marginTop: '1em', width: '100%' }}
+                        >
+                            Tandai Selesai
+                        </button>
+                    </div>
+                </div>
+            </CardActions>
         </Card>
     );
 }

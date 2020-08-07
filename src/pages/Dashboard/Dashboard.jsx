@@ -9,13 +9,12 @@ function Dashboard() {
     const dispatch = useDispatch();
     const member = useSelector((state) => state.getmember);
     const count = useSelector((state) => state.getcount);
-    console.log(count, 'ini count');
+
     useEffect(() => {
         dispatch(fetchGetMember());
-    }, [dispatch]);
-    useEffect(() => {
         dispatch(fetchGetCount());
     }, [dispatch]);
+
     return (
         <div>
             <div className="container " style={{ minHeight: '100vh' }}>
@@ -46,22 +45,24 @@ function Dashboard() {
                         <div className="content">
                             {/* Content */}
                             <table className="table-profile">
-                                <tr>
-                                    <th colSpan="1"></th>
-                                    <th colSpan="2"></th>
-                                </tr>
-                                <tr>
-                                    <td>Nama Bank:</td>
-                                    <td>{member.bankname}</td>
-                                </tr>
-                                <tr>
-                                    <td>Nama di Bank:</td>
-                                    <td>{member.bankaccname}</td>
-                                </tr>
-                                <tr>
-                                    <td>Nomor Rekening:</td>
-                                    <td>{member.bankaccnumber}</td>
-                                </tr>
+                                <tbody>
+                                    <tr>
+                                        <th colSpan="1"></th>
+                                        <th colSpan="2"></th>
+                                    </tr>
+                                    <tr>
+                                        <td>Nama Bank:</td>
+                                        <td>{member.bankname}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nama di Bank:</td>
+                                        <td>{member.bankaccname}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nomor Rekening:</td>
+                                        <td>{member.bankaccnumber}</td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                     </article>

@@ -30,9 +30,9 @@ export default function CardComponent(props) {
                     <CardMedia
                         style={{ height: '100%', width: '100%' }}
                         component="img"
-                        alt="Contemplative Reptile"
+                        alt={props.title}
                         image={props.image}
-                        title="Contemplative Reptile"
+                        title={props.title}
                     />
                 </Img>
                 <Divider />

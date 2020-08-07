@@ -68,7 +68,7 @@ function NavbarUser(props) {
                                     to={`/payment/${props.id}`}
                                     className="button is-light"
                                 >
-                                    <i class="fas fa-shopping-cart"></i>
+                                    <i className="fas fa-shopping-cart"></i>
                                 </Link>
                             </div>
                         </div>
