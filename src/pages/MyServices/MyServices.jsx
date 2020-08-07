@@ -1,12 +1,12 @@
 import React from 'react';
 import '../../assets/css/Profile.css';
-import Tabs from '../../components/Tabs/TabsDashboard';
 import CardRiwayat from '../../components/CardRiwayat/CardRiwayat';
+import TabMyServices from '../../components/Tabs/TabMyServices';
 
 function MyServices() {
     return (
-        <div>
-            <Tabs />
+        <div style={{ minHeight: '80vh' }}>
+            <TabMyServices />
 
             <section className="section" id="about">
                 <div className="section-heading">

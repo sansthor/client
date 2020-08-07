@@ -1,11 +1,11 @@
 import React from 'react';
 import '../../assets/css/Profile.css';
-import Tabs from '../../components/Tabs/TabsDashboard';
+import TabOrder from '../../components/Tabs/TabOrder';
 
 function Order() {
     return (
         <div>
-            <Tabs />
+            <TabOrder />
 
             <section className="section" id="about">
                 <div className="section-heading">
