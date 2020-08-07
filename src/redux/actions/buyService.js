@@ -1,4 +1,4 @@
-addimport Swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 
 const buyService = (values, history) => async () => {
     const token = localStorage.getItem('token');
