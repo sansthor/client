@@ -11,3 +11,4 @@ export * from './getOrder';
 export * from './buyService';
 export * from './addCart';
 export * from './transaction';
+export * from './getcount';
