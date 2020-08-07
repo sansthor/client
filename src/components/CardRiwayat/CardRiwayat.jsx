@@ -26,7 +26,7 @@ function CardRiwayat() {
                                 <CardComponentsCategories
                                     image={item.serviceID.image}
                                     title={item.serviceID.title}
-                                    name={item.userID.username}
+                                    name={item.talentID.username}
                                     avatar={item.userID.avatar}
                                     key={item._id}
                                     price={item.total}
