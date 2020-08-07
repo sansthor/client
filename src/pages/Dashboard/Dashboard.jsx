@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchGetMember } from '../../redux/actions';
 
 import '../../assets/css/Profile.css';
-import TabDashboard from '../../components/Tabs/TabDashboard';
+import Tabs from '../../components/Tabs/TabsDashboard';
 
 function Dashboard() {
     const dispatch = useDispatch();
@@ -14,7 +14,7 @@ function Dashboard() {
     }, [dispatch]);
     return (
         <div>
-            <TabDashboard />
+            <Tabs />
 
             <section className="section" id="services">
                 <div className="section-heading">

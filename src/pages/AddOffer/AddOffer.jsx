@@ -1,12 +1,12 @@
 import React from 'react';
 import '../../assets/css/Profile.css';
 import AddOffer from '../../components/AddOffer/AddOffer';
-import TabAddOffer from '../../components/Tabs/TabAddOffer';
+import Tabs from '../../components/Tabs/TabsDashboard';
 
 function MyServices() {
     return (
         <div>
-            <TabAddOffer />
+            <Tabs />
 
             <section className="section" id="about">
                 <div className="section-heading">
