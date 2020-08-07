@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -7,7 +7,9 @@ import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
 import Divider from '@material-ui/core/Divider';
 import Avatar from '@material-ui/core/Avatar';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchGetOrder, fetchOrderPurchase } from '../../redux/actions';
+import { useHistory } from 'react-router-dom';
 import './Card.css';
 
 import Styled from 'styled-components';
@@ -28,6 +30,17 @@ const useStyles = makeStyles({
 export default function CardRiwayatMyServices(props) {
     const classes = useStyles();
 
+    const history = useHistory();
+    const dispatch = useDispatch();
+    const order = useSelector((state) => state.getorder);
+    console.log(order, 'id order');
+    useEffect(() => {
+        dispatch(fetchGetOrder());
+    }, [dispatch]);
+
+    const handleClick = (id) => {
+        dispatch(fetchOrderPurchase(id, history));
+    };
     return (
         <Card
             style={{ margin: '40px' }}
@@ -96,14 +109,6 @@ export default function CardRiwayatMyServices(props) {
                     }}
                 >
                     <p style={{ textAlign: 'right' }}> IDR {props.price}</p>
-                    <div className="buttons is-right">
-                        <button
-                            className="button is-link is-rounded"
-                            style={{ marginTop: '1em', width: '100%' }}
-                        >
-                            Tandai Selesai
-                        </button>
-                    </div>
                 </div>
             </CardActions>
         </Card>

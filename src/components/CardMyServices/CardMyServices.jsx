@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchGetServiceTalent } from '../../redux/actions';
-import CardRiwayatMyServices from '../CardComponent/CardRiwayatMyServices';
+import CardForMyServices from '../CardComponent/CardForMyService';
 
 function CardMyServices() {
     const dispatch = useDispatch();
@@ -21,7 +21,7 @@ function CardMyServices() {
                     service.data.map((item) => {
                         return (
                             <React.Fragment key={item._id}>
-                                <CardRiwayatMyServices
+                                <CardForMyServices
                                     image={item.image}
                                     title={item.title}
                                     name={item.userID.username}
