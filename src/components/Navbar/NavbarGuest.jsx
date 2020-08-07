@@ -22,7 +22,7 @@ function NavbarGuest() {
                         ></img>
                     </Link>
 
-                    <a
+                    <span
                         role="button"
                         className={`navbar-burger burger ${
                             isActive ? 'is-active' : ''
@@ -32,17 +32,19 @@ function NavbarGuest() {
                         onClick={() => {
                             setIsActive(!isActive);
                         }}
-                        href="/#"
                     >
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
-                    </a>
+                    </span>
                 </div>
 
                 <div
                     id="navbarBasicExample"
                     className={`navbar-menu ${isActive ? 'is-active' : ''}`}
+                    onClick={() => {
+                        setIsActive(!isActive);
+                    }}
                 >
                     <div className="navbar-start">
                         <Link to={url} className="navbar-item">
