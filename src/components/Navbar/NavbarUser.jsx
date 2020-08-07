@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Dropdown from '../Dropdown/Dropdown';
 import PersonIcon from '@material-ui/icons/Person';
+
 function NavbarUser(props) {
-    let url = '';
+    const [isActive, setIsActive] = useState(false);
     return (
         <div>
             <nav
@@ -20,9 +21,30 @@ function NavbarUser(props) {
                             alt="brand"
                         ></img>
                     </Link>
+
+                    <a
+                        role="button"
+                        className={`navbar-burger burger ${
+                            isActive ? 'is-active' : ''
+                        }`}
+                        aria-label="menu"
+                        aria-expanded="false"
+                        data-target="navbarBasicExample"
+                        onClick={() => {
+                            setIsActive(!isActive);
+                        }}
+                        href="/#"
+                    >
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
                 </div>
 
-                <div id="navbarBasicExample" className="navbar-menu">
+                <div
+                    id="navbarBasicExample"
+                    className={`navbar-menu ${isActive ? 'is-active' : ''}`}
+                >
                     <div className="navbar-start">
                         <Link className="navbar-item">Bantuan</Link>
                     </div>
@@ -42,11 +64,11 @@ function NavbarUser(props) {
                             className="navbar-item has-dropdown is-hoverable"
                             style={{ marginRight: '5em' }}
                         >
-                            <Link to={url} className="navbar-link">
+                            <span className="navbar-link">
                                 <PersonIcon />
                                 &nbsp;&nbsp;
                                 {props.username}
-                            </Link>
+                            </span>
                             <Dropdown />
                         </div>
                     </div>

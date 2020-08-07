@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
 function NavbarGuest() {
+    const [isActive, setIsActive] = useState(false);
     let url = '';
     return (
         <div>
-            <nav className="navbar" role="navigation" aria-label="main navigation">
+            <nav
+                className="navbar"
+                role="navigation"
+                aria-label="main navigation"
+            >
                 <div className="navbar-brand">
                     <Link className="navbar-item" to="/">
                         <img
@@ -16,9 +21,29 @@ function NavbarGuest() {
                             alt="brand"
                         ></img>
                     </Link>
+
+                    <a
+                        role="button"
+                        className={`navbar-burger burger ${
+                            isActive ? 'is-active' : ''
+                        }`}
+                        aria-label="menu"
+                        aria-expanded="false"
+                        onClick={() => {
+                            setIsActive(!isActive);
+                        }}
+                        href="/#"
+                    >
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
                 </div>
 
-                <div id="navbarBasicExample" className="navbar-menu">
+                <div
+                    id="navbarBasicExample"
+                    className={`navbar-menu ${isActive ? 'is-active' : ''}`}
+                >
                     <div className="navbar-start">
                         <Link to={url} className="navbar-item">
                             Bantuan
