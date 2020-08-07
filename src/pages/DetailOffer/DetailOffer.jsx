@@ -7,7 +7,7 @@ function DetailOffer() {
     const { id } = useParams();
     const dispatch = useDispatch();
     const service = useSelector((state) => state.getservicebyid);
-
+    console.log(service);
     useEffect(() => {
         dispatch(fetchGetServiceById(id));
     }, [dispatch, id]);
@@ -22,6 +22,9 @@ function DetailOffer() {
                 image={service.data !== undefined && service.data.image}
                 desc={service.data !== undefined && service.data.desc}
                 price={service.data !== undefined && service.data.price}
+                avatar={
+                    service.data !== undefined && service.data.userID.avatar
+                }
             />
         </div>
     );

@@ -111,10 +111,7 @@ function CardDetailOffer(props) {
                             paddingBottom: '10px',
                         }}
                     >
-                        <Avatar
-                            src="https://i.pinimg.com/236x/b1/9c/d0/b19cd01bf5d4cb88240d7a50d21cff33.jpg"
-                            alt="avatar"
-                        />
+                        <Avatar src={props.avatar} alt="avatar" />
                         <Title as="span">
                             <em>{props.name}</em>
                         </Title>
