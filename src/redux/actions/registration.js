@@ -28,10 +28,10 @@ const userLogin = (formData, history) => async (dispatch) => {
 
         if (response.status === 200) {
             Swal.fire({
-                title: 'Login Success!',
+                title: 'Berhasil Login!',
                 text: '',
                 icon: 'success',
-                confirmButtonText: 'Cool',
+                // confirmButtonText: 'Cool',
             });
             localStorage.setItem('token', result.result);
             dispatch(getUserLogin(result));
@@ -41,7 +41,7 @@ const userLogin = (formData, history) => async (dispatch) => {
         }
     } catch (error) {
         Swal.fire({
-            title: 'Email or Password Incorrect!',
+            title: 'Email atau Password Salah!',
             text: '',
             icon: 'error',
             confirmButtonText: 'Cool',
@@ -64,18 +64,18 @@ const register = (formData, history) => async (dispatch) => {
 
     if (response.status === 200) {
         Swal.fire({
-            title: 'Your Email Successfuly Register!',
+            title: 'Pendaftaran Berhasil!',
             text: '',
             icon: 'success',
-            confirmButtonText: 'Cool',
+            // confirmButtonText: 'Cool',
         });
         history.push('/login');
     } else {
         Swal.fire({
-            title: 'Email already registered',
+            title: 'Email Sudah Terdaftar',
             text: '',
             icon: 'error',
-            confirmButtonText: 'Cool',
+            // confirmButtonText: 'Cool',
         });
     }
     dispatch(registerUser(result));
@@ -98,7 +98,7 @@ const registerTalent = (formData, history) => async (dispatch) => {
 
     if (response.status === 200) {
         Swal.fire({
-            title: 'Your Account Successfully be Talent',
+            title: 'Akun Berhasil Di-upgrade Menjadi Talent',
             text: '',
             icon: 'success',
         });
