@@ -5,9 +5,11 @@ import getmember from './getmember';
 import getservicebyid from './getservicebyid';
 import putbasicuser from './putbasicuser';
 import getservicetalent from './getservicetalent';
+import getorder from './getOrder';
 import transaction from './transaction';
-
+import getcount from './getcount';
 export default combineReducers({
+    getorder,
     registration,
     getallservices,
     getmember,
@@ -15,4 +17,5 @@ export default combineReducers({
     putbasicuser,
     getservicetalent,
     transaction,
+    getcount,
 });

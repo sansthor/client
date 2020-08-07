@@ -51,16 +51,24 @@ function NavbarUser(props) {
                         <Link to="/sidebar" className="navbar-item">
                             Bantuan
                         </Link>
+                        <div className="buttons">
+                            <Link to="/catalog" className="button is-light">
+                                <i
+                                    className="fas fa-search"
+                                    aria-hidden="true"
+                                ></i>
+                            </Link>
+                        </div>
                     </div>
 
                     <div className="navbar-end">
                         <div className="navbar-item">
                             <div className="buttons">
-                                <Link to="/catalog" className="button is-light">
-                                    <i
-                                        className="fas fa-search"
-                                        aria-hidden="true"
-                                    ></i>
+                                <Link
+                                    to={`/payment/${props.id}`}
+                                    className="button is-light"
+                                >
+                                    <i class="fas fa-shopping-cart"></i>
                                 </Link>
                             </div>
                         </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../assets/css/Profile.css';
 import CardRiwayat from '../../components/CardRiwayat/CardRiwayat';
+import CardComponentDummy from '../../components/CardComponent/CardComponentsRiwayat';
 import Tabs from '../../components/Tabs/TabsDashboard';
 
 function MyServices() {

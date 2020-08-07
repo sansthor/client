@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchGetMember } from '../../redux/actions';
+import { fetchGetMember, fetchGetCount } from '../../redux/actions';
 
 import '../../assets/css/Profile.css';
 import Tabs from '../../components/Tabs/TabsDashboard';
@@ -8,9 +8,13 @@ import Tabs from '../../components/Tabs/TabsDashboard';
 function Dashboard() {
     const dispatch = useDispatch();
     const member = useSelector((state) => state.getmember);
-
+    const count = useSelector((state) => state.getcount);
+    console.log(count, 'ini count');
     useEffect(() => {
         dispatch(fetchGetMember());
+    }, [dispatch]);
+    useEffect(() => {
+        dispatch(fetchGetCount());
     }, [dispatch]);
     return (
         <div>
@@ -31,7 +35,7 @@ function Dashboard() {
                     <div className="level-item has-text-centered">
                         <div>
                             <p className="heading">In Progress</p>
-                            <p className="title">0</p>
+                            <p className="title">{count.data}</p>
                         </div>
                     </div>
                     <div className="level-item has-text-centered"></div>
