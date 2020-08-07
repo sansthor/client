@@ -63,7 +63,12 @@ function NavbarUser(props) {
                             </div>
                         </div>
                         <div
-                            className="navbar-item has-dropdown is-hoverable"
+                            className={`navbar-item has-dropdown ${
+                                isActive ? 'is-hoverable' : ''
+                            }`}
+                            onClick={() => {
+                                setIsActive(!isActive);
+                            }}
                             style={{ marginRight: '5em' }}
                         >
                             <span className="navbar-link">
