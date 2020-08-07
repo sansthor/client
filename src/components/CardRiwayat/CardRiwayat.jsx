@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 // import CardComponentsCategories from '../CardComponent/CardComponentsCategories';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchGetOrder } from '../../redux/actions';
-import CardRiwayatMyServices from '../CardComponent/CardRiwayatMyServices';
+import CardRiwayatPembelian from '../CardComponent/CardRiwayatPembelian';
 
 function CardRiwayat() {
     const dispatch = useDispatch();
@@ -22,7 +22,7 @@ function CardRiwayat() {
                     order.map((item) => {
                         return (
                             <React.Fragment key={item._id}>
-                                <CardRiwayatMyServices
+                                <CardRiwayatPembelian
                                     image={item.serviceID.image}
                                     title={item.serviceID.title}
                                     name={item.talentID.username}
