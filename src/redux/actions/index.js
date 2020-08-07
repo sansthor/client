@@ -9,3 +9,4 @@ export * from './addService';
 export * from './buyService';
 export * from './addCart';
 export * from './transaction';
+export * from './getcount';
