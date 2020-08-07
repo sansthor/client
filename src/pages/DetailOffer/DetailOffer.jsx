@@ -14,7 +14,7 @@ function DetailOffer() {
     return (
         <div>
             <CardDetailOffer
-                key={service.data !== undefined && service.data._id}
+                id={service.data !== undefined && service.data._id}
                 title={service.data !== undefined && service.data.title}
                 name={
                     service.data !== undefined && service.data.userID.fullname

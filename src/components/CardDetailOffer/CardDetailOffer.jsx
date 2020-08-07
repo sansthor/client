@@ -2,6 +2,9 @@ import React from 'react';
 import Styled from 'styled-components';
 import CollapseComponents from '../CollapseComponents/CollapseComponents';
 import { useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { addCart } from '../../redux/actions';
+
 const Wraps = Styled.div`
 display: flex;
 flex-wrap: wrap;
@@ -71,8 +74,28 @@ margin: 10px 0;
 `;
 function CardDetailOffer(props) {
     const history = useHistory();
-    const handleClick = () => {
-        history.push('/payment');
+    const dispatch = useDispatch();
+
+    const member = useSelector((state) => state.getmember);
+    const service = useSelector((state) => state.getservicebyid.data);
+
+    const handleClick = (id) => {
+        dispatch(
+            addCart(
+                {
+                    userID: member._id,
+                    talentID: service.userID._id,
+                    status: 'CART',
+                    quantity: 1,
+                    total: service.price,
+                    talentStatus: 'CART',
+                    userStatus: 'CART',
+                    serviceID: id,
+                },
+                history,
+                id
+            )
+        );
     };
 
     return (
@@ -125,7 +148,7 @@ function CardDetailOffer(props) {
                             Works
                         </Label>
                         <button
-                            onClick={handleClick}
+                            onClick={() => handleClick(props.id)}
                             className="button is-link "
                         >
                             Buy Now ${props.price}

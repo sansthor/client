@@ -79,7 +79,7 @@ function App() {
                     <Route exact path="/detail-offer/:id">
                         <DetailOffer />
                     </Route>
-                    <Route exact path="/payment">
+                    <Route exact path="/payment/:id">
                         <Payment />
                     </Route>
                     <Route exact path="/payment-report">
