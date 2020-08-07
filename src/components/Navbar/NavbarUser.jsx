@@ -48,7 +48,9 @@ function NavbarUser(props) {
                     }}
                 >
                     <div className="navbar-start">
-                        <Link className="navbar-item">Bantuan</Link>
+                        <Link to="/sidebar" className="navbar-item">
+                            Bantuan
+                        </Link>
                     </div>
 
                     <div className="navbar-end">

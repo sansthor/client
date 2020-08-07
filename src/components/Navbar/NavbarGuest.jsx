@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function NavbarGuest() {
     const [isActive, setIsActive] = useState(false);
-    let url = '';
+
     return (
         <div>
             <nav
@@ -46,8 +46,8 @@ function NavbarGuest() {
                         setIsActive(!isActive);
                     }}
                 >
-                    <div className="navbar-start">
-                        <Link to={url} className="navbar-item">
+                    <div class="navbar-start">
+                        <Link to="/sidebar" class="navbar-item">
                             Bantuan
                         </Link>
                     </div>

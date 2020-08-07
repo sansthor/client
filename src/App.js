@@ -25,6 +25,7 @@ import DetailOffer from './pages/DetailOffer/DetailOffer';
 import Payment from './pages/Payment/Payment';
 import PaymentReport from './pages/Payment/PaymentReport';
 import AddOffer from './pages/AddOffer/AddOffer';
+import CardSidebar from './components/SidebarHelp/CardSidebar';
 
 import Navbar from './components/Navbar/Navbar';
 function App() {
@@ -86,6 +87,9 @@ function App() {
                     </Route>
                     <Route exact path="/add-offer">
                         <AddOffer />
+                    </Route>
+                    <Route exact path="/sidebar">
+                        <CardSidebar />
                     </Route>
                 </Switch>
                 <Footer />
