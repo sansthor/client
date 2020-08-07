@@ -25,7 +25,7 @@ export default function CardComponentsRiwayat(props) {
     const classes = useStyles();
 
     return (
-        <Card style={{ marginTop: '40px' }} className={classes.root}>
+        <Card style={{ margin: '40px' }} className={classes.root}>
             <CardActionArea>
                 <Img>
                     <CardMedia
