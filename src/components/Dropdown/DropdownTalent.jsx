@@ -22,13 +22,14 @@ function DropdownTalent() {
                 </Link>
 
                 <hr className="navbar-divider" />
-                <Link
+                <span
                     onClick={() => dispatch(logout(history))}
                     className="navbar-item"
+                    style={{ cursor: 'pointer' }}
                 >
                     <i className="fa fa-sign-out-alt" aria-hidden="true"></i>
                     &nbsp;&nbsp;Keluar
-                </Link>
+                </span>
             </div>
         </React.Fragment>
     );
