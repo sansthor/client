@@ -4,6 +4,7 @@ import CollapseComponents from '../CollapseComponents/CollapseComponents';
 import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCart } from '../../redux/actions';
+import Avatar from '@material-ui/core/Avatar';
 
 const Wraps = Styled.div`
 display: flex;
@@ -61,11 +62,7 @@ padding: 5px;
 
 
 `;
-const Avatar = Styled.img`
-width: 30px;
-  height: 30px;
-  border-radius: 50%;
-`;
+
 const WrapTittle = Styled.div`
 margin: 10px 0;
 @media (max-width: 1000px){
@@ -111,7 +108,11 @@ function CardDetailOffer(props) {
                             paddingBottom: '10px',
                         }}
                     >
-                        <Avatar src={props.avatar} alt="avatar" />
+                        <Avatar
+                            style={{ top: '-5px', marginRight: '5px' }}
+                            alt="avatar"
+                            src={props.avatar}
+                        />
                         <Title as="span">
                             <em>{props.name}</em>
                         </Title>
@@ -131,18 +132,52 @@ function CardDetailOffer(props) {
                         </Description>
                     </SectionOne>
                     <SectionTwo>
-                        <Label className="checkbox">
-                            <Input type="checkbox" checked readOnly />
-                            Revision 12 Times
-                        </Label>
-                        <Label className="checkbox">
-                            <Input type="checkbox" checked readOnly />
-                            Commercial Use
-                        </Label>
-                        <Label className="checkbox">
-                            <Input type="checkbox" checked readOnly />5 Hours Of
-                            Works
-                        </Label>
+                        <div style={{ display: 'flex', flexDirection: 'row' }}>
+                            {' '}
+                            <i
+                                className="fas fa-check"
+                                style={{ margin: '4px 5px  0 0' }}
+                            ></i>{' '}
+                            <p>
+                                {' '}
+                                Revision{' '}
+                                {props.revision !== undefined
+                                    ? props.revision
+                                    : '1 '}
+                                Times
+                            </p>
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'row' }}>
+                            {' '}
+                            <i
+                                className="fas fa-check"
+                                style={{ margin: '4px 5px  0 0' }}
+                            ></i>{' '}
+                            <p>
+                                {props.requirement !== ''
+                                    ? props.requirement
+                                    : 'Commercial Use'}
+                            </p>
+                        </div>
+                        <div
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'row',
+                                marginBottom: '10px',
+                            }}
+                        >
+                            {' '}
+                            <i
+                                className="fas fa-check"
+                                style={{ margin: '4px 5px  0 0' }}
+                            ></i>{' '}
+                            <p>
+                                {props.processtime !== undefined
+                                    ? props.processtime
+                                    : '5 hari'}
+                            </p>
+                        </div>
+
                         <button
                             onClick={() => handleClick(props.id)}
                             className="button is-link "

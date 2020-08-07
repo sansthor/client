@@ -7,7 +7,7 @@ function DetailOffer() {
     const { id } = useParams();
     const dispatch = useDispatch();
     const service = useSelector((state) => state.getservicebyid);
-    console.log(service);
+    console.log(service, 'add revision');
     useEffect(() => {
         dispatch(fetchGetServiceById(id));
     }, [dispatch, id]);
@@ -24,6 +24,15 @@ function DetailOffer() {
                 price={service.data !== undefined && service.data.price}
                 avatar={
                     service.data !== undefined && service.data.userID.avatar
+                }
+                // revision={
+                //     service.data !== undefined && service.data.revision
+                // }
+                processtime={
+                    service.data !== undefined && service.data.processtime
+                }
+                requirement={
+                    service.data !== undefined && service.data.requirement
                 }
             />
         </div>
