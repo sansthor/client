@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     },
 });
 
-export default function CardComponent(props) {
+export default function CardComponentsRiwayat(props) {
     const classes = useStyles();
 
     return (
@@ -85,6 +85,14 @@ export default function CardComponent(props) {
                         }}
                     >
                         <p style={{ textAlign: 'right' }}> IDR {props.price}</p>
+                        <div className="buttons is-right">
+                            <button
+                                className="button is-link is-rounded"
+                                style={{ marginTop: '1em', width: '100%' }}
+                            >
+                                Tandai Selesai
+                            </button>
+                        </div>
                     </div>
                 </CardContent>
             </CardActionArea>
