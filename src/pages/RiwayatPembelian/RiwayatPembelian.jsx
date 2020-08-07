@@ -11,7 +11,7 @@ function RiwayatPembelian() {
                     style={{
                         display: 'flex',
                         flexWrap: 'wrap',
-                        justifyContent: 'space-around',
+                        justifyContent: 'flex-start',
                     }}
                 >
                     <CardRiwayat />
