@@ -12,12 +12,12 @@ function Catalog() {
     const handleChange = (event) => {
         setInput(event.target.value);
     };
-
+    console.log(services, 'kikiki');
     useEffect(() => {
-        if (input !== '') {
-            dispatch(fetchFilterCatalog(input));
-        } else {
+        if (input === '') {
             dispatch(fetchGetAllServices());
+        } else {
+            dispatch(fetchFilterCatalog(input));
         }
     }, [input, dispatch]);
     return (

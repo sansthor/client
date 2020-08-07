@@ -7,3 +7,4 @@ export * from './edituser';
 export * from './getservicetalent';
 export * from './addService';
 export * from './filterCatalog';
+export * from './getOrder';

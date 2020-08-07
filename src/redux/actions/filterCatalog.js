@@ -22,7 +22,7 @@ const fetchFilterCatalog = (input) => async (dispatch) => {
         const response = await fetch(url, options);
         const result = await response.json();
 
-        dispatch(filterCatalog(result.data));
+        dispatch(filterCatalog(result));
     } catch (error) {
         console.log(error);
     }

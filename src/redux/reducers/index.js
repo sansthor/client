@@ -5,9 +5,9 @@ import getmember from './getmember';
 import getservicebyid from './getservicebyid';
 import putbasicuser from './putbasicuser';
 import getservicetalent from './getservicetalent';
-import filterCatalog from './filterCatalog';
+import getorder from './getOrder';
 export default combineReducers({
-    filterCatalog,
+    getorder,
     registration,
     getallservices,
     getmember,
