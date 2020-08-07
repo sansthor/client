@@ -11,7 +11,7 @@ const MyInput = (props) => {
                 <input
                     className="input"
                     placeholder={props.placeholder}
-                    autofocus=""
+                    autoFocus=""
                     {...props}
                 />
             </div>

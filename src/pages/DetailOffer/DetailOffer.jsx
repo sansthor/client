@@ -7,7 +7,7 @@ function DetailOffer() {
     const { id } = useParams();
     const dispatch = useDispatch();
     const service = useSelector((state) => state.getservicebyid);
-    console.log(service);
+
     useEffect(() => {
         dispatch(fetchGetServiceById(id));
     }, [dispatch, id]);

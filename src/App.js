@@ -18,7 +18,7 @@ import MyServices from './pages/MyServices/MyServices';
 import RiwayatPembelian from './pages/RiwayatPembelian/RiwayatPembelian';
 import Order from './pages/Order/Order';
 import Catalog from './pages/Catalog/Catalog';
-import EditProfile from './pages/Edit Profile/EditProfile';
+import EditProfile from './pages/EditProfile/EditProfile';
 import EditBank from './pages/EditBank/EditBank';
 import EditProfileTalent from './pages/EditProfileTalent/EditProfileTalent';
 import DetailOffer from './pages/DetailOffer/DetailOffer';
@@ -70,13 +70,13 @@ function App() {
                     <Route exact path="/dashboard">
                         <Dashboard />
                     </Route>
-                    <Route exact path="/myservices">
+                    <Route exact path="/my-services">
                         <MyServices />
                     </Route>
                     <Route exact path="/order">
                         <Order />
                     </Route>
-                    <Route exact path="/detailoffer/:id">
+                    <Route exact path="/detail-offer/:id">
                         <DetailOffer />
                     </Route>
                     <Route exact path="/payment">
@@ -85,7 +85,7 @@ function App() {
                     <Route exact path="/payment-report">
                         <PaymentReport />
                     </Route>
-                    <Route exact path="/addoffer">
+                    <Route exact path="/add-offer">
                         <AddOffer />
                     </Route>
                     <Route exact path="/sidebar">

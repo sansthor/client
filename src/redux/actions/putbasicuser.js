@@ -11,7 +11,7 @@ const PUT_BASIC_USER = 'PUT_BASIC_USER';
 const fetchPutBasicUser = (formData, history) => async (dispatch) => {
     const decoded = jwt_decode(localStorage.getItem('token'));
     const id = decoded.id;
-    console.log(id, 'isi id');
+
     const url = `${process.env.REACT_APP_API_URL}/user/update/${id}`;
     for (let key in formData) {
         if (formData[key] === '') {

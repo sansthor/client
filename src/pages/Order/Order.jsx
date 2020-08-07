@@ -1,26 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../../assets/css/Profile.css';
+import Tabs from '../../components/Tabs/TabsDashboard';
 
 function Order() {
     return (
         <div>
-            <div className="tabs">
-                <ul>
-                    <li>
-                        <Link to="/dashboard">Dashboard</Link>
-                    </li>
-                    <li>
-                        <Link to="/myservices">My Services</Link>
-                    </li>
-                    <li className="is-active">
-                        <Link to="/order">Order</Link>
-                    </li>
-                    <li>
-                        <Link to="/addoffer">Add Offer</Link>
-                    </li>
-                </ul>
-            </div>
+            <Tabs />
+
             <section className="section" id="about">
                 <div className="section-heading">
                     <h3 className="title is-2">Order</h3>

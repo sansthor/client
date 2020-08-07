@@ -19,7 +19,7 @@ function DropdownUser() {
                 </Link>
 
                 <Link to="/register/talent" className="navbar-item">
-                    <i class="fas fa-user-plus"></i>
+                    <i className="fas fa-user-plus"></i>
                     &nbsp;&nbsp;
                     <strong>Daftar jadi Talent</strong>
                 </Link>

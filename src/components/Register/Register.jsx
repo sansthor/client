@@ -62,7 +62,7 @@ function Register() {
                                                 className="input"
                                                 type="text"
                                                 placeholder="Full Name"
-                                                autofocus=""
+                                                autoFocus=""
                                                 id="fullname"
                                                 name="fullname"
                                                 value={form.fullname}
@@ -82,7 +82,7 @@ function Register() {
                                                 className="input"
                                                 type="text"
                                                 placeholder="Username"
-                                                autofocus=""
+                                                autoFocus=""
                                                 id="username"
                                                 name="username"
                                                 value={form.username}
@@ -102,7 +102,7 @@ function Register() {
                                                 className="input"
                                                 type="email"
                                                 placeholder="Your Email"
-                                                autofocus=""
+                                                autoFocus=""
                                                 id="email"
                                                 name="email"
                                                 value={form.email}

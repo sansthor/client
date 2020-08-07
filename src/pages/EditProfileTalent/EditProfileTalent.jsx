@@ -113,7 +113,7 @@ function EditProfileTalent() {
                                     onChange={handleChange}
                                 />
                                 <span className="icon is-small is-left">
-                                    <i class="fas fa-map-marker-alt"></i>
+                                    <i className="fas fa-map-marker-alt"></i>
                                 </span>
                             </div>
                         </div>
