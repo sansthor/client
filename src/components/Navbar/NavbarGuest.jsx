@@ -46,8 +46,8 @@ function NavbarGuest() {
                         setIsActive(!isActive);
                     }}
                 >
-                    <div className="navbar-start">
-                        <Link to="/sidebar" className="navbar-item">
+                    <div class="navbar-start">
+                        <Link to="/sidebar" class="navbar-item">
                             Bantuan
                         </Link>
                     </div>
