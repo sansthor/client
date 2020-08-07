@@ -153,11 +153,7 @@ function CardDetailOffer(props) {
                                 className="fas fa-check"
                                 style={{ margin: '4px 5px  0 0' }}
                             ></i>{' '}
-                            <p>
-                                {props.requirement !== ''
-                                    ? props.requirement
-                                    : 'Commercial Use'}
-                            </p>
+                            <p>Commercial Use</p>
                         </div>
                         <div
                             style={{
