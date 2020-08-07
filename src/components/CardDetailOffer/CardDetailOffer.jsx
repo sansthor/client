@@ -92,8 +92,7 @@ function CardDetailOffer(props) {
                     userStatus: 'CART',
                     serviceID: id,
                 },
-                history,
-                id
+                history
             )
         );
     };

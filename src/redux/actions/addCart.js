@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2';
 
-const addCart = (values, history, id) => async () => {
+const addCart = (values, history) => async () => {
     const token = localStorage.getItem('token');
     const url = `${process.env.REACT_APP_API_URL}/order/cart`;
     const options = {
@@ -21,6 +21,8 @@ const addCart = (values, history, id) => async () => {
             text: 'Pesanan anda sudah masuk ke daftar pesanan',
             icon: 'success',
         });
+
+        history('/catalog');
     }
 };
 
