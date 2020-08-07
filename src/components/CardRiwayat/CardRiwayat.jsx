@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import CardComponentsCategories from '../CardComponent/CardComponentsCategories';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchGetOrder } from '../../redux/actions';
+import CardComponentsRiwayat from '../CardComponent/CardComponentsRiwayat';
 
 function CardRiwayat() {
     const dispatch = useDispatch();
@@ -23,7 +24,7 @@ function CardRiwayat() {
                         console.log(item, 'kk');
                         return (
                             <div className="notification">
-                                <CardComponentsCategories
+                                <CardComponentsRiwayat
                                     image={item.serviceID.image}
                                     title={item.serviceID.title}
                                     name={item.talentID.username}
@@ -31,14 +32,6 @@ function CardRiwayat() {
                                     key={item._id}
                                     price={item.total}
                                 />
-                                <div className="buttons is-right">
-                                    <button
-                                        className="button is-link is-rounded"
-                                        style={{ marginTop: '1em' }}
-                                    >
-                                        Tandai Selesai
-                                    </button>
-                                </div>
                             </div>
                         );
                     })
