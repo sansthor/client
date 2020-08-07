@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
-// import CardComponentsCategories from '../CardComponent/CardComponentsCategories';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchGetOrder } from '../../redux/actions';
 import CardRiwayatMyServices from '../CardComponent/CardRiwayatMyServices';
 
-function CardRiwayat() {
+function CardMyServices() {
     const dispatch = useDispatch();
     const order = useSelector((state) => state.getorder);
 
@@ -12,7 +11,6 @@ function CardRiwayat() {
         dispatch(fetchGetOrder());
     }, [dispatch]);
 
-    console.log(order);
     return (
         <React.Fragment>
             {order !== undefined &&
@@ -38,4 +36,4 @@ function CardRiwayat() {
     );
 }
 
-export default CardRiwayat;
+export default CardMyServices;

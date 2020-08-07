@@ -5,9 +5,9 @@ import Tabs from '../../components/Tabs/TabsDashboard';
 function Order() {
     return (
         <div>
-            <Tabs />
+            <div className="container " style={{ minHeight: '100vh' }}>
+                <Tabs />
 
-            <section className="section" id="about">
                 <div className="section-heading">
                     <h3 className="title is-2">Order</h3>
                 </div>
@@ -62,7 +62,9 @@ function Order() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+            {/* <section className="section" id="about"> */}
+            {/* </section> */}
         </div>
     );
 }

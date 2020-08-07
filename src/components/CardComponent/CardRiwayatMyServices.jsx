@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     },
 });
 
-export default function CardComponentsRiwayat(props) {
+export default function CardRiwayatMyServices(props) {
     const classes = useStyles();
 
     return (
@@ -67,7 +67,7 @@ export default function CardComponentsRiwayat(props) {
                                     fontSize: '10px',
                                 }}
                             >
-                                by{' '}
+                                {/* by{' '} */}
                                 <span
                                     style={{
                                         fontStyle: 'italic',

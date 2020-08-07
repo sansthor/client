@@ -18,9 +18,9 @@ function Dashboard() {
     }, [dispatch]);
     return (
         <div>
-            <Tabs />
+            <div className="container " style={{ minHeight: '100vh' }}>
+                <Tabs />
 
-            <section className="section" id="services">
                 <div className="section-heading">
                     <h3 className="title is-2">Dashboard</h3>
                 </div>
@@ -66,7 +66,9 @@ function Dashboard() {
                         </div>
                     </article>
                 </div>
-            </section>
+            </div>
+            {/* <section className="section" id="services"> */}
+            {/* </section> */}
         </div>
     );
 }
