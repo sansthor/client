@@ -6,6 +6,8 @@ export * from './putbasicuser';
 export * from './edituser';
 export * from './getservicetalent';
 export * from './addService';
+export * from './filterCatalog';
+export * from './getOrder';
 export * from './buyService';
 export * from './addCart';
 export * from './transaction';

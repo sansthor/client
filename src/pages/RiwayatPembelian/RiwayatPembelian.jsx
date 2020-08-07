@@ -14,7 +14,6 @@ function RiwayatPembelian() {
                         justifyContent: 'space-around',
                     }}
                 >
-                    Kosong
                     <CardRiwayat />
                 </div>
             </div>
