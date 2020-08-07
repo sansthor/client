@@ -1,5 +1,5 @@
 import React from 'react';
-import CardRiwayat from '../../components/CardRiwayat/CardRiwayat';
+import CardRiwayatPembelian from '../../components/CardComponent/CardRiwayatPembelian';
 
 function RiwayatPembelian() {
     return (
@@ -14,7 +14,7 @@ function RiwayatPembelian() {
                         justifyContent: 'flex-start',
                     }}
                 >
-                    <CardRiwayat />
+                    <CardRiwayatPembelian />
                 </div>
             </div>
         </div>

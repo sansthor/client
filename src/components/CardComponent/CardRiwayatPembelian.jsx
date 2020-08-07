@@ -42,101 +42,135 @@ export default function CardRiwayatMyServices(props) {
         dispatch(fetchOrderPurchase(id, history));
     };
     return (
-        <Card
-            style={{ margin: '40px' }}
-            className={classes.root}
-            key={props.id}
-        >
-            <CardActionArea>
-                <Img>
-                    <CardMedia
-                        style={{ height: '100%', width: '100%' }}
-                        component="img"
-                        alt={props.title}
-                        image={props.image}
-                        title={props.title}
-                    />
-                </Img>
-                <Divider />
-                <CardContent>
-                    <div
-                        key={props.key}
-                        style={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            height: '5em',
-                        }}
-                    >
-                        <Avatar
-                            style={{ top: '-5px', marginRight: '5px' }}
-                            alt="Remy Sharp"
-                            src={props.avatar}
-                        />
-                        <div
-                            style={{
-                                display: 'flex',
-                                flexWrap: 'wrap',
-                                flexDirection: 'column',
-                            }}
-                        >
-                            <p style={{ fontSize: '14px' }}>
-                                <strong>{props.title}</strong>
-                            </p>
-
-                            <p
-                                style={{
-                                    fontSize: '10px',
-                                }}
-                            >
-                                {/* by{' '} */}
-                                <span
-                                    style={{
-                                        fontStyle: 'italic',
-                                    }}
+        <React.Fragment>
+            {order !== undefined &&
+                (order.length === 0 ? (
+                    <p>Kosong</p>
+                ) : (
+                    order.length > 0 &&
+                    order.map((item) => {
+                        return (
+                            <React.Fragment>
+                                <Card
+                                    style={{ margin: '40px' }}
+                                    className={classes.root}
+                                    key={item._id}
                                 >
-                                    {props.name}
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                    <Divider />
-                </CardContent>
-            </CardActionArea>
-            <CardActions className={classes.block}>
-                <div
-                    style={{
-                        margin: '10px 0 0 0',
-                    }}
-                >
-                    <p style={{ textAlign: 'right' }}> IDR {props.price}</p>
-                    <div className="buttons is-right">
-                        <React.Fragment>
-                            {order !== undefined &&
-                                order.map((item) => {
-                                    return (
-                                        <React.Fragment>
-                                            {item.userStatus ===
-                                            'DONE' ? null : (
-                                                <button
-                                                    onClick={() =>
-                                                        handleClick(item._id)
-                                                    }
-                                                    className="button is-link is-rounded"
+                                    <CardActionArea>
+                                        <Img>
+                                            <CardMedia
+                                                style={{
+                                                    height: '100%',
+                                                    width: '100%',
+                                                }}
+                                                component="img"
+                                                alt={item.serviceID.title}
+                                                image={item.serviceID.image}
+                                                title={item.serviceID.title}
+                                            />
+                                        </Img>
+                                        <Divider />
+                                        <CardContent>
+                                            <div
+                                                key={props.key}
+                                                style={{
+                                                    display: 'flex',
+                                                    flexDirection: 'row',
+                                                    height: '5em',
+                                                }}
+                                            >
+                                                <Avatar
                                                     style={{
-                                                        marginTop: '1em',
-                                                        width: '100%',
+                                                        top: '-5px',
+                                                        marginRight: '5px',
+                                                    }}
+                                                    alt="Remy Sharp"
+                                                    src={item.userID.avatar}
+                                                />
+                                                <div
+                                                    style={{
+                                                        display: 'flex',
+                                                        flexWrap: 'wrap',
+                                                        flexDirection: 'column',
                                                     }}
                                                 >
-                                                    Tandai Selesai
-                                                </button>
-                                            )}
-                                        </React.Fragment>
-                                    );
-                                })}
-                        </React.Fragment>
-                    </div>
-                </div>
-            </CardActions>
-        </Card>
+                                                    <p
+                                                        style={{
+                                                            fontSize: '14px',
+                                                        }}
+                                                    >
+                                                        <strong>
+                                                            {
+                                                                item.serviceID
+                                                                    .title
+                                                            }
+                                                        </strong>
+                                                    </p>
+
+                                                    <p
+                                                        style={{
+                                                            fontSize: '10px',
+                                                        }}
+                                                    >
+                                                        {/* by{' '} */}
+                                                        <span
+                                                            style={{
+                                                                fontStyle:
+                                                                    'italic',
+                                                            }}
+                                                        >
+                                                            {
+                                                                item.talentID
+                                                                    .username
+                                                            }
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <Divider />
+                                        </CardContent>
+                                    </CardActionArea>
+                                    <CardActions className={classes.block}>
+                                        <div
+                                            style={{
+                                                margin: '10px 0 0 0',
+                                            }}
+                                        >
+                                            {' '}
+                                            <div className="buttons is-right">
+                                                <p
+                                                    style={{
+                                                        textAlign: 'right',
+                                                    }}
+                                                >
+                                                    {' '}
+                                                    IDR {item.total}
+                                                </p>
+                                                {item.userStatus ===
+                                                'DONE' ? null : (
+                                                    <button
+                                                        onClick={() =>
+                                                            handleClick(
+                                                                item._id
+                                                            )
+                                                        }
+                                                        className="button is-link is-rounded"
+                                                        style={{
+                                                            marginTop: '1em',
+                                                            width: '100%',
+                                                        }}
+                                                    >
+                                                        Tandai Selesai
+                                                    </button>
+                                                )}
+                                            </div>{' '}
+                                        </div>
+                                    </CardActions>
+                                </Card>
+                            </React.Fragment>
+                        );
+                    })
+                ))}
+        </React.Fragment>
     );
 }
