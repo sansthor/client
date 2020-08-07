@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-
 import '../../assets/css/Login.css';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { userLogin } from '../../redux/actions';
+import { Link } from 'react-router-dom';
+
 function Login() {
     const dispatch = useDispatch();
     const history = useHistory();
@@ -50,7 +51,7 @@ function Login() {
                                                 className="input"
                                                 type="email"
                                                 placeholder="Your Email"
-                                                autofocus=""
+                                                autoFocus=""
                                                 id="email"
                                                 name="email"
                                                 onChange={handleChange}
@@ -90,9 +91,9 @@ function Login() {
                                         <p className="has-text-grey">
                                             <label>
                                                 Belum Daftar?{' '}
-                                                <a href="/register">
+                                                <Link to="/register">
                                                     Buat Akun
-                                                </a>
+                                                </Link>
                                             </label>
                                         </p>
                                     </div>

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Dropdown from '../Dropdown/Dropdown';
 import PersonIcon from '@material-ui/icons/Person';
+
 function NavbarUser(props) {
-    let url = '';
+    const [isActive, setIsActive] = useState(false);
     return (
         <div>
             <nav
@@ -20,11 +21,36 @@ function NavbarUser(props) {
                             alt="brand"
                         ></img>
                     </Link>
+
+                    <span
+                        role="button"
+                        className={`navbar-burger burger ${
+                            isActive ? 'is-active' : ''
+                        }`}
+                        aria-label="menu"
+                        aria-expanded="false"
+                        data-target="navbarBasicExample"
+                        onClick={() => {
+                            setIsActive(!isActive);
+                        }}
+                    >
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </span>
                 </div>
 
-                <div id="navbarBasicExample" className="navbar-menu">
+                <div
+                    id="navbarBasicExample"
+                    className={`navbar-menu ${isActive ? 'is-active' : ''}`}
+                    onClick={() => {
+                        setIsActive(!isActive);
+                    }}
+                >
                     <div className="navbar-start">
-                        <Link className="navbar-item">Bantuan</Link>
+                        <Link to="/sidebar" className="navbar-item">
+                            Bantuan
+                        </Link>
                     </div>
 
                     <div className="navbar-end">
@@ -39,14 +65,19 @@ function NavbarUser(props) {
                             </div>
                         </div>
                         <div
-                            className="navbar-item has-dropdown is-hoverable"
+                            className={`navbar-item has-dropdown ${
+                                isActive ? 'is-hoverable' : ''
+                            }`}
+                            onClick={() => {
+                                setIsActive(!isActive);
+                            }}
                             style={{ marginRight: '5em' }}
                         >
-                            <Link to={url} className="navbar-link">
+                            <span className="navbar-link">
                                 <PersonIcon />
                                 &nbsp;&nbsp;
                                 {props.username}
-                            </Link>
+                            </span>
                             <Dropdown />
                         </div>
                     </div>

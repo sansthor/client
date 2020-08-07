@@ -1,7 +1,7 @@
 import React from 'react';
 import Styled from 'styled-components';
 import CollapseComponents from '../CollapseComponents/CollapseComponents';
-
+import { useHistory } from 'react-router-dom';
 const Wraps = Styled.div`
 display: flex;
 flex-wrap: wrap;
@@ -19,7 +19,7 @@ padding: 50px;
 margin: 100px;
 @media (max-width: 1000px) {
     padding: 0;
-    margin:30px 15px 30px 30px;
+    margin:30px;
     border-radius: 15px;
     
 }
@@ -42,7 +42,7 @@ padding: 40px;
 }
 `;
 const WrapImage = Styled.div`
-
+width: 100%;
 `;
 const Input = Styled.input`
 margin-right: 5px;
@@ -51,7 +51,7 @@ const Label = Styled.label`
 margin-bottom: 10px;
 `;
 const Description = Styled.div`
-padding: 10px;
+padding: 30px 20px 30px 20px;
 `;
 const Title = Styled.h1`
 padding: 5px;
@@ -70,6 +70,10 @@ margin: 10px 0;
 }
 `;
 function CardDetailOffer(props) {
+    const history = useHistory();
+    const handleClick = () => {
+        history.push('/payment');
+    };
     return (
         <div key={props.key}>
             <Wrapping>
@@ -96,7 +100,11 @@ function CardDetailOffer(props) {
                 <Wraps>
                     <SectionOne>
                         <WrapImage>
-                            <img src={props.image} alt="thumbnail" />
+                            <img
+                                style={{ width: '100%', height: '100%' }}
+                                src={props.image}
+                                alt="thumbnail"
+                            />
                         </WrapImage>
                         <Description>
                             <p>{props.desc}</p>
@@ -114,7 +122,10 @@ function CardDetailOffer(props) {
                         <Label className="checkbox">
                             <Input type="checkbox" checked />5 Hours Of Works
                         </Label>
-                        <button className="button is-link ">
+                        <button
+                            onClick={handleClick}
+                            className="button is-link "
+                        >
                             Buy Now ${props.price}
                         </button>
                     </SectionTwo>

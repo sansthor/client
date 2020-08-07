@@ -8,7 +8,6 @@ import TableProfileTalent from '../../components/Profile/TableProfileTalent';
 function Profile() {
     const dispatch = useDispatch();
     const member = useSelector((state) => state.getmember);
-    console.log(member);
 
     useEffect(() => {
         dispatch(fetchGetMember());

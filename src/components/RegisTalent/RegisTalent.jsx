@@ -61,7 +61,7 @@ function RegisTalent() {
                                                 className="input"
                                                 type="text"
                                                 placeholder="Full Name"
-                                                autofocus=""
+                                                autoFocus=""
                                                 name="fullname"
                                                 value={updated.fullname}
                                                 onChange={handleChange}
@@ -80,7 +80,7 @@ function RegisTalent() {
                                                 className="input"
                                                 type="text"
                                                 placeholder="Username"
-                                                autofocus=""
+                                                autoFocus=""
                                                 name="username"
                                                 value={updated.username}
                                                 onChange={handleChange}
@@ -99,7 +99,7 @@ function RegisTalent() {
                                                 className="input"
                                                 type="email"
                                                 placeholder="Your Email"
-                                                autofocus=""
+                                                autoFocus=""
                                                 name="email"
                                                 value={updated.email}
                                                 onChange={handleChange}
@@ -119,7 +119,7 @@ function RegisTalent() {
                                                 className="input"
                                                 type="text"
                                                 placeholder="Address"
-                                                autofocus=""
+                                                autoFocus=""
                                                 name="address"
                                                 value={updated.address}
                                                 onChange={handleChange}

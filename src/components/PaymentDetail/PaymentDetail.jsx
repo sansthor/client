@@ -1,6 +1,6 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-
+import { useHistory } from 'react-router-dom';
 const MyInput = (props) => {
     return (
         <div className="field">
@@ -11,7 +11,7 @@ const MyInput = (props) => {
                 <input
                     className="input"
                     placeholder={props.placeholder}
-                    autofocus=""
+                    autoFocus=""
                     {...props}
                 />
             </div>
@@ -20,6 +20,10 @@ const MyInput = (props) => {
 };
 
 export default function PaymentDetail() {
+    const history = useHistory();
+    const handleClick = () => {
+        history.push('/payment-report');
+    };
     return (
         <div className="column is-6 is-offset-1">
             <div className="box">
@@ -98,7 +102,9 @@ export default function PaymentDetail() {
                                     />
                                     <ErrorMessage name="fullname">
                                         {(msg) => (
-                                            <p className="help is-danger">{msg}</p>
+                                            <p className="help is-danger">
+                                                {msg}
+                                            </p>
                                         )}
                                     </ErrorMessage>
                                 </div>
@@ -112,7 +118,9 @@ export default function PaymentDetail() {
                                     />
                                     <ErrorMessage name="email">
                                         {(msg) => (
-                                            <p className="help is-danger">{msg}</p>
+                                            <p className="help is-danger">
+                                                {msg}
+                                            </p>
                                         )}
                                     </ErrorMessage>
                                 </div>
@@ -128,7 +136,9 @@ export default function PaymentDetail() {
                                     />
                                     <ErrorMessage name="address">
                                         {(msg) => (
-                                            <p className="help is-danger">{msg}</p>
+                                            <p className="help is-danger">
+                                                {msg}
+                                            </p>
                                         )}
                                     </ErrorMessage>
                                 </div>
@@ -144,7 +154,9 @@ export default function PaymentDetail() {
                                     />
                                     <ErrorMessage name="creditName">
                                         {(msg) => (
-                                            <p className="help is-danger">{msg}</p>
+                                            <p className="help is-danger">
+                                                {msg}
+                                            </p>
                                         )}
                                     </ErrorMessage>
                                 </div>
@@ -158,7 +170,9 @@ export default function PaymentDetail() {
                                     />
                                     <ErrorMessage name="creditNumber">
                                         {(msg) => (
-                                            <p className="help is-danger">{msg}</p>
+                                            <p className="help is-danger">
+                                                {msg}
+                                            </p>
                                         )}
                                     </ErrorMessage>
                                 </div>
@@ -174,7 +188,9 @@ export default function PaymentDetail() {
                                     />
                                     <ErrorMessage name="creditExpireMonth">
                                         {(msg) => (
-                                            <p className="help is-danger">{msg}</p>
+                                            <p className="help is-danger">
+                                                {msg}
+                                            </p>
                                         )}
                                     </ErrorMessage>
                                 </div>
@@ -188,7 +204,9 @@ export default function PaymentDetail() {
                                     />
                                     <ErrorMessage name="creditExpireYear">
                                         {(msg) => (
-                                            <p className="help is-danger">{msg}</p>
+                                            <p className="help is-danger">
+                                                {msg}
+                                            </p>
                                         )}
                                     </ErrorMessage>
                                 </div>
@@ -202,13 +220,18 @@ export default function PaymentDetail() {
                                     />
                                     <ErrorMessage name="cvv">
                                         {(msg) => (
-                                            <p className="help is-danger">{msg}</p>
+                                            <p className="help is-danger">
+                                                {msg}
+                                            </p>
                                         )}
                                     </ErrorMessage>
                                 </div>
                             </div>
 
-                            <button className="button is-block is-info is-fullwidth">
+                            <button
+                                onClick={handleClick}
+                                className="button is-block is-info is-fullwidth"
+                            >
                                 Bayar
                             </button>
                         </Form>

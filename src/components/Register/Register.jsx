@@ -18,16 +18,30 @@ function Register() {
     });
     const handleSubmit = async (event) => {
         event.preventDefault();
-        if (form.password.length < 6) {
+        if (
+            form.fullname === '' ||
+            form.username === '' ||
+            form.email === '' ||
+            form.password === '' ||
+            form.address === ''
+        ) {
             Swal.fire({
-                title: 'Password must longer than six characters',
+                title: 'Harap Selesaikan Form Registrasi',
                 text: '',
                 icon: 'error',
-                confirmButtonText: 'Cool',
+                // confirmButtonText: 'Cool',
             });
         } else {
-            await dispatch(register(form, history));
-            history.push('/login');
+            if (form.password.length < 6) {
+                Swal.fire({
+                    title: 'Password harus lebih dari 6 karakter',
+                    text: '',
+                    icon: 'error',
+                    // confirmButtonText: 'Cool',
+                });
+            } else {
+                await dispatch(register(form, history));
+            }
         }
     };
 
@@ -63,7 +77,7 @@ function Register() {
                                                 className="input"
                                                 type="text"
                                                 placeholder="Full Name"
-                                                autofocus=""
+                                                autoFocus=""
                                                 id="fullname"
                                                 name="fullname"
                                                 value={form.fullname}
@@ -83,7 +97,7 @@ function Register() {
                                                 className="input"
                                                 type="text"
                                                 placeholder="Username"
-                                                autofocus=""
+                                                autoFocus=""
                                                 id="username"
                                                 name="username"
                                                 value={form.username}
@@ -103,7 +117,7 @@ function Register() {
                                                 className="input"
                                                 type="email"
                                                 placeholder="Your Email"
-                                                autofocus=""
+                                                autoFocus=""
                                                 id="email"
                                                 name="email"
                                                 value={form.email}

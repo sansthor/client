@@ -19,7 +19,7 @@ function EditProfile() {
         dispatch(fetchGetMember());
     }, [dispatch]);
     const member = useSelector((state) => state.getmember);
-    console.log(member, 'di edit profile member');
+
     const [form, setForm] = useState({
         username: member.username || '',
         email: member.email || '',
@@ -114,7 +114,7 @@ function EditProfile() {
                                     onChange={handleChange}
                                 />
                                 <span className="icon is-small is-left">
-                                    <i class="fas fa-map-marker-alt"></i>
+                                    <i className="fas fa-map-marker-alt"></i>
                                 </span>
                             </div>
                         </div>

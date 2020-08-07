@@ -1,28 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../../assets/css/Profile.css';
-
 import CardRiwayat from '../../components/CardRiwayat/CardRiwayat';
+import Tabs from '../../components/Tabs/TabsDashboard';
 
 function MyServices() {
     return (
-        <div>
-            <div className="tabs">
-                <ul>
-                    <li>
-                        <Link to="/dashboard">Dashboard</Link>
-                    </li>
-                    <li className="is-active">
-                        <Link to="/myservices">My Services</Link>
-                    </li>
-                    <li>
-                        <Link to="/order">Order</Link>
-                    </li>
-                    <li>
-                        <Link to="/addoffer">Add Offer</Link>
-                    </li>
-                </ul>
-            </div>
+        <div style={{ minHeight: '80vh' }}>
+            <Tabs />
 
             <section className="section" id="about">
                 <div className="section-heading">
@@ -35,10 +19,6 @@ function MyServices() {
                         justifyContent: 'space-around',
                     }}
                 >
-                    <CardRiwayat />
-                    <CardRiwayat />
-                    <CardRiwayat />
-                    <CardRiwayat />
                     <CardRiwayat />
                 </div>
             </section>

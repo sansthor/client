@@ -4,3 +4,5 @@ export * from './getmember';
 export * from './getservicebyid';
 export * from './putbasicuser';
 export * from './edituser';
+export * from './getservicetalent';
+export * from './addService';
