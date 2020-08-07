@@ -7,6 +7,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Divider from '@material-ui/core/Divider';
 import Avatar from '@material-ui/core/Avatar';
 
+import './Card.css';
+
 import Styled from 'styled-components';
 
 const Img = Styled.div`
@@ -41,6 +43,7 @@ export default function CardComponent(props) {
                         style={{
                             display: 'flex',
                             flexDirection: 'row',
+                            height: '8em',
                         }}
                     >
                         <Avatar
@@ -53,7 +56,6 @@ export default function CardComponent(props) {
                                 display: 'flex',
                                 flexWrap: 'wrap',
                                 flexDirection: 'column',
-                                lineHeight: '1.2',
                             }}
                         >
                             <p style={{ fontSize: '14px' }}>
@@ -82,10 +84,7 @@ export default function CardComponent(props) {
                             margin: '10px 0 0 0',
                         }}
                     >
-                        <p style={{ textAlign: 'right' }}>
-                            {' '}
-                            Price: ${props.price}
-                        </p>
+                        <p style={{ textAlign: 'right' }}> IDR {props.price}</p>
                     </div>
                 </CardContent>
             </CardActionArea>

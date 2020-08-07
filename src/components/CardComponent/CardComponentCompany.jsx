@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Card.css';
+
 function CardComponentCompany(props) {
     return (
         <div style={{ width: '200px' }}>
