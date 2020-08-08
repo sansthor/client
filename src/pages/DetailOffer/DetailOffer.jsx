@@ -25,9 +25,7 @@ function DetailOffer() {
                 avatar={
                     service.data !== undefined && service.data.userID.avatar
                 }
-                // revision={
-                //     service.data !== undefined && service.data.revision
-                // }
+                revision={service.data !== undefined && service.data.revision}
                 processtime={
                     service.data !== undefined && service.data.processtime
                 }

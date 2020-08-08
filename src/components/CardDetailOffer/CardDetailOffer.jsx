@@ -143,7 +143,7 @@ function CardDetailOffer(props) {
                                 Revision{' '}
                                 {props.revision !== undefined
                                     ? props.revision
-                                    : '1 '}
+                                    : '1 '}{' '}
                                 Times
                             </p>
                         </div>
