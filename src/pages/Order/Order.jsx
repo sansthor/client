@@ -14,14 +14,14 @@ function Order(props) {
     const dispatch = useDispatch();
     const orderByTalent = useSelector((state) => state.getorderbytalent);
     console.log(orderByTalent, 'id orderByTalent');
-    const [status, setStatus] = useState('');
+    // const [status, setStatus] = useState('');
     useEffect(() => {
         dispatch(fetchGetOrderByTalent());
     }, [dispatch]);
 
     const handleChange = (id, event) => {
         dispatch(fetchPutOrderByTalent(id));
-        setStatus(event.target.value);
+        // setStatus(event.target.value);
         Swal.fire({
             title: 'Status Berhasil Diubah',
             text: '',
