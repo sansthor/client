@@ -4,7 +4,7 @@ import '../../assets/css/Home.css';
 
 function Footer() {
     return (
-        <footer className="footer" style={{ marginTop: '5em' }}>
+        <footer className="footer">
             <p>Copyright © Digitarian 2020.</p>
         </footer>
     );

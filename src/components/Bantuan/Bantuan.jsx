@@ -21,11 +21,11 @@ const useStyles = makeStyles({
     },
 });
 
-export default function SimpleCard() {
+export default function Bantuan() {
     const classes = useStyles();
 
     return (
-        <div style={{ margin: '50px' }}>
+        <div style={{ padding: '50px', backgroundColor: '#ebebeb' }}>
             {' '}
             <Card className={classes.root}>
                 <SidebarHelp />

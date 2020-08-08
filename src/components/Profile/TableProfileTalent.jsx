@@ -5,23 +5,15 @@ function TableProfileTalent(props) {
         <React.Fragment>
             <tr>
                 <td>Skills:</td>
-                {props.skills !== undefined ? (
-                    <td>{props.skills}</td>
-                ) : (
-                    <td>-</td>
-                )}
+                {props.skills !== '' ? <td>{props.skills}</td> : <td>-</td>}
             </tr>
             <tr>
                 <td>Link Portofolio:</td>
-                {props.link !== undefined ? <td>{props.link}</td> : <td>-</td>}
+                {props.link !== '' ? <td>{props.link}</td> : <td>-</td>}
             </tr>
             <tr>
                 <td>Phone:</td>
-                {props.phone !== undefined ? (
-                    <td>{props.phone}</td>
-                ) : (
-                    <td>-</td>
-                )}
+                {props.phone !== '' ? <td>{props.phone}</td> : <td>-</td>}
             </tr>
         </React.Fragment>
     );

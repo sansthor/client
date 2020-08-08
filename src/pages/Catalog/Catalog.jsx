@@ -12,7 +12,7 @@ function Catalog() {
     const handleChange = (event) => {
         setInput(event.target.value);
     };
-    console.log(services, 'kikiki');
+
     useEffect(() => {
         if (input === '') {
             dispatch(fetchGetAllServices());
@@ -57,18 +57,19 @@ function Catalog() {
                     {services.data !== undefined &&
                         services.data.map((item) => {
                             return (
-                                <React.Fragment>
-                                    <NavLink to={`/detail-offer/${item._id}`}>
-                                        <CardComponentsCategories
-                                            key={item._id}
-                                            image={item.image}
-                                            title={item.title}
-                                            name={item.userID.username}
-                                            avatar={item.userID.avatar}
-                                            price={item.price}
-                                        />
-                                    </NavLink>
-                                </React.Fragment>
+                                <NavLink
+                                    to={`/detail-offer/${item._id}`}
+                                    key={item._id}
+                                >
+                                    <CardComponentsCategories
+                                        id={item._id}
+                                        image={item.image}
+                                        title={item.title}
+                                        name={item.userID.username}
+                                        avatar={item.userID.avatar}
+                                        price={item.price}
+                                    />
+                                </NavLink>
                             );
                         })}
                 </div>

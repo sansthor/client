@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchGetServiceTalent } from '../../redux/actions';
-import CardRiwayatMyServices from '../CardComponent/CardRiwayatMyServices';
+import CardForMyServices from '../CardComponent/CardForMyService';
 
 function CardMyServices() {
     const dispatch = useDispatch();
     const service = useSelector((state) => state.getservicetalent);
-    console.log(service);
 
     useEffect(() => {
         dispatch(fetchGetServiceTalent());
@@ -20,16 +19,17 @@ function CardMyServices() {
                 ) : (
                     service.data.length > 0 &&
                     service.data.map((item) => {
-                        console.log(item, 'kk');
                         return (
-                            <CardRiwayatMyServices
-                                image={item.image}
-                                title={item.title}
-                                name={item.userID.username}
-                                avatar={item.userID.avatar}
-                                key={item._id}
-                                price={item.price}
-                            />
+                            <React.Fragment key={item._id}>
+                                <CardForMyServices
+                                    image={item.image}
+                                    title={item.title}
+                                    name={item.userID.username}
+                                    avatar={item.userID.avatar}
+                                    id={item._id}
+                                    price={item.price}
+                                />
+                            </React.Fragment>
                         );
                     })
                 ))}

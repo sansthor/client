@@ -18,6 +18,7 @@ export default function Tabs() {
                             className={
                                 pathname === item.link ? 'is-active' : ''
                             }
+                            key={item.id}
                         >
                             <Link to={item.link}>{item.title}</Link>
                         </li>
