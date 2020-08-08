@@ -53,30 +53,32 @@ function Profile() {
                             <div className="content">
                                 {/* Content */}
                                 <table className="table-profile">
-                                    <tr>
-                                        <th colSpan="1"></th>
-                                        <th colSpan="2"></th>
-                                    </tr>
-                                    <tr>
-                                        <td>Username:</td>
-                                        <td>{member.username}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Email:</td>
-                                        <td>{member.email}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Address:</td>
-                                        <td>{member.address}</td>
-                                    </tr>
-
-                                    {member.role !== 'USER' && (
-                                        <TableProfileTalent
-                                            skills={member.skills}
-                                            link={member.link}
-                                            phone={member.phone}
-                                        />
-                                    )}
+                                    <tbody>
+                                        <tr>
+                                            <th colSpan="1"></th>
+                                            <th colSpan="2"></th>
+                                        </tr>
+                                        <tr>
+                                            <td>Nama Pengguna:</td>
+                                            <td>{member.username}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Email:</td>
+                                            <td>{member.email}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Alamat:</td>
+                                            <td>{member.address}</td>
+                                        </tr>
+                                        {member.role !== undefined &&
+                                            member.role !== 'USER' && (
+                                                <TableProfileTalent
+                                                    skills={member.skills}
+                                                    link={member.link}
+                                                    phone={member.phone}
+                                                />
+                                            )}
+                                    </tbody>
                                 </table>
                             </div>
                         </article>

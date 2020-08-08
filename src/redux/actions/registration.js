@@ -44,7 +44,6 @@ const userLogin = (formData, history) => async (dispatch) => {
             title: 'Email atau Password Salah!',
             text: '',
             icon: 'error',
-            confirmButtonText: 'Cool',
         });
     }
 };

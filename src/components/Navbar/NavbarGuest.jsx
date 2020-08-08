@@ -47,7 +47,7 @@ function NavbarGuest() {
                     }}
                 >
                     <div className="navbar-start">
-                        <Link to="/sidebar" className="navbar-item">
+                        <Link to="/bantuan" className="navbar-item">
                             Bantuan
                         </Link>
                     </div>
@@ -59,7 +59,7 @@ function NavbarGuest() {
                                     to="/login"
                                     className="button is-light is-rounded"
                                 >
-                                    Login
+                                    Masuk
                                 </Link>
                                 <Link
                                     to="/register"

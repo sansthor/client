@@ -25,9 +25,9 @@ import DetailOffer from './pages/DetailOffer/DetailOffer';
 import Payment from './pages/Payment/Payment';
 import PaymentReport from './pages/Payment/PaymentReport';
 import AddOffer from './pages/AddOffer/AddOffer';
-import CardSidebar from './components/SidebarHelp/CardSidebar';
 
 import Navbar from './components/Navbar/Navbar';
+import Bantuan from './components/Bantuan/Bantuan';
 function App() {
     return (
         <Provider store={createStore(reducers, applyMiddleware(thunk))}>
@@ -88,8 +88,8 @@ function App() {
                     <Route exact path="/add-offer">
                         <AddOffer />
                     </Route>
-                    <Route exact path="/sidebar">
-                        <CardSidebar />
+                    <Route exact path="/bantuan">
+                        <Bantuan />
                     </Route>
                 </Switch>
                 <Footer />

@@ -6,11 +6,10 @@ import Tabs from '../../components/Tabs/TabsDashboard';
 function MyServices() {
     return (
         <div>
-            <Tabs />
-
-            <section className="section" id="about">
+            <div className="container " style={{ minHeight: '100vh' }}>
+                <Tabs />
                 <div className="section-heading">
-                    <h3 className="title is-2">Add Offer</h3>
+                    <h3 className="title is-2">Tambah Service</h3>
                 </div>
                 <div className="columns">
                     <div className="column"></div>
@@ -19,7 +18,9 @@ function MyServices() {
                     </div>
                     <div className="column"></div>
                 </div>
-            </section>
+            </div>
+            {/* <section className="section" id="about"> */}
+            {/* </section> */}
         </div>
     );
 }

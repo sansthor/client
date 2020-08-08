@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@500&family=Poppins:wght@200&display=swap');
-div {
+div,
+Card {
     font-family: 'Poppins', sans-serif;
 }

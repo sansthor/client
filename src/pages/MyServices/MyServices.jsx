@@ -1,15 +1,13 @@
 import React from 'react';
 import '../../assets/css/Profile.css';
-import CardRiwayat from '../../components/CardRiwayat/CardRiwayat';
-import CardComponentDummy from '../../components/CardComponent/CardComponentsRiwayat';
 import Tabs from '../../components/Tabs/TabsDashboard';
+import CardMyServices from '../../components/CardMyServices/CardMyServices';
 
 function MyServices() {
     return (
-        <div style={{ minHeight: '80vh' }}>
-            <Tabs />
-
-            <section className="section" id="about">
+        <div>
+            <div className="container " style={{ minHeight: '100vh' }}>
+                <Tabs />
                 <div className="section-heading">
                     <h3 className="title is-2">My Services</h3>
                 </div>
@@ -17,12 +15,14 @@ function MyServices() {
                     style={{
                         display: 'flex',
                         flexWrap: 'wrap',
-                        justifyContent: 'space-around',
+                        justifyContent: 'flex-start',
                     }}
                 >
-                    <CardRiwayat />
+                    <CardMyServices />
                 </div>
-            </section>
+            </div>
+            {/* <section className="section" id="about"> */}
+            {/* </section> */}
         </div>
     );
 }

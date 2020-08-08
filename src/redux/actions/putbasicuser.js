@@ -31,7 +31,7 @@ const fetchPutBasicUser = (formData, history) => async (dispatch) => {
     // dispatch(putBasicUser(result));
     if (response.status === 200) {
         Swal.fire({
-            title: 'Your Account Successfully be Talent',
+            title: 'Profile Berhasil Diperbarui',
             text: '',
             icon: 'success',
         });

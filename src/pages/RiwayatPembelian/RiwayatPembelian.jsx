@@ -1,20 +1,20 @@
 import React from 'react';
-import CardRiwayat from '../../components/CardRiwayat/CardRiwayat';
+import CardRiwayatPembelian from '../../components/CardComponent/CardRiwayatPembelian';
 
 function RiwayatPembelian() {
     return (
         <div>
             <div className="container " style={{ minHeight: '100vh' }}>
-                <h2 className="title has-text-centered">Riwayat Pembelian</h2>
+                <h2 className="title has-text-centered">Pesanan Saya</h2>
 
                 <div
                     style={{
                         display: 'flex',
                         flexWrap: 'wrap',
-                        justifyContent: 'space-around',
+                        justifyContent: 'flex-start',
                     }}
                 >
-                    <CardRiwayat />
+                    <CardRiwayatPembelian />
                 </div>
             </div>
         </div>

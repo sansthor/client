@@ -48,7 +48,7 @@ function NavbarUser(props) {
                     }}
                 >
                     <div className="navbar-start">
-                        <Link to="/sidebar" className="navbar-item">
+                        <Link to="/bantuan" className="navbar-item">
                             Bantuan
                         </Link>
                         <div className="buttons">
@@ -68,7 +68,7 @@ function NavbarUser(props) {
                                     to={`/payment/${props.id}`}
                                     className="button is-light"
                                 >
-                                    <i class="fas fa-shopping-cart"></i>
+                                    <i className="fas fa-shopping-cart"></i>
                                 </Link>
                             </div>
                         </div>

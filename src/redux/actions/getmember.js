@@ -34,7 +34,7 @@ const fetchGetMember = () => async (dispatch) => {
 const logout = (history) => (dispatch, getState) => {
     Swal.fire({
         icon: 'success',
-        title: 'Terimakasih',
+        title: 'Terima Kasih',
     });
     localStorage.clear();
     history.push('/');

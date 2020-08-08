@@ -55,7 +55,9 @@ function Register() {
                 <div className="hero-body">
                     <div className="container has-text-centered">
                         <div className="column is-4 is-offset-4">
-                            <p className="subtitle has-text-black">Sign Up</p>
+                            <p className="subtitle has-text-black">
+                                Registrasi
+                            </p>
                             <hr className="login-hr" />
                             <div className="box">
                                 <figure className="avatar">
@@ -76,7 +78,7 @@ function Register() {
                                             <input
                                                 className="input"
                                                 type="text"
-                                                placeholder="Full Name"
+                                                placeholder="Nama Lengkap"
                                                 autoFocus=""
                                                 id="fullname"
                                                 name="fullname"
@@ -90,7 +92,7 @@ function Register() {
                                             className="label"
                                             style={{ textAlign: 'start' }}
                                         >
-                                            Username
+                                            Nama Pengguna
                                         </label>
                                         <div className="control">
                                             <input
@@ -131,13 +133,13 @@ function Register() {
                                             className="label"
                                             style={{ textAlign: 'start' }}
                                         >
-                                            Password
+                                            Kata Sandi
                                         </label>
                                         <div className="control">
                                             <input
                                                 className="input"
                                                 type="password"
-                                                placeholder="Your Password"
+                                                placeholder="Kata Sandi"
                                                 id="password"
                                                 name="password"
                                                 value={form.password}
@@ -150,13 +152,13 @@ function Register() {
                                             className="label"
                                             style={{ textAlign: 'start' }}
                                         >
-                                            Address
+                                            Alamat
                                         </label>
                                         <div className="control">
                                             <input
                                                 className="input"
                                                 type="text"
-                                                placeholder="Address"
+                                                placeholder="Alamat"
                                                 id="address"
                                                 name="address"
                                                 value={form.address}

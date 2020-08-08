@@ -12,10 +12,10 @@ function DropdownTalent() {
                     Feed
                 </Link>
                 <Link to="/profile/edit/talent" className="navbar-item">
-                    Edit Profile
+                    Ubah Profile
                 </Link>
                 <Link to="/history" className="navbar-item">
-                    Riwayat Pembelian
+                    Pesanan Saya
                 </Link>
                 <Link to="/dashboard" className="navbar-item">
                     <strong>Halaman Talent</strong>
