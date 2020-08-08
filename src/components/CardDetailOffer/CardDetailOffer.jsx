@@ -154,7 +154,9 @@ function CardDetailOffer(props) {
                                 style={{ margin: '4px 5px  0 0' }}
                             ></i>{' '}
                             <p style={{ marginBottom: '10px' }}>
-                                Commercial Use
+                                {props.revision !== undefined
+                                    ? props.revision
+                                    : 'tidak ada kebutuhan'}
                             </p>
                         </div>
                         <div

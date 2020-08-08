@@ -76,7 +76,7 @@ export default function CardRiwayatMyServices(props) {
                                                 style={{
                                                     display: 'flex',
                                                     flexDirection: 'row',
-                                                    height: '5em',
+                                                    height: '5rem',
                                                 }}
                                             >
                                                 <Avatar
@@ -91,7 +91,6 @@ export default function CardRiwayatMyServices(props) {
                                                     style={{
                                                         display: 'flex',
                                                         flexWrap: 'wrap',
-                                                        flexDirection: 'column',
                                                     }}
                                                 >
                                                     <div>
@@ -117,19 +116,10 @@ export default function CardRiwayatMyServices(props) {
                                                                     '10px',
                                                             }}
                                                         >
-                                                            {/* by{' '} */}
-                                                            <span
-                                                                style={{
-                                                                    fontStyle:
-                                                                        'italic',
-                                                                }}
-                                                            >
-                                                                {
-                                                                    item
-                                                                        .talentID
-                                                                        .username
-                                                                }
-                                                            </span>
+                                                            {
+                                                                item.talentID
+                                                                    .username
+                                                            }
                                                         </p>
                                                     </div>
                                                 </div>
@@ -148,6 +138,7 @@ export default function CardRiwayatMyServices(props) {
                                                 <p
                                                     style={{
                                                         textAlign: 'right',
+                                                        marginBottom: '0px',
                                                     }}
                                                 >
                                                     {' '}

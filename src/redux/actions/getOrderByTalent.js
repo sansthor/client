@@ -29,15 +29,15 @@ const fetchGetOrderByTalent = () => async (dispatch) => {
         console.log(error);
     }
 };
-const fetchPutOrderByTalent = (value) => async (dispatch) => {
+const fetchPutOrderByTalent = (id) => async (dispatch) => {
     try {
-        const decoded = jwt_decode(localStorage.getItem('token'));
-        const id = decoded.id;
+        // const decoded = jwt_decode(localStorage.getItem('token'));
+        // const id = decoded.id;
         const url = `${process.env.REACT_APP_API_URL}/order/seller/${id}`;
 
         const options = {
             method: 'PUT',
-            body: JSON.stringify(value),
+            // body: JSON.stringify(value),
             headers: {
                 'Content-type': 'application/json',
             },

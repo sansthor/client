@@ -13,6 +13,7 @@ const editprofile = (formData) => async (dispatch) => {
     const options = {
         method: 'PUT',
         body: JSON.stringify({ ...formData }),
+
         headers: {
             'Content-type': 'application/json',
         },

@@ -14,23 +14,20 @@ function Order(props) {
     const dispatch = useDispatch();
     const orderByTalent = useSelector((state) => state.getorderbytalent);
     console.log(orderByTalent, 'id orderByTalent');
-    const [status, setStatus] = useState({
-        talentStatus: '',
-    });
+    const [status, setStatus] = useState('');
+    useEffect(() => {
+        dispatch(fetchGetOrderByTalent());
+    }, [dispatch]);
 
-    const handleChange = (event) => {
-        setStatus({ talentStatus: event.target.value });
+    const handleChange = (id, event) => {
+        dispatch(fetchPutOrderByTalent(id));
+        setStatus(event.target.value);
         Swal.fire({
             title: 'Status Berhasil Diubah',
             text: '',
             icon: 'success',
         });
     };
-    console.log('ini status', status);
-    useEffect(() => {
-        dispatch(fetchGetOrderByTalent());
-        dispatch(fetchPutOrderByTalent(status));
-    }, [dispatch, status]);
 
     return (
         <div>
@@ -69,8 +66,11 @@ function Order(props) {
                                             <td>{item.userID.fullname}</td>
                                             <SelectStatus
                                                 name="status"
-                                                status={item.status}
-                                                handleChange={handleChange}
+                                                value={item.status}
+                                                onChange={() =>
+                                                    handleChange(item._id)
+                                                }
+                                                // handleChange={handleChange}
                                             />
                                         </tr>
                                     );

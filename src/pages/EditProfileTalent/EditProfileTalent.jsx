@@ -13,13 +13,13 @@ function EditProfileTalent() {
     const dispatch = useDispatch();
     const member = useSelector((state) => state.getmember);
     const [updated, setupdated] = useState({
-        username: member.username,
-        email: member.email,
+        username: member.username || '',
+        email: member.email || '',
         password: '',
-        address: member.address,
-        skills: member.skills,
-        link: member.link,
-        phone: member.phone,
+        address: member.address || '',
+        skills: member.skills || '',
+        link: member.link || '',
+        phone: member.phone || '',
     });
 
     const handleChange = (event) => {
@@ -28,7 +28,7 @@ function EditProfileTalent() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        await dispatch(editprofile(updated));
+        dispatch(editprofile(updated));
     };
     useEffect(() => {
         dispatch(fetchGetMember());
@@ -58,6 +58,7 @@ function EditProfileTalent() {
                                     type="text"
                                     placeholder="Nama Pengguna Baru"
                                     name="username"
+                                    id="username"
                                     value={updated.username}
                                     onChange={handleChange}
                                 />
@@ -75,6 +76,7 @@ function EditProfileTalent() {
                                     type="email"
                                     placeholder="Email Baru"
                                     name="email"
+                                    id="email"
                                     value={updated.email}
                                     onChange={handleChange}
                                 />
@@ -92,6 +94,7 @@ function EditProfileTalent() {
                                     type="password"
                                     placeholder="Kata Sandi Baru"
                                     name="password"
+                                    id="password"
                                     value={updated.password}
                                     onChange={handleChange}
                                 />
@@ -109,6 +112,7 @@ function EditProfileTalent() {
                                     type="text"
                                     placeholder="Alamat Baru"
                                     name="address"
+                                    id="address"
                                     value={updated.address}
                                     onChange={handleChange}
                                 />
@@ -126,6 +130,7 @@ function EditProfileTalent() {
                                     type="text"
                                     placeholder="Nomor HP"
                                     name="phone"
+                                    id="phone"
                                     value={updated.phone}
                                     onChange={handleChange}
                                 />
@@ -143,6 +148,7 @@ function EditProfileTalent() {
                                     type="text"
                                     placeholder="Pisahkan dengan koma, contoh: HTML, CSS, JS"
                                     name="skills"
+                                    id="skills"
                                     value={updated.skills}
                                     onChange={handleChange}
                                 />
@@ -160,6 +166,7 @@ function EditProfileTalent() {
                                     type="text"
                                     placeholder="Masukkan link. Contoh: github.com/digitarian"
                                     name="link"
+                                    id="link"
                                     value={updated.link}
                                     onChange={handleChange}
                                 />

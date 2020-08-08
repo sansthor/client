@@ -7,8 +7,8 @@ function SelectStatus(props) {
                 <div className="select">
                     <select
                         name={props.name}
-                        value={props.status}
-                        onChange={props.handleChange}
+                        value={props.value}
+                        onChange={props.onChange}
                     >
                         <option value="">Status</option>
                         <option value="IN PROGRESS">In Progress</option>
