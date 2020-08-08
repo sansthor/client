@@ -48,12 +48,12 @@ padding: 40px;
 const WrapImage = Styled.div`
 width: 100%;
 `;
-const Input = Styled.input`
-margin-right: 5px;
-`;
-const Label = Styled.label`
-margin-bottom: 10px;
-`;
+// const Input = Styled.input`
+// margin-right: 5px;
+// `;
+// const Label = Styled.label`
+// margin-bottom: 10px;
+// `;
 const Description = Styled.div`
 padding: 30px 20px 30px 20px;
 `;

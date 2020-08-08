@@ -5,7 +5,7 @@ import CardMyServices from '../../components/CardMyServices/CardMyServices';
 
 function MyServices() {
     return (
-        <div style={{ minHeight: '80vh' }}>
+        <div>
             <div className="container " style={{ minHeight: '100vh' }}>
                 <Tabs />
                 <div className="section-heading">

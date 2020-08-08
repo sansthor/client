@@ -8,8 +8,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Divider from '@material-ui/core/Divider';
 import Avatar from '@material-ui/core/Avatar';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchGetOrder, fetchOrderPurchase } from '../../redux/actions';
-import { useHistory } from 'react-router-dom';
+import { fetchGetOrder } from '../../redux/actions';
+
 import './Card.css';
 
 import Styled from 'styled-components';
@@ -30,7 +30,6 @@ const useStyles = makeStyles({
 export default function CardRiwayatMyServices(props) {
     const classes = useStyles();
 
-    const history = useHistory();
     const dispatch = useDispatch();
     const order = useSelector((state) => state.getorder);
     console.log(order, 'id order');
@@ -38,9 +37,6 @@ export default function CardRiwayatMyServices(props) {
         dispatch(fetchGetOrder());
     }, [dispatch]);
 
-    const handleClick = (id) => {
-        dispatch(fetchOrderPurchase(id, history));
-    };
     return (
         <Card
             style={{ margin: '40px' }}
