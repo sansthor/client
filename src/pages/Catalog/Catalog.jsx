@@ -55,6 +55,7 @@ function Catalog() {
                         display: 'flex',
                         flexWrap: 'wrap',
                         justifyContent: 'space-around',
+                        marginBottom: '40px',
                     }}
                 >
                     {services.data !== undefined &&
