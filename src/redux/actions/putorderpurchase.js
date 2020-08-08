@@ -13,7 +13,7 @@ const fetchOrderPurchase = (id, history) => async (dispatch) => {
     await response.json;
     if (response.status === 200) {
         Swal.fire({
-            title: 'Your Account Successfully Done',
+            title: 'Pesanan Ditandai Selesai',
             text: '',
             icon: 'success',
         });
