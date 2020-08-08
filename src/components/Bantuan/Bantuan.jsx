@@ -31,7 +31,7 @@ export default function Bantuan() {
     const classes = useStyles();
 
     return (
-        <Wrap>
+        <Wrap className="hero is-success">
             {' '}
             <Card className={classes.root}>
                 <SidebarHelp />

@@ -12,7 +12,7 @@ function DetailOffer() {
         dispatch(fetchGetServiceById(id));
     }, [dispatch, id]);
     return (
-        <div>
+        <div style={{ backgroundColor: '#f2f6fa' }}>
             <CardDetailOffer
                 id={service.data !== undefined && service.data._id}
                 title={service.data !== undefined && service.data.title}

@@ -3,7 +3,7 @@ import Accordian from './Accordian';
 function SidebarHelp() {
     return (
         <div style={{ margin: '50px' }}>
-            <h1 className="title is-2" style={{ padding: '40px 0' }}>
+            <h1 style={{ padding: '40px 0', fontSize: '46px' }}>
                 Apa Yang Dapat Kami Bantu?
             </h1>
             <div style={{ marginBottom: '50px' }}>
