@@ -11,7 +11,7 @@ function MyServices() {
                 <div className="section-heading">
                     <h3 className="title is-2">Tambah Service</h3>
                 </div>
-                <div className="columns">
+                <div className="columns" style={{ marginBottom: '40px' }}>
                     <div className="column"></div>
                     <div className="column is-half">
                         <AddOffer />
