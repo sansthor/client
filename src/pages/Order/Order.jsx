@@ -1,19 +1,36 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import Swal from 'sweetalert2';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchGetOrderByTalent } from '../../redux/actions';
-// import { useHistory } from 'react-router-dom';
+import {
+    fetchGetOrderByTalent,
+    fetchPutOrderByTalent,
+} from '../../redux/actions';
 
 import '../../assets/css/Profile.css';
 import Tabs from '../../components/Tabs/TabsDashboard';
+import SelectStatus from './SelectStatus';
 
 function Order(props) {
-    // const history = useHistory();
     const dispatch = useDispatch();
     const orderByTalent = useSelector((state) => state.getorderbytalent);
     console.log(orderByTalent, 'id orderByTalent');
+    const [status, setStatus] = useState({
+        talentStatus: '',
+    });
+
+    const handleChange = (event) => {
+        setStatus({ talentStatus: event.target.value });
+        Swal.fire({
+            title: 'Status Berhasil Diubah',
+            text: '',
+            icon: 'success',
+        });
+    };
+    console.log('ini status', status);
     useEffect(() => {
         dispatch(fetchGetOrderByTalent());
-    }, [dispatch]);
+        dispatch(fetchPutOrderByTalent(status));
+    }, [dispatch, status]);
 
     return (
         <div>
@@ -50,17 +67,11 @@ function Order(props) {
                                             <td>{item.serviceID.title}</td>
                                             <td>{item.userID._id}</td>
                                             <td>{item.userID.fullname}</td>
-                                            <td>
-                                                <div className="select">
-                                                    <select>
-                                                        <option>Status</option>
-                                                        <option>
-                                                            On Going
-                                                        </option>
-                                                        <option>Done</option>
-                                                    </select>
-                                                </div>
-                                            </td>
+                                            <SelectStatus
+                                                name="status"
+                                                status={item.status}
+                                                handleChange={handleChange}
+                                            />
                                         </tr>
                                     );
                                 })}
