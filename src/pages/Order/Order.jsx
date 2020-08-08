@@ -8,7 +8,6 @@ import {
 
 import '../../assets/css/Profile.css';
 import Tabs from '../../components/Tabs/TabsDashboard';
-import SelectStatus from './SelectStatus';
 
 function Order(props) {
     const dispatch = useDispatch();
