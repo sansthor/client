@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-
+import Styled from 'styled-components';
 import SidebarHelp from './SidebarHelp';
 
 const useStyles = makeStyles({
@@ -20,16 +20,22 @@ const useStyles = makeStyles({
         marginBottom: 12,
     },
 });
-
+const Wrap = Styled.div`
+padding: 100px;
+background-color: #f2f6fa;
+@media (max-width: 1000px){
+    padding: 50px;
+}
+`;
 export default function Bantuan() {
     const classes = useStyles();
 
     return (
-        <div style={{ padding: '50px', backgroundColor: '#ebebeb' }}>
+        <Wrap>
             {' '}
             <Card className={classes.root}>
                 <SidebarHelp />
             </Card>
-        </div>
+        </Wrap>
     );
 }
