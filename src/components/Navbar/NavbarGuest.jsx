@@ -59,7 +59,7 @@ function NavbarGuest() {
                                     to="/login"
                                     className="button is-light is-rounded"
                                 >
-                                    Login
+                                    Masuk
                                 </Link>
                                 <Link
                                     to="/register"

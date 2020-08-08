@@ -29,7 +29,7 @@ function Login() {
                 <div className="hero-body">
                     <div className="container has-text-centered">
                         <div className="column is-4 is-offset-4">
-                            <p className="subtitle has-text-black">Sign In</p>
+                            <p className="subtitle has-text-black">Masuk</p>
                             <hr className="login-hr" />
                             <div className="box">
                                 <figure className="avatar">
@@ -50,7 +50,7 @@ function Login() {
                                             <input
                                                 className="input"
                                                 type="email"
-                                                placeholder="Your Email"
+                                                placeholder="Email"
                                                 autoFocus=""
                                                 id="email"
                                                 name="email"
@@ -65,13 +65,13 @@ function Login() {
                                             className="label"
                                             style={{ textAlign: 'start' }}
                                         >
-                                            Password
+                                            Kata Sandi
                                         </label>
                                         <div className="control">
                                             <input
                                                 className="input"
                                                 type="password"
-                                                placeholder="Your Password"
+                                                placeholder="Kata Sandi"
                                                 id="password"
                                                 name="password"
                                                 onChange={handleChange}

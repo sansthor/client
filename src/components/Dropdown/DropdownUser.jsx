@@ -12,10 +12,10 @@ function DropdownUser() {
                     Feed
                 </Link>
                 <Link to="/profile/edit" className="navbar-item">
-                    Edit Profile
+                    Ubah Profile
                 </Link>
                 <Link to="/history" className="navbar-item">
-                    Riwayat Pembelian
+                    Pesanan Saya
                 </Link>
 
                 <Link to="/register/talent" className="navbar-item">

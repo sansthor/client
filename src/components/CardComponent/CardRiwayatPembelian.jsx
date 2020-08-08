@@ -94,37 +94,44 @@ export default function CardRiwayatMyServices(props) {
                                                         flexDirection: 'column',
                                                     }}
                                                 >
-                                                    <p
-                                                        style={{
-                                                            fontSize: '14px',
-                                                        }}
-                                                    >
-                                                        <strong>
-                                                            {
-                                                                item.serviceID
-                                                                    .title
-                                                            }
-                                                        </strong>
-                                                    </p>
-
-                                                    <p
-                                                        style={{
-                                                            fontSize: '10px',
-                                                        }}
-                                                    >
-                                                        {/* by{' '} */}
-                                                        <span
+                                                    <div>
+                                                        <p
                                                             style={{
-                                                                fontStyle:
-                                                                    'italic',
+                                                                fontSize:
+                                                                    '14px',
                                                             }}
                                                         >
-                                                            {
-                                                                item.talentID
-                                                                    .username
-                                                            }
-                                                        </span>
-                                                    </p>
+                                                            <strong>
+                                                                {
+                                                                    item
+                                                                        .serviceID
+                                                                        .title
+                                                                }
+                                                            </strong>
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p
+                                                            style={{
+                                                                fontSize:
+                                                                    '10px',
+                                                            }}
+                                                        >
+                                                            {/* by{' '} */}
+                                                            <span
+                                                                style={{
+                                                                    fontStyle:
+                                                                        'italic',
+                                                                }}
+                                                            >
+                                                                {
+                                                                    item
+                                                                        .talentID
+                                                                        .username
+                                                                }
+                                                            </span>
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <Divider />

@@ -51,7 +51,7 @@ function Order(props) {
                                 }}
                             >
                                 <th>ID Pesanan</th>
-                                <th>Item</th>
+                                <th>Pesanan</th>
                                 <th>ID Client</th>
                                 <th>Client</th>
                                 <th>Status</th>

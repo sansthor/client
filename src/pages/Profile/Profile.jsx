@@ -59,7 +59,7 @@ function Profile() {
                                             <th colSpan="2"></th>
                                         </tr>
                                         <tr>
-                                            <td>Username:</td>
+                                            <td>Nama Pengguna:</td>
                                             <td>{member.username}</td>
                                         </tr>
                                         <tr>
@@ -67,7 +67,7 @@ function Profile() {
                                             <td>{member.email}</td>
                                         </tr>
                                         <tr>
-                                            <td>Address:</td>
+                                            <td>Alamat:</td>
                                             <td>{member.address}</td>
                                         </tr>
                                         {member.role !== undefined &&

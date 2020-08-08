@@ -51,12 +51,12 @@ function EditProfileTalent() {
                     <div className="column"></div>
                     <div className="column is-half">
                         <div className="field">
-                            <label className="label">Username</label>
+                            <label className="label">Nama Pengguna</label>
                             <div className="control has-icons-left">
                                 <input
                                     className="input"
                                     type="text"
-                                    placeholder="New Username"
+                                    placeholder="Nama Pengguna Baru"
                                     name="username"
                                     value={updated.username}
                                     onChange={handleChange}
@@ -73,7 +73,7 @@ function EditProfileTalent() {
                                 <input
                                     className="input "
                                     type="email"
-                                    placeholder="Email input"
+                                    placeholder="Email Baru"
                                     name="email"
                                     value={updated.email}
                                     onChange={handleChange}
@@ -85,12 +85,12 @@ function EditProfileTalent() {
                         </div>
 
                         <div className="field">
-                            <label className="label">Password</label>
+                            <label className="label">Kata Sandi</label>
                             <div className="control has-icons-left ">
                                 <input
                                     className="input"
                                     type="password"
-                                    placeholder="New Password"
+                                    placeholder="Kata Sandi Baru"
                                     name="password"
                                     value={updated.password}
                                     onChange={handleChange}
@@ -102,12 +102,12 @@ function EditProfileTalent() {
                         </div>
 
                         <div className="field">
-                            <label className="label">Address</label>
+                            <label className="label">Alamat</label>
                             <div className="control has-icons-left ">
                                 <input
                                     className="input"
                                     type="text"
-                                    placeholder="New Address"
+                                    placeholder="Alamat Baru"
                                     name="address"
                                     value={updated.address}
                                     onChange={handleChange}
@@ -119,12 +119,12 @@ function EditProfileTalent() {
                         </div>
 
                         <div className="field">
-                            <label className="label">Phone Number</label>
+                            <label className="label">Nomor HP</label>
                             <div className="control has-icons-left">
                                 <input
                                     className="input "
                                     type="text"
-                                    placeholder="New Phone Number"
+                                    placeholder="Nomor HP"
                                     name="phone"
                                     value={updated.phone}
                                     onChange={handleChange}
@@ -136,7 +136,7 @@ function EditProfileTalent() {
                         </div>
 
                         <div className="field">
-                            <label className="label">Skills</label>
+                            <label className="label">Daftar Keahlian</label>
                             <div className="control has-icons-left">
                                 <input
                                     className="input"

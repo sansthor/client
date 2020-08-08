@@ -44,7 +44,7 @@ function EditBank() {
                     <div className="column"></div>
                     <div className="column is-half">
                         <div className="field">
-                            <label className="label">Bank Name</label>
+                            <label className="label">Nama Bank</label>
                             <div className="control">
                                 <input
                                     className="input"
@@ -59,7 +59,7 @@ function EditBank() {
                         </div>
 
                         <div className="field">
-                            <label className="label">Account Name</label>
+                            <label className="label">Nama di Bank</label>
                             <div className="control ">
                                 <input
                                     className="input "
@@ -74,7 +74,7 @@ function EditBank() {
                         </div>
 
                         <div className="field">
-                            <label className="label">Account Number</label>
+                            <label className="label">Nomor Rekening</label>
                             <div className="control">
                                 <input
                                     className="input"

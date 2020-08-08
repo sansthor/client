@@ -4,7 +4,7 @@ function TableProfileTalent(props) {
     return (
         <React.Fragment>
             <tr>
-                <td>Skills:</td>
+                <td>Daftar Keahlian:</td>
                 {props.skills !== '' ? <td>{props.skills}</td> : <td>-</td>}
             </tr>
             <tr>
@@ -12,7 +12,7 @@ function TableProfileTalent(props) {
                 {props.link !== '' ? <td>{props.link}</td> : <td>-</td>}
             </tr>
             <tr>
-                <td>Phone:</td>
+                <td>Nomor HP:</td>
                 {props.phone !== '' ? <td>{props.phone}</td> : <td>-</td>}
             </tr>
         </React.Fragment>

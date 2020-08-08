@@ -5,9 +5,9 @@ export default function Tabs() {
     const { pathname } = useLocation();
     const tabContent = [
         { id: 'dashboard', link: '/dashboard', title: 'Dashboard' },
-        { id: 'myServices', link: '/my-services', title: 'My Service' },
-        { id: 'order', link: '/order', title: 'Order' },
-        { id: 'addOffer', link: '/add-offer', title: 'Add Offer' },
+        { id: 'myServices', link: '/my-services', title: 'Service Saya' },
+        { id: 'order', link: '/order', title: 'Pesanan Client' },
+        { id: 'addOffer', link: '/add-offer', title: 'Tambah Service' },
     ];
     return (
         <div className="tabs">

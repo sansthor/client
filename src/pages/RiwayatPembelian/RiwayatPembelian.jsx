@@ -5,7 +5,7 @@ function RiwayatPembelian() {
     return (
         <div>
             <div className="container " style={{ minHeight: '100vh' }}>
-                <h2 className="title has-text-centered">Riwayat Pembelian</h2>
+                <h2 className="title has-text-centered">Pesanan Saya</h2>
 
                 <div
                     style={{

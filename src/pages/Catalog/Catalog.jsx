@@ -32,7 +32,7 @@ function Catalog() {
                                 <input
                                     className="input is-primary"
                                     type="text"
-                                    placeholder="Search"
+                                    placeholder="Ketik judul layanan yang dicari"
                                     value={input}
                                     onChange={handleChange}
                                 />
