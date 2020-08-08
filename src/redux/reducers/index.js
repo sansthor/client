@@ -8,7 +8,9 @@ import getservicetalent from './getservicetalent';
 import getorder from './getOrder';
 import transaction from './transaction';
 import getcount from './getcount';
+import getorderbytalent from './getOrderByTalent';
 export default combineReducers({
+    getorderbytalent,
     getorder,
     registration,
     getallservices,

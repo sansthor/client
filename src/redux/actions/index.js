@@ -13,3 +13,4 @@ export * from './addCart';
 export * from './transaction';
 export * from './getcount';
 export * from './putorderpurchase';
+export * from './getOrderByTalent';
