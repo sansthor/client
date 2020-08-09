@@ -53,12 +53,12 @@ padding: 40px;
 const WrapImage = Styled.div`
 width: 100%;
 `;
-// const Input = Styled.input`
-// margin-right: 5px;
-// `;
-// const Label = Styled.label`
-// margin-bottom: 10px;
-// `;
+const Hover = Styled.div`
+    transition: 0.3s;
+   &:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+   }
+`;
 const Description = Styled.div`
 padding-top: 30px;
 `;
@@ -125,104 +125,112 @@ function CardDetailOffer(props) {
                         </span>
                     </div>
                 </WrapTittle>
-                <Card>
-                    <Wraps>
-                        <SectionOne>
-                            <WrapImage>
-                                <img
-                                    style={{ width: '100%', height: '100%' }}
-                                    src={
-                                        props.image !== false ? props.image : ''
-                                    }
-                                    alt="thumbnail"
-                                />
-                            </WrapImage>
-                            <Description>
-                                <p>{props.desc}</p>
-                            </Description>
-                        </SectionOne>
-                        <SectionTwo>
-                            <div
-                                style={{
-                                    display: 'flex',
-                                    flexDirection: 'row',
-                                }}
-                            >
-                                {' '}
-                                <i
-                                    className="fas fa-check"
-                                    style={{ margin: '4px 5px  0 0' }}
-                                ></i>{' '}
-                                <p style={{ marginBottom: '10px' }}>
+                <Hover>
+                    <Card>
+                        <Wraps>
+                            <SectionOne>
+                                <WrapImage>
+                                    <img
+                                        style={{
+                                            width: '100%',
+                                            height: '100%',
+                                        }}
+                                        src={
+                                            props.image !== false
+                                                ? props.image
+                                                : ''
+                                        }
+                                        alt="thumbnail"
+                                    />
+                                </WrapImage>
+                                <Description>
+                                    <p>{props.desc}</p>
+                                </Description>
+                            </SectionOne>
+                            <SectionTwo>
+                                <div
+                                    style={{
+                                        display: 'flex',
+                                        flexDirection: 'row',
+                                    }}
+                                >
                                     {' '}
-                                    Revision{' '}
-                                    {props.revision !== undefined
-                                        ? props.revision
-                                        : '1 '}
-                                    {'  '}
-                                    Times
-                                </p>
-                            </div>
-                            <div
-                                style={{
-                                    display: 'flex',
-                                    flexDirection: 'row',
-                                }}
-                            >
-                                {' '}
-                                <i
-                                    className="fas fa-check"
-                                    style={{ margin: '4px 5px  0 0' }}
-                                ></i>{' '}
-                                <p style={{ marginBottom: '10px' }}>
-                                    {props.requirements !== undefined
-                                        ? props.requirements
-                                        : 'Tidak ada kebutuhan khusus'}
-                                </p>
-                            </div>
-                            <div
-                                style={{
-                                    display: 'flex',
-                                    flexDirection: 'row',
-                                }}
-                            >
-                                {' '}
-                                <i
-                                    className="fas fa-check"
-                                    style={{ margin: '4px 5px  0 0' }}
-                                ></i>{' '}
-                                <p style={{ marginBottom: '10px' }}>
-                                    Commercial Use
-                                </p>
-                            </div>
-                            <div
-                                style={{
-                                    display: 'flex',
-                                    flexDirection: 'row',
-                                    marginBottom: '10px',
-                                }}
-                            >
-                                {' '}
-                                <i
-                                    className="far fa-clock"
-                                    style={{ margin: '4px 5px  0 0' }}
-                                ></i>{' '}
-                                <p>
-                                    {props.processtime !== undefined
-                                        ? props.processtime
-                                        : '5 hari'}
-                                </p>
-                            </div>
+                                    <i
+                                        className="fas fa-check"
+                                        style={{ margin: '4px 5px  0 0' }}
+                                    ></i>{' '}
+                                    <p style={{ marginBottom: '10px' }}>
+                                        {' '}
+                                        Revision{' '}
+                                        {props.revision !== undefined
+                                            ? props.revision
+                                            : '1 '}
+                                        {'  '}
+                                        Times
+                                    </p>
+                                </div>
+                                <div
+                                    style={{
+                                        display: 'flex',
+                                        flexDirection: 'row',
+                                    }}
+                                >
+                                    {' '}
+                                    <i
+                                        className="fas fa-check"
+                                        style={{ margin: '4px 5px  0 0' }}
+                                    ></i>{' '}
+                                    <p style={{ marginBottom: '10px' }}>
+                                        {props.requirements !== undefined
+                                            ? props.requirements
+                                            : 'Tidak ada kebutuhan khusus'}
+                                    </p>
+                                </div>
+                                <div
+                                    style={{
+                                        display: 'flex',
+                                        flexDirection: 'row',
+                                    }}
+                                >
+                                    {' '}
+                                    <i
+                                        className="fas fa-check"
+                                        style={{ margin: '4px 5px  0 0' }}
+                                    ></i>{' '}
+                                    <p style={{ marginBottom: '10px' }}>
+                                        Commercial Use
+                                    </p>
+                                </div>
+                                <div
+                                    style={{
+                                        display: 'flex',
+                                        flexDirection: 'row',
+                                        marginBottom: '10px',
+                                    }}
+                                >
+                                    {' '}
+                                    <i
+                                        className="far fa-clock"
+                                        style={{ margin: '4px 5px  0 0' }}
+                                    ></i>{' '}
+                                    <p>
+                                        {props.processtime !== undefined
+                                            ? props.processtime
+                                            : '5 hari'}
+                                    </p>
+                                </div>
 
-                            <button
-                                onClick={() => handleClick(props.id)}
-                                className="button is-link "
-                            >
-                                Buy Now ${props.price}
-                            </button>
-                        </SectionTwo>
-                    </Wraps>
-                </Card>
+                                <button
+                                    onClick={() => handleClick(props.id)}
+                                    className="button is-link "
+                                >
+                                    Buy Now ${props.price}
+                                </button>
+                            </SectionTwo>
+                        </Wraps>
+                    </Card>
+                </Hover>
+
                 <CollapseComponents />
             </Wrapping>
         </div>

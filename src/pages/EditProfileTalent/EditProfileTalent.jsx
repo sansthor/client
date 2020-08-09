@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchGetMember, editprofile } from '../../redux/actions';
+import { useHistory } from 'react-router-dom';
+import { fetchGetMember, fetchPutBasicUser } from '../../redux/actions';
 import { Link } from 'react-router-dom';
 import Styled from 'styled-components';
 
@@ -10,29 +11,30 @@ padding: 30px;
 }
 `;
 function EditProfileTalent() {
+    const history = useHistory();
     const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(fetchGetMember());
+    }, [dispatch]);
     const member = useSelector((state) => state.getmember);
-    const [updated, setupdated] = useState({
-        username: member.username,
-        email: member.email,
+    const [form, setForm] = useState({
+        username: '',
+        email: '',
         password: '',
-        address: member.address,
-        skills: member.skills,
-        link: member.link,
-        phone: member.phone,
+        address: '',
+        skills: '',
+        link: '',
+        phone: '',
     });
 
     const handleChange = (event) => {
-        setupdated({ ...updated, [event.target.name]: event.target.value });
+        setForm({ ...form, [event.target.name]: event.target.value });
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        await dispatch(editprofile(updated));
+        dispatch(fetchPutBasicUser(form, history));
     };
-    useEffect(() => {
-        dispatch(fetchGetMember());
-    }, [dispatch]);
 
     return (
         <div>
@@ -58,7 +60,7 @@ function EditProfileTalent() {
                                     type="text"
                                     placeholder="Nama Pengguna Baru"
                                     name="username"
-                                    value={updated.username}
+                                    value={form.username}
                                     onChange={handleChange}
                                 />
                                 <span className="icon is-small is-left">
@@ -75,7 +77,7 @@ function EditProfileTalent() {
                                     type="email"
                                     placeholder="Email Baru"
                                     name="email"
-                                    value={updated.email}
+                                    value={form.email}
                                     onChange={handleChange}
                                 />
                                 <span className="icon is-small is-left">
@@ -92,7 +94,7 @@ function EditProfileTalent() {
                                     type="password"
                                     placeholder="Kata Sandi Baru"
                                     name="password"
-                                    value={updated.password}
+                                    value={form.password}
                                     onChange={handleChange}
                                 />
                                 <span className="icon is-small is-left">
@@ -109,7 +111,7 @@ function EditProfileTalent() {
                                     type="text"
                                     placeholder="Alamat Baru"
                                     name="address"
-                                    value={updated.address}
+                                    value={form.address}
                                     onChange={handleChange}
                                 />
                                 <span className="icon is-small is-left">
@@ -126,7 +128,7 @@ function EditProfileTalent() {
                                     type="text"
                                     placeholder="Nomor HP"
                                     name="phone"
-                                    value={updated.phone}
+                                    value={form.phone}
                                     onChange={handleChange}
                                 />
                                 <span className="icon is-small is-left">
@@ -143,7 +145,7 @@ function EditProfileTalent() {
                                     type="text"
                                     placeholder="Pisahkan dengan koma, contoh: HTML, CSS, JS"
                                     name="skills"
-                                    value={updated.skills}
+                                    value={form.skills}
                                     onChange={handleChange}
                                 />
                                 <span className="icon is-small is-left">
@@ -160,7 +162,7 @@ function EditProfileTalent() {
                                     type="text"
                                     placeholder="Masukkan link. Contoh: github.com/digitarian"
                                     name="link"
-                                    value={updated.link}
+                                    value={form.link}
                                     onChange={handleChange}
                                 />
                                 <span className="icon is-small is-left">
