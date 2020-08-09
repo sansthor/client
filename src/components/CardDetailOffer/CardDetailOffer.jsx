@@ -45,7 +45,6 @@ width: 30%;
 
 display: flex;
 flex-direction: column;
-padding: 40px;
 @media (max-width: 1000px){
     width: 100%;
 }
@@ -161,12 +160,12 @@ function CardDetailOffer(props) {
                                     ></i>{' '}
                                     <p style={{ marginBottom: '10px' }}>
                                         {' '}
-                                        Revision{' '}
+                                        Revisi{' '}
                                         {props.revision !== undefined
                                             ? props.revision
                                             : '1 '}
                                         {'  '}
-                                        Times
+                                        Kali
                                     </p>
                                 </div>
                                 <div
@@ -177,7 +176,7 @@ function CardDetailOffer(props) {
                                 >
                                     {' '}
                                     <i
-                                        className="fas fa-check"
+                                        className="fas fa-thumbtack"
                                         style={{ margin: '4px 5px  0 0' }}
                                     ></i>{' '}
                                     <p style={{ marginBottom: '10px' }}>
@@ -198,7 +197,7 @@ function CardDetailOffer(props) {
                                         style={{ margin: '4px 5px  0 0' }}
                                     ></i>{' '}
                                     <p style={{ marginBottom: '10px' }}>
-                                        Commercial Use
+                                        Pemakaian Komersial
                                     </p>
                                 </div>
                                 <div
@@ -219,12 +218,30 @@ function CardDetailOffer(props) {
                                             : '5 hari'}
                                     </p>
                                 </div>
+                                <div
+                                    style={{
+                                        display: 'flex',
+                                        flexDirection: 'row',
+                                        marginBottom: '10px',
+                                    }}
+                                >
+                                    {' '}
+                                    <i
+                                        className="fas fa-money-bill-wave-alt"
+                                        style={{ margin: '4px 5px  0 0' }}
+                                    ></i>{' '}
+                                    <p>
+                                        {props.price !== undefined
+                                            ? props.price
+                                            : 'Gratis'}
+                                    </p>
+                                </div>
 
                                 <button
                                     onClick={() => handleClick(props.id)}
                                     className="button is-link "
                                 >
-                                    Buy Now ${props.price}
+                                    Pesan Sekarang
                                 </button>
                             </SectionTwo>
                         </Wraps>
