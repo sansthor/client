@@ -1,5 +1,6 @@
+import jwt_decode from 'jwt-decode';
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { fetchPutBasicUser, fetchGetMember } from '../../redux/actions';
 import { Link } from 'react-router-dom';
@@ -18,13 +19,14 @@ function EditProfile() {
     useEffect(() => {
         dispatch(fetchGetMember());
     }, [dispatch]);
-    const member = useSelector((state) => state.getmember);
-
+    // const member = useSelector((state) => state.getmember);
+    const decoded = jwt_decode(localStorage.getItem('token'));
+    console.log(decoded);
     const [form, setForm] = useState({
-        username: member.username || '',
-        email: member.email || '',
+        username: '',
+        email: '',
         password: '',
-        address: member.address || '',
+        address: '',
     });
 
     const handleChange = (event) => {
