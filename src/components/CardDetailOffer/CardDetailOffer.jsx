@@ -12,6 +12,7 @@ display: flex;
 flex-wrap: wrap;
 margin-bottom: 50px;
 background-color: white;
+padding: 30px 30px 0 30px;
 @media (max-width: 1000px){
     margin-bottom: 0;
 }
@@ -59,7 +60,7 @@ width: 100%;
 // margin-bottom: 10px;
 // `;
 const Description = Styled.div`
-padding: 30px 20px 30px 20px;
+padding-top: 30px;
 `;
 const Title = Styled.h1`
 font-size: 36px;
@@ -173,7 +174,24 @@ function CardDetailOffer(props) {
                                     style={{ margin: '4px 5px  0 0' }}
                                 ></i>{' '}
                                 <p style={{ marginBottom: '10px' }}>
-                                    {props.requirement}
+                                    {props.requirements !== undefined
+                                        ? props.requirements
+                                        : 'Tidak ada kebutuhan khusus'}
+                                </p>
+                            </div>
+                            <div
+                                style={{
+                                    display: 'flex',
+                                    flexDirection: 'row',
+                                }}
+                            >
+                                {' '}
+                                <i
+                                    className="fas fa-check"
+                                    style={{ margin: '4px 5px  0 0' }}
+                                ></i>{' '}
+                                <p style={{ marginBottom: '10px' }}>
+                                    Commercial Use
                                 </p>
                             </div>
                             <div
