@@ -24,7 +24,7 @@ function LayananKami() {
                                 data-aos="fade-in"
                                 data-aos-easing="linear"
                             >
-                                <i class="fab fa-android fa-3x"></i>
+                                <i className="fab fa-android fa-3x"></i>
                                 <hr />
                                 <h2>
                                     Menawarkan berbagai jasa digital yang
@@ -37,7 +37,7 @@ function LayananKami() {
                                 data-aos="fade-in"
                                 data-aos-easing="linear"
                             >
-                                <i class="fas fa-globe fa-3x"></i>
+                                <i className="fas fa-globe fa-3x"></i>
                                 {/* <i className="fas fa-paint-brush fa-3x"></i> */}
                                 <hr />
                                 <h2>
@@ -50,7 +50,7 @@ function LayananKami() {
                                 data-aos="fade-in"
                                 data-aos-easing="linear"
                             >
-                                <i class="fab fa-apple fa-3x"></i>
+                                <i className="fab fa-apple fa-3x"></i>
                                 <hr />
                                 <h2>
                                     Menawarkan berbagai jasa digital yang
@@ -66,7 +66,7 @@ function LayananKami() {
                                 data-aos="fade-in"
                                 data-aos-easing="linear"
                             >
-                                <i class="fas fa-user-tie fa-3x"></i>
+                                <i className="fas fa-user-tie fa-3x"></i>
                                 <hr />
                                 <h2>
                                     Menampilkan jasa digital oleh para talenta
@@ -78,7 +78,7 @@ function LayananKami() {
                                 data-aos="fade-in"
                                 data-aos-easing="linear"
                             >
-                                <i class="far fa-thumbs-up fa-3x"></i>
+                                <i className="far fa-thumbs-up fa-3x"></i>
                                 <hr />
                                 <h2>
                                     Menjamin client mendapatkan jasa digital
