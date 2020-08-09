@@ -118,7 +118,8 @@ export default function PaymentDetail() {
                                     ...values,
                                     transactionID,
                                 },
-                                history
+                                history,
+                                member._id
                             )
                         );
                     }}
