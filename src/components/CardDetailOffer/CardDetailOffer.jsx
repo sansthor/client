@@ -82,21 +82,25 @@ function CardDetailOffer(props) {
     const service = useSelector((state) => state.getservicebyid.data);
 
     const handleClick = (id) => {
-        dispatch(
-            addCart(
-                {
-                    userID: member._id,
-                    talentID: service.userID._id,
-                    status: 'CART',
-                    quantity: 1,
-                    total: service.price,
-                    talentStatus: 'CART',
-                    userStatus: 'CART',
-                    serviceID: id,
-                },
-                history
-            )
-        );
+        if (localStorage.getItem('token') === null) {
+            history.push('/login');
+        } else {
+            dispatch(
+                addCart(
+                    {
+                        userID: member._id,
+                        talentID: service.userID._id,
+                        status: 'CART',
+                        quantity: 1,
+                        total: service.price,
+                        talentStatus: 'CART',
+                        userStatus: 'CART',
+                        serviceID: id,
+                    },
+                    history
+                )
+            );
+        }
     };
 
     return (
@@ -180,8 +184,8 @@ function CardDetailOffer(props) {
                                         style={{ margin: '4px 5px  0 0' }}
                                     ></i>{' '}
                                     <p style={{ marginBottom: '10px' }}>
-                                        {props.requirements !== undefined
-                                            ? props.requirements
+                                        {props.requirement !== undefined
+                                            ? props.requirement
                                             : 'Tidak ada kebutuhan khusus'}
                                     </p>
                                 </div>

@@ -28,6 +28,8 @@ import AddOffer from './pages/AddOffer/AddOffer';
 
 import Navbar from './components/Navbar/Navbar';
 import Bantuan from './components/Bantuan/Bantuan';
+import PrivateRoute from './helpers/PrivateRoute';
+
 function App() {
     return (
         <Provider store={createStore(reducers, applyMiddleware(thunk))}>
@@ -43,53 +45,56 @@ function App() {
                     <Route exact path="/register">
                         <Register />
                     </Route>
-                    <Route exact path="/register/talent">
+                    <PrivateRoute exact path="/register/talent">
                         <RegisTalent />
-                    </Route>
-                    <Route exact path="/profile">
+                    </PrivateRoute>
+                    <PrivateRoute exact path="/profile">
                         <Profile />
-                    </Route>
-                    <Route exact path="/profile/edit">
+                    </PrivateRoute>
+                    <PrivateRoute exact path="/profile/edit">
                         <EditProfile />
-                    </Route>
-                    <Route exact path="/profile/edit/talent">
+                    </PrivateRoute>
+                    <PrivateRoute exact path="/profile/edit/talent">
                         <EditProfileTalent />
-                    </Route>
-                    <Route exact path="/profile/bank">
+                    </PrivateRoute>
+                    <PrivateRoute exact path="/profile/bank">
                         <EditBank />
-                    </Route>
-                    <Route exact path="/profile">
+                    </PrivateRoute>
+                    <PrivateRoute exact path="/profile">
                         <Profile />
-                    </Route>
-                    <Route exact path="/history">
+                    </PrivateRoute>
+                    <PrivateRoute exact path="/history">
                         <RiwayatPembelian />
-                    </Route>
+                    </PrivateRoute>
                     <Route exact path="/catalog">
                         <Catalog />
                     </Route>
-                    <Route exact path="/dashboard">
+                    <PrivateRoute exact path="/dashboard">
                         <Dashboard />
-                    </Route>
-                    <Route exact path="/my-services">
+                    </PrivateRoute>
+                    <PrivateRoute exact path="/my-services">
                         <MyServices />
-                    </Route>
-                    <Route exact path="/order">
+                    </PrivateRoute>
+                    <PrivateRoute exact path="/order">
                         <Order />
-                    </Route>
+                    </PrivateRoute>
                     <Route exact path="/detail-offer/:id">
                         <DetailOffer />
                     </Route>
-                    <Route exact path="/payment/:id">
+                    <PrivateRoute exact path="/payment/:id">
                         <Payment />
-                    </Route>
-                    <Route exact path="/payment-report">
+                    </PrivateRoute>
+                    <PrivateRoute exact path="/payment-report">
                         <PaymentReport />
-                    </Route>
-                    <Route exact path="/add-offer">
+                    </PrivateRoute>
+                    <PrivateRoute exact path="/add-offer">
                         <AddOffer />
-                    </Route>
+                    </PrivateRoute>
                     <Route exact path="/bantuan">
                         <Bantuan />
+                    </Route>
+                    <Route path="*">
+                        <Home />
                     </Route>
                 </Switch>
                 <Footer />

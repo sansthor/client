@@ -17,7 +17,7 @@ const fetchOrderPurchase = (id, history) => async (dispatch) => {
             text: '',
             icon: 'success',
         });
-        history.push('/profile');
+        history.push('/order');
     }
 };
 
