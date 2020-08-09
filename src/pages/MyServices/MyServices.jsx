@@ -9,7 +9,7 @@ function MyServices() {
             <div className="container " style={{ minHeight: '100vh' }}>
                 <Tabs />
                 <div className="section-heading">
-                    <h3 className="title is-2">My Services</h3>
+                    <h3 className="title is-2">Services Saya</h3>
                 </div>
                 <div
                     style={{

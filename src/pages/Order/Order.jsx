@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import Swal from 'sweetalert2';
+import React, { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
     fetchGetOrderByTalent,
@@ -8,29 +8,20 @@ import {
 
 import '../../assets/css/Profile.css';
 import Tabs from '../../components/Tabs/TabsDashboard';
-import SelectStatus from './SelectStatus';
 
 function Order(props) {
     const dispatch = useDispatch();
+    const history = useHistory();
     const orderByTalent = useSelector((state) => state.getorderbytalent);
     console.log(orderByTalent, 'id orderByTalent');
-    const [status, setStatus] = useState({
-        talentStatus: '',
-    });
 
-    const handleChange = (event) => {
-        setStatus({ talentStatus: event.target.value });
-        Swal.fire({
-            title: 'Status Berhasil Diubah',
-            text: '',
-            icon: 'success',
-        });
+    const handleClick = (id) => {
+        dispatch(fetchPutOrderByTalent(id, history));
     };
-    console.log('ini status', status);
+
     useEffect(() => {
         dispatch(fetchGetOrderByTalent());
-        dispatch(fetchPutOrderByTalent(status));
-    }, [dispatch, status]);
+    }, [dispatch]);
 
     return (
         <div>
@@ -67,11 +58,45 @@ function Order(props) {
                                             <td>{item.serviceID.title}</td>
                                             <td>{item.userID._id}</td>
                                             <td>{item.userID.fullname}</td>
-                                            <SelectStatus
-                                                name="status"
-                                                status={item.status}
-                                                handleChange={handleChange}
-                                            />
+                                            <React.Fragment>
+                                                <td>
+                                                    {item.talentStatus ===
+                                                    'DONE' ? (
+                                                        <div
+                                                            style={{
+                                                                display: 'flex',
+                                                                flexDirection:
+                                                                    'row',
+                                                                justifyContent:
+                                                                    'center',
+                                                            }}
+                                                        >
+                                                            <i
+                                                                className="fas fa-check"
+                                                                style={{
+                                                                    margin:
+                                                                        '4px 5px  0 0',
+                                                                }}
+                                                            ></i>
+                                                            <p>Selesai</p>
+                                                        </div>
+                                                    ) : (
+                                                        <button
+                                                            onClick={() =>
+                                                                handleClick(
+                                                                    item._id
+                                                                )
+                                                            }
+                                                            className="button is-link is-rounded"
+                                                            style={{
+                                                                width: '100%',
+                                                            }}
+                                                        >
+                                                            Tandai Selesai
+                                                        </button>
+                                                    )}
+                                                </td>
+                                            </React.Fragment>
                                         </tr>
                                     );
                                 })}

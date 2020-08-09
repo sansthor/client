@@ -33,7 +33,7 @@ function Dashboard() {
                     </div>
                     <div className="level-item has-text-centered">
                         <div>
-                            <p className="heading">In Progress</p>
+                            <p className="heading">Pesanan Berlangsung</p>
                             <p className="title">{count.data}</p>
                         </div>
                     </div>

@@ -3,7 +3,8 @@ import CollapseComponentsWeb from './CollapseComponentsWeb';
 import Styled from 'styled-components';
 
 const Tittle = Styled.h2`
-margin-bottom: 10px;
+font-size: 36px;
+margin: 40px 0;
 @media (max-width: 1000px) {
     padding: 10px;
 }

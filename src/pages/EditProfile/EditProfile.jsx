@@ -23,7 +23,7 @@ function EditProfile() {
     const [form, setForm] = useState({
         username: member.username || '',
         email: member.email || '',
-        password: member.password || '',
+        password: '',
         address: member.address || '',
     });
 

@@ -60,11 +60,12 @@ function RegisTalent() {
                                             <input
                                                 className="input"
                                                 type="text"
-                                                placeholder="Full Name"
+                                                placeholder="Nama Lengkap"
                                                 autoFocus=""
                                                 name="fullname"
                                                 value={updated.fullname}
                                                 onChange={handleChange}
+                                                disabled
                                             />
                                         </div>
                                     </div>
@@ -79,11 +80,12 @@ function RegisTalent() {
                                             <input
                                                 className="input"
                                                 type="text"
-                                                placeholder="Username"
+                                                placeholder="Nama Pengguna"
                                                 autoFocus=""
                                                 name="username"
                                                 value={updated.username}
                                                 onChange={handleChange}
+                                                disabled
                                             />
                                         </div>
                                     </div>
@@ -98,11 +100,12 @@ function RegisTalent() {
                                             <input
                                                 className="input"
                                                 type="email"
-                                                placeholder="Your Email"
+                                                placeholder="Alamat Email"
                                                 autoFocus=""
                                                 name="email"
                                                 value={updated.email}
                                                 onChange={handleChange}
+                                                disabled
                                             />
                                         </div>
                                     </div>
@@ -118,11 +121,12 @@ function RegisTalent() {
                                             <input
                                                 className="input"
                                                 type="text"
-                                                placeholder="Address"
+                                                placeholder="Alamat"
                                                 autoFocus=""
                                                 name="address"
                                                 value={updated.address}
                                                 onChange={handleChange}
+                                                disabled
                                             />
                                         </div>
                                     </div>
@@ -132,7 +136,7 @@ function RegisTalent() {
                                             className="label"
                                             style={{ textAlign: 'start' }}
                                         >
-                                            Skills
+                                            Daftar Keahlian
                                         </label>
                                         <div className="control">
                                             <input

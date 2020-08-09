@@ -5,17 +5,20 @@ import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCart } from '../../redux/actions';
 import Avatar from '@material-ui/core/Avatar';
+import Card from '@material-ui/core/Card';
 
 const Wraps = Styled.div`
 display: flex;
 flex-wrap: wrap;
 margin-bottom: 50px;
+background-color: white;
+padding: 30px 30px 0 30px;
 @media (max-width: 1000px){
     margin-bottom: 0;
 }
 `;
 const Wrapping = Styled.div`
-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
 display: flex;
 flex-wrap: wrap;
 flex-direction: column;
@@ -29,15 +32,17 @@ margin: 100px;
 }
 `;
 const SectionOne = Styled.div`
+padding:20px;
 width:70%;
-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
 @media (max-width: 1000px){
     width: 100%;
 }
 `;
 const SectionTwo = Styled.div`
+padding: 20px;
 width: 30%;
-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
 display: flex;
 flex-direction: column;
 padding: 40px;
@@ -55,9 +60,10 @@ width: 100%;
 // margin-bottom: 10px;
 // `;
 const Description = Styled.div`
-padding: 30px 20px 30px 20px;
+padding-top: 30px;
 `;
 const Title = Styled.h1`
+font-size: 36px;
 padding: 5px;
 
 
@@ -95,12 +101,13 @@ function CardDetailOffer(props) {
     };
 
     return (
-        <div>
+        <div
+            className="hero is-success is-fullheight"
+            style={{ color: 'black' }}
+        >
             <Wrapping>
                 <WrapTittle>
-                    <Title>
-                        <strong>{props.title}</strong>
-                    </Title>
+                    <Title>{props.title}</Title>
                     <div
                         style={{
                             display: 'flex',
@@ -113,77 +120,109 @@ function CardDetailOffer(props) {
                             alt="avatar"
                             src={props.avatar}
                         />
-                        <Title as="span">
+                        <span>
                             <em>{props.name}</em>
-                        </Title>
+                        </span>
                     </div>
                 </WrapTittle>
-                <Wraps>
-                    <SectionOne>
-                        <WrapImage>
-                            <img
-                                style={{ width: '100%', height: '100%' }}
-                                src={props.image !== false ? props.image : ''}
-                                alt="thumbnail"
-                            />
-                        </WrapImage>
-                        <Description>
-                            <p>{props.desc}</p>
-                        </Description>
-                    </SectionOne>
-                    <SectionTwo>
-                        <div style={{ display: 'flex', flexDirection: 'row' }}>
-                            {' '}
-                            <i
-                                className="fas fa-check"
-                                style={{ margin: '4px 5px  0 0' }}
-                            ></i>{' '}
-                            <p style={{ marginBottom: '10px' }}>
+                <Card>
+                    <Wraps>
+                        <SectionOne>
+                            <WrapImage>
+                                <img
+                                    style={{ width: '100%', height: '100%' }}
+                                    src={
+                                        props.image !== false ? props.image : ''
+                                    }
+                                    alt="thumbnail"
+                                />
+                            </WrapImage>
+                            <Description>
+                                <p>{props.desc}</p>
+                            </Description>
+                        </SectionOne>
+                        <SectionTwo>
+                            <div
+                                style={{
+                                    display: 'flex',
+                                    flexDirection: 'row',
+                                }}
+                            >
                                 {' '}
-                                Revision{' '}
-                                {props.revision !== undefined
-                                    ? props.revision
-                                    : '1 '}
-                                Times
-                            </p>
-                        </div>
-                        <div style={{ display: 'flex', flexDirection: 'row' }}>
-                            {' '}
-                            <i
-                                className="fas fa-check"
-                                style={{ margin: '4px 5px  0 0' }}
-                            ></i>{' '}
-                            <p style={{ marginBottom: '10px' }}>
-                                Commercial Use
-                            </p>
-                        </div>
-                        <div
-                            style={{
-                                display: 'flex',
-                                flexDirection: 'row',
-                                marginBottom: '10px',
-                            }}
-                        >
-                            {' '}
-                            <i
-                                className="far fa-clock"
-                                style={{ margin: '4px 5px  0 0' }}
-                            ></i>{' '}
-                            <p>
-                                {props.processtime !== undefined
-                                    ? props.processtime
-                                    : '5 hari'}
-                            </p>
-                        </div>
+                                <i
+                                    className="fas fa-check"
+                                    style={{ margin: '4px 5px  0 0' }}
+                                ></i>{' '}
+                                <p style={{ marginBottom: '10px' }}>
+                                    {' '}
+                                    Revision{' '}
+                                    {props.revision !== undefined
+                                        ? props.revision
+                                        : '1 '}
+                                    {'  '}
+                                    Times
+                                </p>
+                            </div>
+                            <div
+                                style={{
+                                    display: 'flex',
+                                    flexDirection: 'row',
+                                }}
+                            >
+                                {' '}
+                                <i
+                                    className="fas fa-check"
+                                    style={{ margin: '4px 5px  0 0' }}
+                                ></i>{' '}
+                                <p style={{ marginBottom: '10px' }}>
+                                    {props.requirements !== undefined
+                                        ? props.requirements
+                                        : 'Tidak ada kebutuhan khusus'}
+                                </p>
+                            </div>
+                            <div
+                                style={{
+                                    display: 'flex',
+                                    flexDirection: 'row',
+                                }}
+                            >
+                                {' '}
+                                <i
+                                    className="fas fa-check"
+                                    style={{ margin: '4px 5px  0 0' }}
+                                ></i>{' '}
+                                <p style={{ marginBottom: '10px' }}>
+                                    Commercial Use
+                                </p>
+                            </div>
+                            <div
+                                style={{
+                                    display: 'flex',
+                                    flexDirection: 'row',
+                                    marginBottom: '10px',
+                                }}
+                            >
+                                {' '}
+                                <i
+                                    className="far fa-clock"
+                                    style={{ margin: '4px 5px  0 0' }}
+                                ></i>{' '}
+                                <p>
+                                    {props.processtime !== undefined
+                                        ? props.processtime
+                                        : '5 hari'}
+                                </p>
+                            </div>
 
-                        <button
-                            onClick={() => handleClick(props.id)}
-                            className="button is-link "
-                        >
-                            Buy Now ${props.price}
-                        </button>
-                    </SectionTwo>
-                </Wraps>
+                            <button
+                                onClick={() => handleClick(props.id)}
+                                className="button is-link "
+                            >
+                                Buy Now ${props.price}
+                            </button>
+                        </SectionTwo>
+                    </Wraps>
+                </Card>
                 <CollapseComponents />
             </Wrapping>
         </div>

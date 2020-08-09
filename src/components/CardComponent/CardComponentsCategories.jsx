@@ -43,7 +43,7 @@ export default function CardComponent(props) {
                         style={{
                             display: 'flex',
                             flexDirection: 'row',
-                            height: '5em',
+                            height: '5rem',
                         }}
                     >
                         <Avatar
