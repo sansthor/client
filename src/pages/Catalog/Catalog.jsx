@@ -22,7 +22,10 @@ function Catalog() {
     }, [input, dispatch]);
     return (
         <div>
-            <div className="container " style={{ minHeight: '100vh' }}>
+            <div
+                className="container "
+                style={{ minHeight: '100vh', marginBottom: '5em' }}
+            >
                 <h2 className="title has-text-centered">Cari Disini</h2>
                 <div className="columns">
                     <div className="column"></div>
