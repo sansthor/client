@@ -1,4 +1,5 @@
 import Swal from 'sweetalert2';
+import { fetchGetOrder } from './getOrder';
 const PUT_ORDER_PURCHASE = 'PUT_ORDER_PURCHASE';
 
 const fetchOrderPurchase = (id, history) => async (dispatch) => {
@@ -17,8 +18,9 @@ const fetchOrderPurchase = (id, history) => async (dispatch) => {
             text: '',
             icon: 'success',
         });
-        history.push('/order');
     }
+
+    dispatch(fetchGetOrder());
 };
 
 export { fetchOrderPurchase, PUT_ORDER_PURCHASE };
