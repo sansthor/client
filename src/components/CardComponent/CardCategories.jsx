@@ -40,7 +40,7 @@ function CardCategories() {
                                             title={item.title}
                                             name={item.userID.username}
                                             price={item.price}
-                                            avatar={item.avatar}
+                                            avatar={item.userID.avatar}
                                         />
                                     </Link>
                                 </React.Fragment>
