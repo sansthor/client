@@ -18,7 +18,7 @@ export default function Cart() {
         transaction.length > 0
             ? transaction.reduce((a, b) => ({ total: a.total + b.total }))
             : { total: 0 };
-    console.log(transaction.length);
+
     return (
         <div className="column is-4">
             <div className="box">

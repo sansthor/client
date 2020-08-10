@@ -26,7 +26,7 @@ const Image = Styled.div`
 function CardPopular() {
     const dispatch = useDispatch();
     const best = useSelector((state) => state.bestcategory);
-    console.log(best);
+
     useEffect(() => {
         dispatch(fetchGetBestCategory());
     }, [dispatch]);
@@ -40,10 +40,10 @@ function CardPopular() {
                     {best.data !== undefined &&
                         best.data.map((item) => {
                             return (
-                                <Image data-aos="fade-right">
+                                <Image data-aos="fade-right" key={item._id}>
                                     <Link to={`/detail-offer/${item._id}`}>
                                         <CardComponent
-                                            key={item._id}
+                                            id={item._id}
                                             title={item.title}
                                             image={item.image}
                                         />

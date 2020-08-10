@@ -50,11 +50,10 @@ export default function CardRiwayatMyServices(props) {
                     order.length > 0 &&
                     order.map((item) => {
                         return (
-                            <React.Fragment>
+                            <React.Fragment key={item._id}>
                                 <Card
                                     style={{ margin: '40px' }}
                                     className={classes.root}
-                                    key={item._id}
                                 >
                                     <CardActionArea>
                                         <Img>

@@ -122,7 +122,7 @@ function CardDetailOffer(props) {
                         <Avatar
                             style={{ top: '-5px', marginRight: '5px' }}
                             alt="avatar"
-                            src={props.avatar}
+                            src={props.avatar || ''}
                         />
                         <span>
                             <em>{props.name}</em>
