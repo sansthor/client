@@ -14,3 +14,5 @@ export * from './transaction';
 export * from './getcount';
 export * from './putorderpurchase';
 export * from './getOrderByTalent';
+export * from './bestpopular';
+export * from './bestcategory';

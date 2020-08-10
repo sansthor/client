@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2';
 
-const buyService = (values, history) => async () => {
+const buyService = (values, history, member) => async () => {
     const token = localStorage.getItem('token');
     const url = `${process.env.REACT_APP_API_URL}/order/checkout`;
     const options = {
@@ -22,7 +22,8 @@ const buyService = (values, history) => async () => {
             icon: 'success',
         });
 
-        history.push('/');
+        history.push(`/payment/${member}`);
+        window.location.reload();
     }
 };
 

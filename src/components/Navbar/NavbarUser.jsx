@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Dropdown from '../Dropdown/Dropdown';
 import PersonIcon from '@material-ui/icons/Person';
 
 function NavbarUser(props) {
     const [isActive, setIsActive] = useState(false);
+    const transaction = useSelector(
+        (state) => state.transaction.transactionCartByID
+    );
+    const [totalCart, settotalCart] = useState(0);
+    useEffect(() => {
+        settotalCart(transaction.length);
+    }, [transaction]);
     return (
         <div>
             <nav
@@ -68,7 +76,26 @@ function NavbarUser(props) {
                                     to={`/payment/${props.id}`}
                                     className="button is-light"
                                 >
-                                    <i className="fas fa-shopping-cart"></i>
+                                    <div>
+                                        <i className="fas fa-shopping-cart"></i>
+                                    </div>
+                                    <div
+                                        style={{
+                                            fontWeight: 'bolder',
+                                            height: '20px',
+                                            width: '20px',
+                                            backgroundColor: '#7fdbda',
+                                            color: '#002858',
+                                            borderRadius: '50%',
+                                            fontSize: '12px',
+                                            padding: '2px',
+                                            textAlign: 'center',
+                                        }}
+                                    >
+                                        {transaction.length === undefined
+                                            ? 0
+                                            : totalCart}
+                                    </div>
                                 </Link>
                             </div>
                         </div>
