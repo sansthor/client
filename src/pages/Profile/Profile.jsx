@@ -22,7 +22,11 @@ function Profile() {
                                 <article className="tile is-child has-text-centered">
                                     <figure className="image is-128x128 is-inline-block">
                                         <img
-                                            src="https://img.vim-cn.com/80/791e5955feca09de9cbb8437f308c09f88c9b8.png"
+                                            src={
+                                                member.avatar === undefined
+                                                    ? 'https://img.vim-cn.com/80/791e5955feca09de9cbb8437f308c09f88c9b8.png'
+                                                    : member.avatar
+                                            }
                                             alt="avatar"
                                             className="is-rounded"
                                             style={{ margin: 'auto' }}
