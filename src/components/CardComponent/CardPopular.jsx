@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import CardComponent from '../CardComponent/CardComponent';
-
+import { fetchGetBestCategory } from '../../redux/actions';
+import { useDispatch, useSelector } from 'react-redux';
 import './Card.css';
 
 const Wrap = Styled.div`
@@ -22,30 +24,34 @@ const Image = Styled.div`
    }
 `;
 function CardPopular() {
+    const dispatch = useDispatch();
+    const best = useSelector((state) => state.bestcategory);
+    console.log(best);
+    useEffect(() => {
+        dispatch(fetchGetBestCategory());
+    }, [dispatch]);
     return (
         <div>
             <h1 className="title" align="center">
                 Kategori Layanan Favorit
             </h1>
             <Wrap>
-                <Image data-aos="fade-right">
-                    <CardComponent
-                        title="Wordpress"
-                        image="https://bestpartnereducation.com/public/news/2019/12/tertarik-menjadi-web-developer-ikuti-langkah-ini/web%20developer.jpg"
-                    />
-                </Image>
-                <Image data-aos="fade">
-                    <CardComponent
-                        title="Design Thinking"
-                        image="https://wisdomeweb.com/wp-content/uploads/2020/01/ReactJS.jpg"
-                    />
-                </Image>
-                <Image data-aos="fade-left">
-                    <CardComponent
-                        title="Web Development"
-                        image="https://bestpartnereducation.com/public/news/2019/12/tertarik-menjadi-web-developer-ikuti-langkah-ini/web%20developer.jpg"
-                    />
-                </Image>
+                <React.Fragment>
+                    {best.data !== undefined &&
+                        best.data.map((item) => {
+                            return (
+                                <Image data-aos="fade-right">
+                                    <Link to={`/detail-offer/${item._id}`}>
+                                        <CardComponent
+                                            key={item._id}
+                                            title={item.title}
+                                            image={item.image}
+                                        />
+                                    </Link>
+                                </Image>
+                            );
+                        })}
+                </React.Fragment>
             </Wrap>
         </div>
     );

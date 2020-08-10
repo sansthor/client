@@ -185,7 +185,7 @@ function CardDetailOffer(props) {
                                         style={{ margin: '4px 5px  0 0' }}
                                     ></i>{' '}
                                     <p style={{ marginBottom: '10px' }}>
-                                        {props.requirement !== undefined
+                                        {props.requirement !== ''
                                             ? props.requirement
                                             : 'Tidak ada kebutuhan khusus'}
                                     </p>

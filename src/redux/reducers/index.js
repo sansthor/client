@@ -9,6 +9,8 @@ import getorder from './getOrder';
 import transaction from './transaction';
 import getcount from './getcount';
 import getorderbytalent from './getOrderByTalent';
+import bestpopular from './bestpopular';
+import bestcategory from './bestcategory';
 export default combineReducers({
     getorderbytalent,
     getorder,
@@ -20,4 +22,6 @@ export default combineReducers({
     getservicetalent,
     transaction,
     getcount,
+    bestpopular,
+    bestcategory,
 });
