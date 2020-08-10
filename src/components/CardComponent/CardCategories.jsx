@@ -40,7 +40,11 @@ function CardCategories() {
                                             title={item.title}
                                             name={item.userID.username}
                                             price={item.price}
-                                            avatar={item.userID.avatar}
+                                            avatar={
+                                                item.userID.avatar === undefined
+                                                    ? 'https://img.vim-cn.com/80/791e5955feca09de9cbb8437f308c09f88c9b8.png'
+                                                    : item.userID.avatar
+                                            }
                                         />
                                     </Link>
                                 </React.Fragment>
