@@ -26,7 +26,7 @@ const Image = Styled.div`
 function CardPopular() {
     const dispatch = useDispatch();
     const best = useSelector((state) => state.bestcategory);
-    console.log(best);
+
     useEffect(() => {
         dispatch(fetchGetBestCategory());
     }, [dispatch]);

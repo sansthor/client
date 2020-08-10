@@ -7,7 +7,6 @@ import './Card.css';
 function CardCategories() {
     const dispatch = useDispatch();
     const popular = useSelector((state) => state.bestpopular);
-    console.log(popular);
 
     useEffect(() => {
         dispatch(fetchGetPopular());
