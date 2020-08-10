@@ -1,4 +1,3 @@
-import jwt_decode from 'jwt-decode';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
@@ -20,7 +19,6 @@ function EditProfile() {
         dispatch(fetchGetMember());
     }, [dispatch]);
     const member = useSelector((state) => state.getmember);
-    const decoded = jwt_decode(localStorage.getItem('token'));
 
     const [form, setForm] = useState({
         username: member.username || '',

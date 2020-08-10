@@ -7,7 +7,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
 import Divider from '@material-ui/core/Divider';
 import Avatar from '@material-ui/core/Avatar';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { fetchGetOrder } from '../../redux/actions';
 
 import './Card.css';
@@ -31,7 +31,6 @@ export default function CardRiwayatMyServices(props) {
     const classes = useStyles();
 
     const dispatch = useDispatch();
-    const order = useSelector((state) => state.getorder);
 
     useEffect(() => {
         dispatch(fetchGetOrder());
