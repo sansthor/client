@@ -32,10 +32,10 @@ function CardCategories() {
                     {popular.data !== undefined &&
                         popular.data.map((item) => {
                             return (
-                                <React.Fragment>
+                                <React.Fragment key={item._id}>
                                     <Link to={`/detail-offer/${item._id}`}>
                                         <CardComponentsCategories
-                                            key={item._id}
+                                            id={item._id}
                                             image={item.image}
                                             title={item.title}
                                             name={item.userID.username}
