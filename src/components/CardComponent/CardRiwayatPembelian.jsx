@@ -52,7 +52,7 @@ export default function CardRiwayatMyServices(props) {
                         return (
                             <React.Fragment key={item._id}>
                                 <Card
-                                    style={{ margin: '40px' }}
+                                    style={{ margin: '30px' }}
                                     className={classes.root}
                                 >
                                     <CardActionArea>
