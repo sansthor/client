@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { fetchGetMember, fetchPutBasicUser } from '../../redux/actions';
 import { Link } from 'react-router-dom';
@@ -16,15 +16,15 @@ function EditProfileTalent() {
     useEffect(() => {
         dispatch(fetchGetMember());
     }, [dispatch]);
-    // const member = useSelector((state) => state.getmember);
+    const member = useSelector((state) => state.getmember);
     const [form, setForm] = useState({
-        username: '',
-        email: '',
+        username: member.username || '',
+        email: member.email || '',
         password: '',
-        address: '',
-        skills: '',
-        link: '',
-        phone: '',
+        address: member.address || '',
+        skills: member.skills || '',
+        link: member.link || '',
+        phone: member.phone || '',
     });
 
     const handleChange = (event) => {

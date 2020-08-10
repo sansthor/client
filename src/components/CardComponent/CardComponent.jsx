@@ -24,7 +24,7 @@ export default function CardComponent(props) {
     const classes = useStyles();
 
     return (
-        <Card className={classes.root}>
+        <Card key={props.key} className={classes.root}>
             <CardActionArea>
                 <Img>
                     <CardMedia
