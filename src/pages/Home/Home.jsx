@@ -6,7 +6,7 @@ import TentangKami from '../../components/Home/TentangKami/TentangKami';
 import MottoKami from '../../components/Home/MottoKami/MottoKami';
 import LayananKami from '../../components/Home/LayananKami/LayananKami';
 import CardPopular from '../../components/CardComponent/CardPopular';
-import SaranMasukan from '../../components/Home/SaranMasukan/SaranMasukan';
+// import SaranMasukan from '../../components/Home/SaranMasukan/SaranMasukan';
 
 import '../../assets/css/Home.css';
 
@@ -19,10 +19,10 @@ function Home() {
                 <CardCategories />
                 <div style={{ marginTop: '5em' }}></div>
                 <CardPopular />
-                <TentangKami />
                 <MottoKami />
                 <LayananKami />
-                <SaranMasukan />
+                <TentangKami />
+                {/* <SaranMasukan /> */}
             </div>
             {/* End Main Content */}
         </div>
