@@ -13,7 +13,6 @@ function Order(props) {
     const dispatch = useDispatch();
     const history = useHistory();
     const orderByTalent = useSelector((state) => state.getorderbytalent);
-    console.log(orderByTalent, 'id orderByTalent');
 
     const handleClick = (id) => {
         dispatch(fetchPutOrderByTalent(id, history));
@@ -51,7 +50,6 @@ function Order(props) {
                         <tbody>
                             {orderByTalent.data !== undefined &&
                                 orderByTalent.data.map((item) => {
-                                    console.log(item, 'lololo');
                                     return (
                                         <tr key={item._id}>
                                             <td>{item.serviceID._id}</td>

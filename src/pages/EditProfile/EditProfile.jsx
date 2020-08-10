@@ -21,7 +21,7 @@ function EditProfile() {
     }, [dispatch]);
     // const member = useSelector((state) => state.getmember);
     const decoded = jwt_decode(localStorage.getItem('token'));
-    console.log(decoded);
+
     const [form, setForm] = useState({
         username: '',
         email: '',

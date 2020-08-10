@@ -32,7 +32,7 @@ export default function CardRiwayatMyServices(props) {
 
     const dispatch = useDispatch();
     const order = useSelector((state) => state.getorder);
-    console.log(order, 'id order');
+
     useEffect(() => {
         dispatch(fetchGetOrder());
     }, [dispatch]);
