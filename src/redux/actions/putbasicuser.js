@@ -35,7 +35,7 @@ const fetchPutBasicUser = (formData, history) => async (dispatch) => {
             text: '',
             icon: 'success',
         });
-        history.push('/my-services');
+        history.push('/profile');
     }
 };
 
