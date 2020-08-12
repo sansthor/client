@@ -13,26 +13,20 @@ function DetailOffer() {
     }, [dispatch, id]);
     return (
         <div style={{ backgroundColor: '#f2f6fa' }}>
-            <CardDetailOffer
-                id={service.data !== undefined && service.data._id}
-                title={service.data !== undefined && service.data.title}
-                name={
-                    service.data !== undefined && service.data.userID.fullname
-                }
-                image={service.data !== undefined && service.data.image}
-                desc={service.data !== undefined && service.data.desc}
-                price={service.data !== undefined && service.data.price}
-                avatar={
-                    service.data !== undefined && service.data.userID.avatar
-                }
-                revision={service.data !== undefined && service.data.revision}
-                processtime={
-                    service.data !== undefined && service.data.processtime
-                }
-                requirement={
-                    service.data !== undefined && service.data.requirement
-                }
-            />
+            {service.data !== undefined && (
+                <CardDetailOffer
+                    id={service.data._id}
+                    title={service.data.title}
+                    name={service.data.userID.fullname}
+                    image={service.data.image}
+                    desc={service.data.desc}
+                    price={service.data.price}
+                    avatar={service.data.userID.avatar}
+                    revision={service.data.revision}
+                    processtime={service.data.processtime}
+                    requirement={service.data.requirement}
+                />
+            )}
         </div>
     );
 }
